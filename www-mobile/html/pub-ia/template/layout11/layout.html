@@ -1,0 +1,386 @@
+<!doctype html>
+<!--
+  ~ Copyright (c) 2017. (주)사람인HR.
+  ~ All rights reserved.
+  -->
+
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>오투잡</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/slick.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/mobile.css">
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/mobile/flicking.pkgd.min.js"></script>
+    <script src="/js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- 로딩이미지 -->
+<div class="loading"><img src="/image/mobile/common/loading.gif" alt="로딩이미지" /></div>
+<!-- //로딩이미지 -->
+
+<!-- app_download 1334 -->
+<aside class="app_download img_ver">
+    <div class="app_inner">
+        <p class="img_area"><a href="#"><img src="/image/mobile/common/app_download_20180629.png" alt=""></a></p>
+        <button type="button" class="closer"><img src="/image/mobile/common/ico_download_closer.png" alt=""></button>
+    </div>
+</aside>
+<!-- //app_download -->
+
+<div class="category_sitemap">
+    <div class="sitemap_div">
+        <div class="sitemap_close">
+            <button type="button" onclick="closeSiteMap()"><img src="/image/mobile/message/ic_close.png"></button>
+        </div>
+        <label>오투잡<br>카테고리</label>
+        <div class="category_grids">
+            <div class="category_grid">
+                <button class="c_button coupon" type="button" id="main_c_11">
+                    디자인
+                </button>
+                <div class="sub_category" id="sub_c_11">
+                    <a href="javascript:void(0)">디자인 전체</a>
+                    <a href="javascript:void(0)">배너/상세페이지</a>
+                    <a href="javascript:void(0)">웹디자인</a>
+                    <a href="javascript:void(0)">블로그/카페</a>
+                    <a href="javascript:void(0)">로고/CI&BI</a>
+                    <a href="javascript:void(0)">캘리그라피</a>
+                    <a href="javascript:void(0)">전단지/홍보물</a>
+                    <a href="javascript:void(0)">명함</a>
+                    <a href="javascript:void(0)">일러스트</a>
+                    <a href="javascript:void(0)">캐리커쳐/인물</a>
+                    <a href="javascript:void(0)">만화/웹툰</a>
+                    <a href="javascript:void(0)">캐릭터/아이콘</a>
+                    <a href="javascript:void(0)">패키지/북커버</a>
+                    <a href="javascript:void(0)">인테리어/3D</a>
+                    <a href="javascript:void(0)">PPT디자인</a>
+                    <a href="javascript:void(0)">포토샵/보정</a>
+                    <a href="javascript:void(0)">사진촬영</a>
+                    <a href="javascript:void(0)">누끼작업</a>
+                    <a href="javascript:void(0)">이미지변환</a>
+                    <a href="javascript:void(0)">기타</a>
+                </div>
+                <button class="c_button new" type="button" id="main_c_13">
+                    마케팅
+                </button>
+                <div class="sub_category" id="sub_c_13">
+                    <a href="javascript:void(0)">마케팅 전체</a>
+                    <a href="javascript:void(0)">검색 최적화</a>
+                    <a href="javascript:void(0)">키워드 광고</a>
+                    <a href="javascript:void(0)">포털/블로그/카페</a>
+                    <a href="javascript:void(0)">SNS마케팅</a>
+                    <a href="javascript:void(0)">배너 광고</a>
+                    <a href="javascript:void(0)">광고/홍보 대행</a>
+                    <a href="javascript:void(0)">언론 홍보</a>
+                    <a href="javascript:void(0)">카피라이팅</a>
+                    <a href="javascript:void(0)">기획/컨설팅</a>
+                    <a href="javascript:void(0)">마케팅 노하우</a>
+                    <a href="javascript:void(0)">앱 다운/평점리뷰</a>
+                    <a href="javascript:void(0)">지도 평가/평점</a>
+                    <a href="javascript:void(0)">메시지/메일 발송</a>
+                    <a href="javascript:void(0)">온오프라인 마케팅</a>
+                </div>
+                <button class="c_button call" type="button" id="main_c_10">
+                    번역
+                </button>
+                <div class="sub_category" id="sub_c_10">
+                    <a href="javascript:void(0)">번역 전체</a>
+                    <a href="javascript:void(0)">영어번역</a>
+                    <a href="javascript:void(0)">중국어번역</a>
+                    <a href="javascript:void(0)">일본어번역</a>
+                    <a href="javascript:void(0)">프랑스어번역</a>
+                    <a href="javascript:void(0)">독일어번역</a>
+                    <a href="javascript:void(0)">스페인어번역</a>
+                    <a href="javascript:void(0)">이탈리아어번역</a>
+                    <a href="javascript:void(0)">러시아어번역</a>
+                    <a href="javascript:void(0)">인도네시아어번역</a>
+                    <a href="javascript:void(0)">태국어번역</a>
+                    <a href="javascript:void(0)">베트남어번역</a>
+                    <a href="javascript:void(0)">아랍어번역</a>
+                    <a href="javascript:void(0)">몽골어번역</a>
+                    <a href="javascript:void(0)">외국어/기타</a>
+                </div>
+                <button class="c_button coupon" type="button" id="main_c_12">
+                    비즈니스문서
+                </button>
+                <div class="sub_category" id="sub_c_12">
+                    <a href="javascript:void(0)">비즈니스문서 전체</a>
+                    <a href="javascript:void(0)">워드/타이핑</a>
+                    <a href="javascript:void(0)">사업계획/제안서</a>
+                    <a href="javascript:void(0)">PPT/프레지</a>
+                    <a href="javascript:void(0)">엑셀/통계</a>
+                    <a href="javascript:void(0)">리서치/자료수집</a>
+                    <a href="javascript:void(0)">보고서/리포트</a>
+                    <a href="javascript:void(0)">기타</a>
+                </div>
+            </div>
+
+            <div class="category_grid">
+                <button class="c_button" type="button" id="main_c_23">
+                    창작/작문
+                </button>
+                <div class="sub_category" id="sub_c_23"></div>
+                <button class="c_button" type="button" id="main_c_14">
+                    음악/더빙
+                </button>
+                <div class="sub_category" id="sub_c_14"></div>
+                <button class="c_button" type="button" id="main_c_25">
+                    영상/애니
+                </button>
+                <div class="sub_category" id="sub_c_25"></div>
+                <button class="c_button" type="button" id="main_c_15">
+                    IT개발
+                </button>
+                <div class="sub_category" id="sub_c_15"></div>
+            </div>
+            <div class="category_grid">
+                <button class="c_button coupon" type="button" id="main_c_17">
+                    전문가컨설팅
+                </button>
+                <div class="sub_category" id="sub_c_17"></div>
+                <button class="c_button" type="button" id="main_c_18">
+                    운세/상담
+                </button>
+                <div class="sub_category" id="sub_c_18"></div>
+                <button class="c_button" type="button" id="main_c_16">
+                    생활서비스
+                </button>
+                <div class="sub_category" id="sub_c_16"></div>
+                <button class="c_button" type="button" id="main_c_26">
+                    핸드메이드
+                </button>
+                <div class="sub_category" id="sub_c_26"></div>
+            </div>
+
+            <div class="category_grid">
+                <button class="c_button" type="button" id="main_c_21">
+                    여행플랜
+                </button>
+                <div class="sub_category" id="sub_c_21"></div>
+                <button class="c_button" type="button" id="main_c_27">
+                    레슨
+                </button>
+                <div class="sub_category" id="sub_c_27"></div>
+                <button class="c_button" type="button" id="main_c_19">
+                    행사/이벤트
+                </button>
+                <div class="sub_category" id="sub_c_19"></div>
+                <button class="c_button" type="button" disabled>
+                    &nbsp;
+                </button>
+            </div>
+        </div>
+
+
+        <label>오더잡</label>
+        <a class="sitemap_big_banner" href="javascript:void(0)"><img src="/image/mobile/etc/orderjob_link.png"></a>
+
+        <label>테마추천</label>
+        <h3>#쇼핑몰 창업</h3>
+        <div class="sitemap_banner_slide contents_slide">
+            <ul>
+                <li><a href="javascript:void(0);"><img src="//images.otwojob.com/product/Z/w/U/ZwUucuTZtNQEZi7.png/o2j/resize/164x128>"></a></li>
+                <li><a href="javascript:void(0);"><img src="//images.otwojob.com/product/q/V/3/qV3tKwmrlFBk2Iy.png/o2j/resize/164x128>"></a></li>
+                <li><a href="javascript:void(0);"><img src="//images.otwojob.com/product/X/e/M/XeMLOXOLFg9ieWY.jpg/o2j/resize/164x128>"></a></li>
+                <li><a href="javascript:void(0);"><img src="//images.otwojob.com/product/B/k/P/BkPJTjkZqUPGuq8.jpg/o2j/resize/164x128>"></a></li>
+            </ul>
+        </div>
+        <h3>#회사 창업</h3>
+        <div class="sitemap_banner_slide contents_slide">
+            <ul>
+                <li><a href="javascript:void(0);"><img src="//images.otwojob.com/product/Z/w/U/ZwUucuTZtNQEZi7.png/o2j/resize/164x128>"></a></li>
+                <li><a href="javascript:void(0);"><img src="//images.otwojob.com/product/q/V/3/qV3tKwmrlFBk2Iy.png/o2j/resize/164x128>"></a></li>
+                <li><a href="javascript:void(0);"><img src="//images.otwojob.com/product/X/e/M/XeMLOXOLFg9ieWY.jpg/o2j/resize/164x128>"></a></li>
+                <li><a href="javascript:void(0);"><img src="//images.otwojob.com/product/B/k/P/BkPJTjkZqUPGuq8.jpg/o2j/resize/164x128>"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="app_induce">
+    <div>
+        <button class="banner_close"><img src="/image/mobile/ico/icon-close-white.png"></button>
+        <a class="logo_btn" href="javascript:void(0)"><img src="/image/mobile/ico/icon-logo.png"></a><br>
+        <img class="app_induce_comment_1" src="/image/mobile/temp/app_induce_comment_1.png"><br>
+        <button class="app_submit"><img src="/image/mobile/temp/app_induce_comment_2.png"></button><br>
+        <a href="javascript:void(0)" class="app_induce_comment_2"><img src="/image/mobile/temp/app_induce_comment_3.png"></a>
+    </div>
+</div>
+
+
+<!-- header -->
+<header class="header" id="header"></header>
+<!-- //header -->
+
+<!-- search_wrap -->
+<!--<div class="search_wrap"></div>-->
+<div class="search_wrap search_bar" style="display:none"></div>
+<!-- //search_wrap -->
+
+<!-- all_menu -->
+<section class="all_menu"></section>
+<!-- //all_menu -->
+
+<!-- gnb -->
+<section class="gnb" id="gnb"></section>
+<!-- gnb -->
+
+<!-- content -->
+<section class="content" id="content">
+    <div class="tab1"></div>
+    <div class="tab2"></div>
+    <div class="tab3"></div>
+</section>
+<!-- //content -->
+
+<!-- aside_menu -->
+<aside class="aside_menu"></aside>
+<!-- //aside_menu -->
+
+<!-- 1392 -->
+<div class="bnr_event_toast" style="display: none;">
+    <a href="#" title="새창으로 열기" target="_self"><img src="/image/mobile/temp/bnr_event_toast2.png" alt="딱, 일주일만! 럭키 디자인 위크"></a>
+    <button type="button" class="btn_close"><span class="blind">이벤트 배너 닫기</span></button>
+</div>
+<script type="text/javascript">
+
+    var bnrEventToast = $('.bnr_event_toast'),
+        delay = setTimeout(function(){
+            bnrEventToast.removeClass('hidden');
+        }, 1000);
+
+    $('.btn_close').on('click', bnrEventToast, function(){
+        bnrEventToast.hide();
+    });
+
+    $(window).scroll(function () {
+        var scrollDoc = document.body.scrollTop;
+        if (scrollDoc === 0) {
+            bnrEventToast.removeClass('hidden');
+        } else {
+            bnrEventToast.addClass('hidden');
+        }
+    });
+</script>
+<!-- //1392 -->
+
+<!-- footer -->
+<footer class="footer" id="footer"></footer>
+<!-- //footer -->
+
+<!-- layer popup : main 1334 -->
+<!--<div class="pop_main" style="display:none">
+    <div class="dimm"></div>
+
+    <div class="in_layer">
+        <p class="img_area"><a href="#"><img src="/image/mobile/temp/pop_main_20171031.png" alt=""></a></p>
+
+        <p class="close_area">
+            <button type="button">다시 보지 않기</button>
+            <button type="button" class="line_left" onclick="javascript:$('.pop_main').hide();">닫기</button>
+        </p>
+    </div>
+</div>-->
+<!-- layer popup 1334 -->
+
+<script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    //header
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout11/header.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#header').html(data);
+               }
+           });
+    //search_wrap
+    $.ajax({
+        type: 'GET',
+        url: '/m/pub-ia/template/layout11/search_wrap.html',
+        dataType: 'html',
+        cache: false,
+        async: false,
+        success: function (data) {
+            $('.search_wrap').html(data);
+        }
+    });
+    //all_menu
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout11/all_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.all_menu').html(data);
+               }
+           });
+    //gnb
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout11/gnb.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#gnb').html(data);
+               }
+           });
+    //content
+    $.ajax({
+               type: 'GET',
+               url: '/m/'+getParameterByName('page'),
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#content').find('.tab2').html(data);
+               }
+           });
+    //aside_menu
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout11/aside_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.aside_menu').html(data);
+               }
+           });
+    //footer
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout11/footer.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#footer').html(data);
+               }
+           });
+</script>
+<script type="text/javascript" src="/js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="/js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="/js/mobile/otwojob.main.js"></script>
+<script type="text/javascript" src="/js/mobile/otwojob.exec.js"></script>
+<script type="text/javascript" src="/js/mobile/slick.min.js"></script>
+</body>
+</html>

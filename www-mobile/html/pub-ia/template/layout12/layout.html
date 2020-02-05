@@ -1,0 +1,1902 @@
+<!doctype html>
+<!--
+  ~ Copyright (c) 2017. (주)사람인HR.
+  ~ All rights reserved.
+  -->
+
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>오투잡</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="/js/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/short_event.css"><!-- 이벤트 페이지에만 노출 -->
+    <link rel="stylesheet" type="text/css" href="/css/mobile/mobile.css">
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/jquery/jquery-ui.min.js"></script>
+    <script src="/js/mobile/otwojob.vendor.js"></script>
+    <script type="text/javascript" src="/js/mobile/loader.js"></script>
+    <script type="text/javascript" src="/js/jquery/detectmobilebrowser.js"></script>
+    <script type="text/javascript" src="/js/jquery/jquery.mtz.monthpicker.js"></script>
+    <script type="text/javascript" src="/js/mobile/flicking.pkgd.min.js"></script>
+</head>
+<body>
+
+<div class="tutorial_main" style="display:none;">
+    <div style="position:relative;">
+        <img id="tutorial_image" src="/image/mobile/temp/message-tutorial-01.png">
+        <div id="tutorial_btn">
+            <div id="tutorial_page_1" class="selPage">&nbsp;</div>
+            <div id="tutorial_page_2">&nbsp;</div>
+            <div id="tutorial_page_3">&nbsp;</div>
+            <div id="tutorial_page_4">&nbsp;</div>
+            <div id="tutorial_page_5">&nbsp;</div>
+            <button id="tutorial_btn_next"  onclick="Tutorial.next('http://images.otwojob.com/image/pc/temp/message-tutorial', 2, 5)">Skip</button>
+            <button id="tutorial_btn_close" style="display:none;" onclick="Tutorial.close()">오투잡TALK 시작하기</button>
+        </div>
+     </div>
+</div>
+
+<!-- header -->
+<header class="header title_bar block" id="header"></header>
+<!--<header class="header transparent" id="header"></header>-->
+<!-- //header -->
+
+<!-- search_wrap -->
+<!--<div class="search_wrap"></div>-->
+<div class="search_wrap search_bar" style="display:none"></div>
+<!-- //search_wrap -->
+
+
+<!-- all_menu -->
+<section class="all_menu"></section>
+<!-- //all_menu -->
+
+<!-- gnb -->
+<!--<section class="gnb" id="gnb"></section>-->
+<!-- gnb -->
+
+<!-- content -->
+<section class="content" id="content"></section>
+<!-- //content -->
+
+<!-- aside_menu -->
+<aside class="aside_menu"></aside>
+<!-- //aside_menu -->
+
+<!-- footer -->
+<footer class="footer" id="footer"></footer>
+<!-- //footer -->
+
+<div class="detail_layer" style="display:none;">
+    <button class="layer_close" onclick="detailSearch.close()"><img src="/image/mobile/ico/ic-close-black.png"></button>
+    <label>상세검색</label>
+    <section class="keyword_contents">
+        <div class="inform toggle">
+            접속중
+            <input type="checkbox" class="type01">
+        </div>
+        <div class="inform toggle">
+            무료재능
+            <input type="checkbox" class="type01">
+        </div>
+        <div class="inform toggle">
+            사업자
+            <input type="checkbox" class="type01">
+        </div>
+        <div class="inform toggle">
+            할인중
+            <input type="checkbox" class="type01">
+        </div>
+    </section>
+
+    <section class="keyword_contents">
+        <label>결과 내 검색</label>
+        <input type="text" class="detail_text">
+    </section>
+
+    <section class="keyword_contents">
+        <div class="contents_assort">
+            <label>제공 파일 형식</label>
+            <div class="inform check">
+                <label for="f_type1" class="form_label">
+                    <input type="checkbox" name="f_type" id="f_type1" class="content_chk">
+                    <span class="txt">PNG</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="f_type2" class="form_label">
+                    <input type="checkbox" name="f_type" id="f_type2" class="content_chk" checked>
+                    <span class="txt">PSD</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="f_type3" class="form_label">
+                    <input type="checkbox" name="f_type" id="f_type3" class="content_chk">
+                    <span class="txt">AI</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="f_type4" class="form_label">
+                    <input type="checkbox" name="f_type" id="f_type4" class="content_chk">
+                    <span class="txt">JPEG</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="f_type5" class="form_label">
+                    <input type="checkbox" name="f_type" id="f_type5" class="content_chk">
+                    <span class="txt">BMP</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="f_type6" class="form_label">
+                    <input type="checkbox" name="f_type" id="f_type6" class="content_chk">
+                    <span class="txt">기타</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="contents_assort">
+            <label>원본파일 제공 여부</label>
+            <div class="inform check">
+                <label for="s_type1" class="form_label">
+                    <input type="checkbox" name="s_type" id="s_type1" class="content_chk" checked>
+                    <span class="txt">제공</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="s_type2" class="form_label">
+                    <input type="checkbox" name="s_type" id="s_type2" class="content_chk">
+                    <span class="txt">미제공</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="s_type3" class="form_label">
+                    <input type="checkbox" name="s_type" id="s_type3" class="content_chk">
+                    <span class="txt">기타</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="contents_assort">
+            <label>시안개수</label>
+            <div class="inform check">
+                <label for="n_type1" class="form_label">
+                    <input type="checkbox" name="n_type" id="n_type1" class="content_chk" checked>
+                    <span class="txt">1개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="n_type2" class="form_label">
+                    <input type="checkbox" name="n_type" id="n_type2" class="content_chk">
+                    <span class="txt">2개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="n_type3" class="form_label">
+                    <input type="checkbox" name="n_type" id="n_type3" class="content_chk">
+                    <span class="txt">3개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="n_type4" class="form_label">
+                    <input type="checkbox" name="n_type" id="n_type4" class="content_chk">
+                    <span class="txt">4개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="n_type5" class="form_label">
+                    <input type="checkbox" name="n_type" id="n_type5" class="content_chk">
+                    <span class="txt">5개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="n_type6" class="form_label">
+                    <input type="checkbox" name="n_type" id="n_type6" class="content_chk">
+                    <span class="txt">기타</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="contents_assort">
+            <label>저작권</label>
+            <div class="inform check span2">
+                <label for="a_type1" class="form_label">
+                    <input type="checkbox" name="a_type" id="a_type1" class="content_chk" checked>
+                    <span class="txt">상업적 사용가능</span>
+                </label>
+            </div>
+            <div class="inform check span2">
+                <label for="a_type2" class="form_label">
+                    <input type="checkbox" name="a_type" id="a_type2" class="content_chk">
+                    <span class="txt">비상업적 사용</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="a_type3" class="form_label">
+                    <input type="checkbox" name="a_type" id="a_type3" class="content_chk">
+                    <span class="txt">기타</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="contents_assort">
+            <label>수정가능횟수 </label>
+            <div class="inform check">
+                <label for="c_type1" class="form_label">
+                    <input type="checkbox" name="c_type" id="c_type1" class="content_chk" checked>
+                    <span class="txt">1개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="c_type2" class="form_label">
+                    <input type="checkbox" name="c_type" id="c_type2" class="content_chk">
+                    <span class="txt">2개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="c_type3" class="form_label">
+                    <input type="checkbox" name="c_type" id="c_type3" class="content_chk">
+                    <span class="txt">3개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="c_type4" class="form_label">
+                    <input type="checkbox" name="c_type" id="c_type4" class="content_chk">
+                    <span class="txt">4개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="c_type5" class="form_label">
+                    <input type="checkbox" name="c_type" id="c_type5" class="content_chk">
+                    <span class="txt">5개</span>
+                </label>
+            </div>
+            <div class="inform check">
+                <label for="c_type6" class="form_label">
+                    <input type="checkbox" name="c_type" id="c_type6" class="content_chk">
+                    <span class="txt">기타</span>
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <div class="check_result">
+        <span>PNG<button class="check_remove"><img src="/image/mobile/common/btn_close.png"></button></span>
+        <span>제공<button class="check_remove"><img src="/image/mobile/common/btn_close.png"></button></span>
+        <span>상업적 사용가능<button class="check_remove"><img src="/image/mobile/common/btn_close.png"></button></span>
+        <span>수정1회<button class="check_remove"><img src="/image/mobile/common/btn_close.png"></button></span>
+    </div>
+
+    <div class="detail_buttons">
+        <button class="reset_btn">선택 초기화</button>
+        <button class="search_btn">검색</button>
+    </div>
+</div>
+
+<!-- layer popup : 옵션검색 -->
+<div class="pop_layer type01" id="option_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">옵션검색</h2>
+        <div class="layer_cont sizetype">
+
+            <h3 class="in_tit">기본제공 파일 형태</h3>
+            <p class="form_line type01">
+                <label for="l_opt1"><input type="checkbox" id="l_opt1"><span class="txt">PNG</span></label>
+                <label for="l_opt2" class="second_form" id="l_opt2"><input type="checkbox"><span class="txt">PDF</span></label>
+                <label for="l_opt3" class="second_form" id="l_opt3"><input type="checkbox"><span class="txt">JPG</span></label>
+                <label for="l_opt4"><input type="checkbox" id="l_opt4"><span class="txt">PSD</span></label>
+                <label for="l_opt5" class="second_form" id="l_opt5"><input type="checkbox"><span class="txt">XLS</span></label>
+                <label for="l_opt6" class="second_form" id="l_opt6"><input type="checkbox"><span class="txt">MPEG</span></label>
+                <label for="l_opt7"><input type="checkbox" id="l_opt7"><span class="txt">AI</span></label>
+                <label for="l_opt8" class="second_form" id="l_opt8"><input type="checkbox"><span class="txt">PPTX</span></label>
+                <label for="l_opt9" class="second_form" id="l_opt9"><input type="checkbox"><span class="txt">HWP</span></label>
+            </p>
+
+            <h3 class="in_tit type01">원본파일 제공여부</h3>
+            <p class="form_line type01">
+                <label for="l_opt10" class="half"><input type="radio" name="origin_file" id="l_opt10"><span class="txt">제공</span></label>
+                <label for="l_opt11" class="half second_form"><input type="radio" name="origin_file" id="l_opt11"><span class="txt">미제공</span></label>
+            </p>
+
+            <h3 class="in_tit type01">문의 응답 시간</h3>
+            <p class="form_line type01">
+                <label for="l_opt12" class="half"><input type="radio" name="response_time" id="l_opt12"><span class="txt">1시간 이내</span></label>
+                <label for="l_opt13" class="half second_form"><input type="radio" name="response_time" id="l_opt13"><span class="txt">1일 이내</span></label>
+                <label for="l_opt14" class="half"><input type="radio" name="response_time" id="l_opt14"><span class="txt">3일 이내</span></label>
+                <label for="l_opt15" class="half second_form"><input type="radio" name="response_time" id="l_opt15"><span class="txt">7일 이내</span></label>
+            </p>
+
+            <div class="del_itembox">
+                <h3 class="i_tit">검색조건</h3>
+                <div class="in_box">
+                    <span>PNG<button type="button" class="del">삭제</button></span>
+                    <span>PSD<button type="button" class="del">삭제</button></span>
+                    <span>제공<button type="button" class="del">삭제</button></span>
+                    <span>기업용<button type="button" class="del">삭제</button></span>
+                    <span>2회<button type="button" class="del">삭제</button></span>
+                    <span>1시간이내<button type="button" class="del">삭제</button></span>
+                </div>
+            </div>
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">초기화</button>
+                <button type="button" class="btn_type btn_type02 sm">검색</button>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //layer popup -->
+
+<!-- layer popup : 공유하기 -->
+<div class="pop_layer" id ="share_pop">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">공유하기</h2>
+        <div class="layer_cont">
+            <div class="share_btns">
+                <a href="#"><img src="/image/mobile/common/ico_share01.png" alt=""><span>페이스북</span></a>
+                <a href="#"><img src="/image/mobile/common/ico_share02.png" alt=""><span>카카오톡</span></a>
+                <a href="#"><img src="/image/mobile/common/ico_share03.png" alt=""><span>트위터</span></a>
+                <a href="#"><img src="/image/mobile/common/ico_share04.png" alt=""><span>URL복사</span></a>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //layer popup -->
+
+<!-- layer popup : 스케줄확인 -->
+<div class="pop_layer type01" id="schedule_calendar">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit2"><em class="blind">스케줄확인 팝업</em></h2>
+        <div class="layer_cont sizetype pt0">
+
+            <!-- schedule_calendar -->
+            <div class="schedule_calendar layer_cal">
+                <div class="year_month">
+                    <button class="prev">이전달</button>
+                    <p>
+                        <span class="year"><strong>2016</strong>년</span>
+                        <span class="monthh"><strong>7</strong>월</span>
+                    </p>
+                    <button class="next">다음달</button>
+                </div>
+
+                <!-- carlendar -->
+                <div class="carlendar">
+                    <!-- week -->
+                    <div class="week">
+                        <ul>
+                            <li><span>일</span></li>
+                            <li><span>월</span></li>
+                            <li><span>화</span></li>
+                            <li><span>수</span></li>
+                            <li><span>목</span></li>
+                            <li><span>금</span></li>
+                            <li><span>토</span></li>
+                        </ul>
+                    </div>
+                    <!--// week -->
+
+                    <!-- day -->
+                    <div class="day">
+                        <ul>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>1</span></li>
+                            <li><span>2</span></li>
+                            <li><span>3</span></li>
+                            <li><span>4</span></li>
+                            <li><span>5</span></li>
+                            <li><span>6</span></li>
+                            <li><span>7</span></li>
+                            <li class="mark_today"><span>8</span></li>
+                            <li><span>9</span></li>
+                            <li><span>10</span></li>
+                            <li><span>11</span></li>
+                            <li><span>12</span></li>
+                            <li><span>13</span></li>
+                            <li><span>14</span></li>
+                            <li><span>15</span></li>
+                            <li><span>16</span></li>
+                            <li><span>17</span></li>
+                            <li><span>18</span></li>
+                            <li><span>19</span></li>
+                            <li><span>20</span></li>
+                            <li><span>21</span></li>
+                            <li><span>22</span></li>
+                            <li class="mark_offday"><span>23</span></li>
+                            <li><span>24</span></li>
+                            <li><span>25</span></li>
+                            <li><span>26</span></li>
+                            <li><span>27</span></li>
+                            <li><span>28</span></li>
+                            <li><span>29</span></li>
+                            <li><span>30</span></li>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>&nbsp;</span></li>
+                        </ul>
+                    </div>
+                    <!--// day -->
+                </div>
+                <!--// carlendar -->
+            </div>
+            <!-- //schedule_calendar -->
+
+            <div class="schedule_dot">
+                <span>오늘날짜</span>
+                <span>응대 불가능 날짜</span>
+            </div>
+            <ul class="schedule_txt">
+                <li>판매자는 문의에 대한 응답이 불가능한 날짜를 설정할 수 있습니다.</li>
+                <li>판매자가 설정한 문의응대 불가능 날짜를 참고하여 주문해주세요.</li>
+            </ul>
+        </div>
+        <button type="button" class="closer closer2">닫기</button>
+    </div>
+</div>
+<!-- layer popup -->
+
+<!-- layer popup : 신고하기 -->
+<div class="pop_layer" id="reportLayer" style="display:none">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <h2 class="tit">신고하기</h2>
+        <div class="layer_cont">
+
+            <select name="" id="" class="full_width">
+                <option value="">신고유형 선택</option>
+            </select>
+
+            <textarea name="" id="" cols="25" rows="5" class="top10" placeholder="신고하실 내용을 입력해주세요."></textarea>
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm" onclick="$('#reportLayer').hide();">닫기</button>
+                <button type="button" class="btn_type btn_type02 sm">신고하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- layer popup -->
+
+<!-- layer popup : 승인거절 -->
+<div class="pop_layer" id="talent_refuse" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">승인거절 사유</h2>
+        <div class="layer_cont">
+            <p class="text01">죄송합니다.<br>테스트 등록으로 인한 승인이 거절되었습니다.</p>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //layer popup -->
+
+<!-- layer popup : 출금신청 -->
+<div class="pop_layer payback_info" id="payback" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">출금신청</h2>
+        <div class="layer_cont">
+            <p class="text02">출금 가능한 수익금<strong class="price_txt">1,350,000</strong>원</p>
+
+            <!-- payment_box -->
+            <div class="payment_box">
+                <p class="tit">출금신청금액</p>
+                <div class="price_area">
+					<span class="write">
+						<input type="text" id="출금신청금액" title="출금신청금액">
+						<em>원</em>
+					</span>
+                    <label for="opt1"><input type="checkbox" id="opt1" checked="checked"><span class="txt">모두출금</span></label>
+                </div>
+                <p class="tit">O캐시 충전</p>
+                <div class="price_area">
+					<span class="write">
+						<input type="text" id="O캐시 충전" title="O캐시 충전">
+						<em>원</em>
+					</span>
+                </div>
+            </div>
+            <!-- //payment_box -->
+
+            <!-- result_cash -->
+            <div class="result_cash type03">
+                <p>
+                    <span class="tit">총 출금액 </span>
+                    <span class="price type01"><strong>770,000</strong>원</span>
+                </p>
+            </div>
+            <!-- //result_cash -->
+
+            <p class="text05">출금계좌</p>
+            <!-- payment_box -->
+
+            <div class="payment_box center">
+                <div class="account_info">
+                    <label>은행명</label>
+                    <span>KB 국민은행</span>
+                </div>
+                <div class="account_info">
+                    <label>예금주</label>
+                    <span>오투잡</span>
+                </div>
+                <div class="account_info">
+                    <label>계좌번호</label>
+                    <span>123-408940-45861</span>
+                </div>
+                <span class="info_msg error">미인증 계좌입니다</span>
+                <button class="btn_type absolute">변경</button>
+            </div>
+
+            <!-- 출금계좌가 없는경우-->
+            <div class="payment_box center" style="display: none;">
+                <p class="tit full">등록된 출금 계좌 정보가 없습니다.<br>
+                    출금계좌를 먼저 등록해주세요</p>
+                <button class="btn_type">계좌등록</button>
+            </div>
+            <!-- //payment_box -->
+
+            <!-- list_type04 -->
+            <div class="list_type04">
+                <ul>
+                    <li><p>계좌 정보 수정은 판매회원 정보 수정  페이지에서 가능합니다.</p></li>
+                    <li><p>수익금은 현금 출금 혹은 O캐시로 충전하실 수 있습니다.</p></li>
+                    <li><p>총 출금액 = 출금 신청금액 + O캐시 충전금액</p></li>
+                    <li><p>출금신청은 취소할 수 없습니다.</p></li>
+                </ul>
+            </div>
+            <!-- //list_type04 -->
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm" onclick="layerClose('payback_info')">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //layer popup -->
+
+<!-- Layer popup : 이메일 입력 -->
+<div class="pop_layer" id="fn_order_email" style="display: none;">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <h2 class="tit">주문 전 입력해 주세요! <span class="member_point">최초 1회</span></h2>
+        <div class="layer_cont">
+
+            <!-- otwojob-1627 -->
+            <p class="small_txt_banner"><span>EVENT</span><a href="#">지금 개인정보 입력하면 할인쿠폰 즉시 발급!</a></p>
+            <article class="cont_wrap">
+                <!-- form_join -->
+                <fieldset class="form_join">
+                    <legend class="blind">이메일입력</legend>
+                    <div class="write first">
+                        <div class="input_wrap required">
+                            <input type="text" title="이메일주소" placeholder="이메일 주소">
+                        </div>
+                        <button type="button" class="btn_confirm_new">인증하기</button>
+                        <p class="warning" id="">[$test@test2.co.kr$]으로 발송된 인증메일의 인증링크를 유효시간 30분 안에 클릭해주세요.</p> <!-- step01 -->
+                        <p class="confirm" id="">인증이 완료 되었습니다.</p> <!-- step02 -->
+                        <p class="warning" id="">[$test@test2.co.kr$](은)는 이미 가입되어 있는 이메일주소 입니다.</p> <!-- 이미가입시 -->
+                    </div>
+                    <div class="write">
+                        <div class="confirm_box">
+                            <label for="agree2" class="form_type01"><input type="checkbox" id="agree2"><span class="txt">(선택) 이메일을 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree_layer01');">마케팅정보 수신</a>에 동의합니다.</span></label>
+                            <p class="confirm_box_info">
+                                <span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="write hide" id="event_info_agree_layer01">
+                        <div class="write_agree_form">
+                            <p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree_layer01');">X</a></p>
+                            <div class="txt_box">
+                                • 수집ㆍ이용목적<br>
+                                &nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+                                • 수집항목: 이메일 수신동의<br>
+                                • 보유 및 이용기간: 서비스 이용시까지<br><br>
+                                ※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //form_join -->
+                </fieldset>
+            </article>
+            <div class="list_type04">
+                <ul>
+                    <li><p>회원서비스 제공,  구매자 확인 및 상담 처리를 위해 입력해주세요.</p></li>
+                    <li><p>입력하신 정보는 기본회원 정보에 함께 저장합니다.</p></li>
+                </ul>
+            </div>
+
+            <button type="button" class="closer" onclick="$('#fn_order_email').hide();">닫기</button>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02">인증완료하기</button>
+                <button type="button" class="btn_type btn_type11">인증완료하기</button> <!-- 미인증시 노출 -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Layer popup -->
+
+<!-- Layer popup : 휴대폰번호 입력 -->
+<div class="pop_layer" id="fn_order_phone">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <h2 class="tit">주문 전 입력해 주세요! <span class="member_point">최초 1회</span></h2>
+        <div class="layer_cont">
+
+            <article class="cont_wrap">
+                <!-- form_join -->
+                <fieldset class="form_join">
+                    <legend class="blind">휴대폰번호입력</legend>
+                    <div class="write first">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm')">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="confirm" id="">입력하신 번호로 인증번호가 발송되었습니다.</p>
+                    </div>
+                    <div class="write hide" id="phone_confirm">
+                        <div class="input_wrap required">
+                            <input type="text" title="인증번호 입력" placeholder="인증번호 입력">
+                        </div>
+                        <button type="button" class="btn_confirm_new">인증하기</button>
+                    </div>
+                    <div class="write">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)" value="01033333333">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm');">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="warning" id="">이미 사용중인 휴대폰번호입니다.</p>
+                    </div>
+                    <div class="write">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)" value="01033333333">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm')">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="confirm" id="">인증이 완료 되었습니다.</p>
+                    </div>
+                    <div class="write">
+                        <div class="confirm_box">
+                            <label for="agree2" class="form_type01"><input type="checkbox" id="agree2"><span class="txt">(선택) SMS/MMS를 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree_layer02');">마케팅정보 수신</a>에 동의합니다.</span></label>
+                            <p class="confirm_box_info">
+                                <span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="write hide" id="event_info_agree_layer02">
+                        <div class="write_agree_form">
+                            <p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree_layer02');">X</a></p>
+                            <div class="txt_box">
+                                • 수집ㆍ이용목적<br>
+                                &nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+                                • 수집항목: SMS/MMS 수신동의<br>
+                                • 보유 및 이용기간: 서비스 이용시까지<br><br>
+                                ※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //form_join -->
+                </fieldset>
+            </article>
+            <div class="list_type04">
+                <ul>
+                    <li><p>회원서비스 제공,  구매자 확인 및 상담 처리를 위해 입력해주세요.</p></li>
+                    <li><p>입력하신 정보는 기본회원 정보에 함께 저장합니다.</p></li>
+                </ul>
+            </div>
+
+            <button type="button" class="closer" onclick="$('#fn_order_phone').hide();">닫기</button>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02">인증완료하기</button>
+                <button type="button" class="btn_type btn_type11">인증완료하기</button> <!-- 미인증시 노출 -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Layer popup -->
+
+<div class="pop_layer" id="empty_order_layer">
+    <div class="dimm"></div>
+
+    <div class="in_layer width270">
+        <button class="closer" onclick="$('#empty_order_layer').hide()"></button>
+        <h2 class="tit">나의 오더 전달</h2>
+        <div class="layer_cont">
+            <p class="text04">판매자에게 오더를 전달하려면 신규오더 후<br>
+                판매자 프로필 혹은 판매자와 톡톡에서<br>
+                전달할 수 있습니다.</p>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02 sm">신규오더하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Layer popup : 휴대폰번호, 이메일 동시 입력 -->
+<div class="pop_layer" id="fn_order_phone_mail">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <h2 class="tit">주문 전 입력해 주세요! <span class="member_point">최초 1회</span></h2>
+        <div class="layer_cont">
+
+            <article class="cont_wrap">
+                <!-- form_join -->
+                <fieldset class="form_join">
+                    <legend class="blind">휴대폰번호, 이메일 동시 입력</legend>
+                    <div class="write first">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm')">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="confirm" id="">입력하신 번호로 인증번호가 발송되었습니다.</p>
+                    </div>
+                    <div class="write hide" id="phone_confirm">
+                        <div class="input_wrap required">
+                            <input type="text" title="인증번호 입력" placeholder="인증번호 입력">
+                        </div>
+                        <button type="button" class="btn_confirm_new">인증하기</button>
+                    </div>
+                    <div class="write">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)" value="01033333333">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm');">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="warning" id="">이미 사용중인 휴대폰번호입니다.</p>
+                    </div>
+                    <div class="write">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)" value="01033333333">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm')">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="confirm" id="">인증이 완료 되었습니다.</p>
+                    </div>
+                    <div class="write">
+                        <div class="confirm_box">
+                            <label for="agree2" class="form_type01"><input type="checkbox" id="agree2"><span class="txt">(선택) SMS/MMS를 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree_layer0201');">마케팅정보 수신</a>에 동의합니다.</span></label>
+                            <p class="confirm_box_info">
+                                <span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="write hide" id="event_info_agree_layer0201">
+                        <div class="write_agree_form">
+                            <p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree_layer0201');">X</a></p>
+                            <div class="txt_box">
+                                • 수집ㆍ이용목적<br>
+                                &nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+                                • 수집항목: SMS/MMS 수신동의<br>
+                                • 보유 및 이용기간: 서비스 이용시까지<br><br>
+                                ※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="write first">
+                        <div class="input_wrap required">
+                            <input type="text" title="이메일주소" placeholder="이메일 주소">
+                        </div>
+                        <button type="button" class="btn_confirm_new">인증하기</button>
+                        <p class="warning" id="">[$test@test2.co.kr$]으로 발송된 인증메일의 인증링크를 유효시간 30분 안에 클릭해주세요.</p> <!-- step01 -->
+                        <p class="confirm" id="">인증이 완료 되었습니다.</p> <!-- step02 -->
+                        <p class="warning" id="">[$test@test2.co.kr$](은)는 이미 가입되어 있는 이메일주소 입니다.</p> <!-- 이미가입시 -->
+                    </div>
+                    <div class="write">
+                        <div class="confirm_box">
+                            <label for="agree2" class="form_type01"><input type="checkbox" id="agree2"><span class="txt">(선택) 이메일을 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree_layer0102');">마케팅정보 수신</a>에 동의합니다.</span></label>
+                            <p class="confirm_box_info">
+                                <span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="write hide" id="event_info_agree_layer0102">
+                        <div class="write_agree_form">
+                            <p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree_layer0102');">X</a></p>
+                            <div class="txt_box">
+                                • 수집ㆍ이용목적<br>
+                                &nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+                                • 수집항목: 이메일 수신동의<br>
+                                • 보유 및 이용기간: 서비스 이용시까지<br><br>
+                                ※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //form_join -->
+                </fieldset>
+            </article>
+            <div class="list_type04">
+                <ul>
+                    <li><p>회원서비스 제공,  구매자 확인 및 상담 처리를 위해 입력해주세요.</p></li>
+                    <li><p>입력하신 정보는 기본회원 정보에 함께 저장합니다.</p></li>
+                </ul>
+            </div>
+
+            <button type="button" class="closer" onclick="$('#fn_order_phone_mail').hide();">닫기</button>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02">인증완료하기</button>
+                <button type="button" class="btn_type btn_type11">인증완료하기</button> <!-- 미인증시 노출 -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Layer popup -->
+
+<!-- layer popup : 맛보기재능 사전등록 프로모션 안내 -->
+<div class="pop_layer" id="free_promotion_info" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">맛보기재능 사전등록 프로모션 안내</h2>
+        <div class="layer_cont">
+            <img style="width:100%" src="/image/mobile/temp/@img_free_pop.png" alt="현재 맛보기재능 사전등록 프로모션 기간입니다. 맛보기재능 사전등록은 PC에서만 등록 가능합니다.">
+            <p style="border-top:1px solid #ccc;margin-top:20px;padding-top:10px;font-size:12px;color:#888;"><label><input type="checkbox"> 오늘은 그만 보기</label></p>
+        </div>
+        <button type="button" class="closer"onclick="$('#free_promotion_info').hide();">닫기</button>
+    </div>
+</div>
+
+<!-- layer popup : 맛보기재능 주문 -->
+<div class="pop_layer" id="free_order" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">맛보기재능 주문</h2>
+        <div class="layer_cont">
+            <!-- list_type -->
+            <div class="list_type08 free_list_type">
+                <!-- item -->
+                <article class="item first">
+                    <div class="item_cont">
+                        <div class="image_item">
+                            <div class="img"><a href="#"><img src="/image/mobile/temp/@item001.png" alt=""></a></div>
+                            <div class="desc_wrap">
+                                <p class="category">
+                                    <span class="main">디자인</span>
+                                    <span class="sub">전단지/홍보물</span>
+                                </p>
+                                <h4 class="cate_tit"><a href="#">고객맞춤 디자인/센스 풀 가동/감동 있는 디자인! 몽키디자인! <i>+맛보기</i></a></h4>
+                            </div>
+                        </div>
+                        <div class="last_order_cont">
+                            <h4 class="tit">총 금액</h4>
+                            <p class="price"><span>0</span>원</p>
+                        </div>
+                    </div>
+                    <div class="free_list_type_info">
+                        <dl>
+                            <dt>상세설명</dt>
+                            <dd>맛보기재능은 A/S 및 수정이 불가능하며, 구매 후 취소 시 재구매가 불가능합니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>판매규정</dt>
+                            <dd>맛보기재능은 판매자가 재능의 일부를 맛보기로 제공하는 기능으로, 무료(0원)로 결제가 진행됩니다.</dd>
+                        </dl>
+                    </div>
+                </article>
+                <!-- //item -->
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01">취소</button>
+                <button type="button" class="btn_type btn_type03 free_type"><span>0원</span>주문 계속하기</button>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //layer popup -->
+
+<!-- layer popup : 상품정렬 안내 -->
+<div class="pop_layer" id="sort_pop" style="display: none;">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">추천순</h2>
+        <div class="layer_cont text01">
+            <p>구매자가 원하는 상품을 더 쉽게 찾을 수 있도록 판매경험, 판매적극성, 구매만족도를 합산하여 정렬</p>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+
+<div class="pop_layer type01" id="coupon_info_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">사용조건</h2>
+        <div class="layer_cont sizetype">
+            <div class="list_type04">
+                <ul>
+                    <li>5만원이상 구매 시 할인 가능</li>
+                    <li>사용가능 재능 상품
+                        <ul class="type_no link_type">
+                            <li>[$재능카테고리 1차$] > 전체</li>
+                            <li><a href="javascript:void();">[$재능카테고리 1차$] > [$카테고리2차$]</a></li>
+                            <li>[$ 재능명(상품코드)$]</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+
+<!-- Layer popup : 페이백 : otwojob-1400 -->
+<div class="pop_layer type01" id="payback_event1">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">구매적립 기준</h2>
+        <div class="layer_cont">
+            <p class="halfline">&#149;&nbsp;50만원 미만 : 결제금액 의 1% 적립</p>
+            <p class="halfline">&#149;&nbsp;50만원 이상 ~ 100만원 미만 :결제금액 의 2% 적립</p>
+            <p class="halfline">&#149;&nbsp;100만원 이상~: 결제금액 의 3% 적립</p>
+            <p class="oneline">30만원 이상의 혜택은 2018.09.17까지이며, <br>회사의 사정으로 중지 될 수 있습니다.</p>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<div class="pop_layer type01" id="payback_event2">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">구매평 적립기준</h2>
+        <div class="layer_cont">
+            <p>구매평 150자 미만 200p, 150자 이상 500p</p>
+            <p class="mt5">등록 완료 시 즉시 지급!</p>
+            <p class="mt13"><a href="#" class="link_style">자세히보기></a></p>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //Layer popup : 페이백 : otwojob-1400 -->
+
+<!-- layer popup : otwojob-1455 -->
+<div class="pop_layer" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer lucky7">
+        <div class="lucky7_cont">
+            <p class="lucky7_img01"><img src="/image/mobile/popup/lucky7_img01.png"></p>
+            <p class="lucky7_text01">오투잡 가족 7일째를 기념하여<br><em>럭키세븐 할인쿠폰</em>이 발급되었습니다.</p>
+            <p class="lucky7_img02"><img src="/image/mobile/popup/lucky7_img02.png"></p>
+            <p class="lucky7_text02">앞으로도 회원님의 무한한 사랑을 기대하며,<br>오투잡이 행운의 쿠폰을 쏩니다.</p>
+            <p class="lucky7_btn"><a href="#">쿠폰 확인 ＞</a></p>
+        </div>
+        <button type="button" class="lucky7_closer">닫기</button>
+    </div>
+</div>
+<!-- layer popup : otwojob-1455 -->
+
+<!-- layer popup : otwojob-1455 -->
+<div class="pop_layer" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer secret">
+        <div class="secret_cont">
+            <p class="secret_text01">쉿! <span>정영환정영환정영환환환</span>님께<br><em>시크릿 할인쿠폰</em>이 발급되었습니다.</p>
+            <p class="secret_img01"><img src="/image/mobile/popup/secret_img02.png"></p>
+            <p class="secret_text02">아직도 구매를 망설인다면<br>이번이 할인받아 구매할 기회!</p>
+            <p class="secret_btn"><a href="#">쿠폰 확인 ＞</a></p>
+        </div>
+        <button type="button" class="secret_closer">닫기</button>
+    </div>
+</div>
+<!-- layer popup : otwojob-1455 -->
+
+<!-- layer popup : kakao api otwojob-1518 -->
+<div class="pop_layer" id="kakao_layer" style="display:none">
+    <div class="dimm"></div>
+
+    <div class="in_layer">
+       11111
+    </div>
+</div>
+<!-- layer popup : kakao api -->
+
+<!-- layer popup : otwojob-1455 -->
+<div class="pop_layer" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer secret">
+        <div class="secret_cont">
+            <p class="secret_text01">쉿! <span>정영환정영환정영환환환</span>님께<br><em>할인쿠폰</em>이 발급되었습니다.</p>
+            <p class="secret_img01"><img src="/image/mobile/popup/coupon_1000.png"></p>
+            <p class="secret_text02">아직도 구매를 망설인다면<br>이번이 할인받아 구매할 기회!</p>
+            <p class="secret_btn"><a href="#">쿠폰 확인 ＞</a></p>
+        </div>
+        <button type="button" class="secret_closer">닫기</button>
+    </div>
+</div>
+<!-- layer popup : otwojob-1455 -->
+
+<!-- pop_layer : 나의 제안내용 보기-->
+<div class="pop_layer" id="my_pop">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">나의 제안내용 보기</h2>
+        <div class="layer_cont sizetype">
+            <button type="button" class="closer" >닫기</button>
+            <!-- list_type02 -->
+            <div class="list_type02 no_top">
+                <div class="item_wrap popup_con">
+                    <!-- item -->
+                    <div class="item first">
+                        <div class="in_wrap">
+                            <div class="head">
+                                <p class="status ing">요청중</p>
+                                <p class="regist_day">2016.01.19 <em class="ico">종료</em></p>
+                            </div>
+                            <h4 class="tit">단순 이미지 수정 및 제작해 드려요</h4>
+                            <div class="info_wrap">
+                                <p class="price"><span class="span_wrap"><img src="../image/mobile/index/ico_info1.png" alt=""><span class="num">190,000</span>원</span></p>
+                                <p class="remain_day"><span class="span_wrap"><img src="../image/mobile/index/ico_info2.png" alt="">20일</span></p>
+                            </div>
+                            <div class="details">
+                                <p class="comment">
+                                    2016년 신설회사a로 건물을 전문관리하여 양호한 상태로 안전, 청결하게 유지해 드리는 서비스를 제공하고 있습니다.<br>
+                                    <br>
+                                    상징적 의미: 청결, 안전<br>
+                                    로고컨셉: 그린, 블루, 청녹색계열 선호
+                                </p>
+                                <div class="meta_info">
+                                    <span>파일형식 : docx</span>
+                                    <span>언어 : 영어</span>
+                                    <span>번역 : 외 -> 한</span>
+                                </div>
+                                <div class="attached" >
+                                    <p class="line1">첨부파일 <span class="n">3개</span> (35.2KB)</p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">01_참고디자인.jpg</a></p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">02_참고디자인2.jpg</a></p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">03_참고디자인3.jpg</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //item -->
+                </div>
+            </div>
+            <!-- //list_type02 -->
+        </div>
+    </div>
+</div>
+
+<div class="pop_layer buy_promotion" id="buy_promotion_popup" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer promotion">
+        <h1>아직,구매결정 못하셨나요?</h1>
+        <h3>가격과 시간부담을 덜어드리겠습니다.</h3>
+        <button class="down_coupon"><img src="/image/mobile/temp/coupon-link.png"></button>
+        <button class="link_orderjob"><img src="/image/mobile/temp/orderjob-link.png"></button>
+        <div class="btn_wrap">
+            <button type="button" onclick="setPopupCookie('buy_promotion_m'); OTWOJOB.layerClose();">오늘 하루 열지 않기</button>
+            <button type="button" onclick="OTWOJOB.layerClose()">닫기</button>
+        </div>
+    </div>
+</div>
+
+<!-- 톡톡 목록페이지. 판매회원 전환후 최초 접속시-->
+<div class="pop_layer" id="mode_change_layer" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer">
+        <div class="dimm"></div>
+        <div class="in_layer width01">
+            <h2 class="tit">톡톡 화면 변경 안내</h2>
+            <div class="layer_cont image_layer">
+                <img src="/image/mobile/temp/symbol-sell-popup.png" class="mode_change_image"><br>
+                판매회원이 되신 것을 축하합니다.<br>
+                톡톡 화면 기본값이 판매 톡톡으로
+                변경됩니다.
+                <button class="wide_layer_close_btn" onclick="OTWOJOB.layerClose()">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //pop_layer -->
+
+<div class="pop_layer" id="orderjob_fee_layer" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer noPadding">
+        <div class="layer_cont image_layer">
+            <button class="close_popup" type="button" onclick="closePromotionBanner('orderjob_fee_layer')"><img src="/image/mobile/common/btn-close-18-px.png"></button>
+            <img src="/image/mobile/temp/orderjob-fee-popup.png" class="orderjob_fee_image"><br>
+            <button class="wide_event_link" type="button">이벤트 자세히 보기<img class="link_arrow" src="/image/mobile/ico/ic-arrow-right-8-px.png"></button>
+        </div>
+    </div>
+</div>
+
+<div class="pop_layer" id="uncertified_banner" style="display:none">
+    <div class="dimm"></div>
+    <div class="in_layer transparent">
+        <div class="layer_cont image_layer">
+            <a href="javascript:void(0)"><img src="/image/mobile/temp/uncertified_banner.png" class="uncertified_banner_image"></a>
+        </div>
+    </div>
+</div>
+
+<div class="pop_layer shipping_information_layer">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <h2 class="tit">배송정보 입력</h2>
+        <div class="layer_cont">
+            <label>발송하신 상품의 배송정보를 입력해주세요.</label>
+            <div class="write_type01">
+                <div class="inform">
+                    <label>택배사</label>
+                    <select class="select_inform">
+                        <option>선택</option>
+                        <option>CJ대한통운</option>
+                        <option>한진택배</option>
+                    </select>
+                </div>
+                <div class="inform direct_input">
+                    <label>&nbsp;</label>
+                    <input type="text" class="text_inform" placeholder="택배사를 입력해주세요">
+                </div>
+                <div class="inform">
+                    <label>송장번호</label>
+                    <input type="text" class="text_inform">
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm" onclick="$('.shipping_information_layer').hide();">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pop_layer schedule_calendar_setting">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <div class="layer_cont">
+            <div class="full_calendar_inline"></div>
+            <div class="schedule_comment">
+                <span>
+                    <p class="today">오늘 날짜</p>
+                    <p class="holiday">휴가날짜</p>
+                    <p class="disabled">응대불가능 날짜</p>
+                </span>
+                판매자는 응대 불가능 날짜와 휴가를 설정할 수 있습니다.
+                판매자가 설정한 응대 불가능, 휴가 날짜를 참고하여 주문해 주세요.
+            </div>
+        </div>
+        <div class="btn_wrap">
+            <button type="button" class="btn_type btn_type01" onclick="$('.schedule_calendar_setting').hide();">닫기</button>
+        </div>
+    </div>
+</div>
+
+<div class="overlay_pop_layer full_image_layer">
+    <button class="btn_close"></button>
+    <div class="layer_body">
+        <img class="main_full_image full" src="//images.otwojob.com/attached/s/v/z/svzrDMcv8QHqP58.png/o2j/resize/500>">
+    </div>
+</div>
+
+
+<!-- full_layer_pop : 예약 메시지 -->
+<section class="full_layer_pop msg_reservation">
+    <div class="layer_box">
+        <div class="tit_area">
+            <p>예약 메시지<span>예약 메시지를 작성하거나 목록을 확인할 수 있어요.</span></p>
+        </div>
+        <div class="tab_area">
+            <button class="selected" onclick="$('.msg_reservation .cont_area').hide(); $('.msg_reservation button').removeClass('selected'); $(this).addClass('selected'); $('.msg_reservation .cont_area').eq(0).show();">예약 메시지 작성</button>
+            <button onclick="$('.msg_reservation .cont_area').hide(); $('.msg_reservation button').removeClass('selected'); $(this).addClass('selected');  $('.msg_reservation .cont_area').eq(1).show();">메시지 예약 목록</button>
+        </div>
+        <div class="cont_area scrollbar-inner">
+            <section class="entering_box">
+                <div class="make_input">
+                    <label>받는사람</label>
+                    <div class="inform_type01 seller_info">
+                        <span class="photo">
+                            <span>
+                                <img class="featured-image" src="//images.otwojob.com/profile/4/b/2/4b28ClauHi9DFQs.png/o2j/resize/28>" alt="rnrchfla" title="rnrchfla">
+                            </span>
+                        </span>
+                        <span class="name">
+                            <a href="javascript:void(0)" target="_blank">포선생</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="make_input">
+                    <label>발송일시
+                        <span>현재 기준으로 30분 이후 발송건만 예약전송 가능</span>
+                    </label>
+                    <div class="inform_type01">
+                        <input type="text" class="input_calendar with_week only_after" placeholder="2019-03-07 (수)">
+                        <div class="select_type01 selectbox">
+                            <label for="sel01">00시</label>
+                            <select name="" id="sel01" title="할인쿠폰">
+                                <option>00시</option>
+                                <option>01시</option>
+                                <option>02시</option>
+                                <option>03시</option>
+                                <option>04시</option>
+                                <option>05시</option>
+                                <option>06시</option>
+                                <option>07시</option>
+                                <option>08시</option>
+                                <option>09시</option>
+                                <option>10시</option>
+                                <option>11시</option>
+                                <option>12시</option>
+                                <option>13시</option>
+                                <option>14시</option>
+                                <option>15시</option>
+                                <option>16시</option>
+                                <option>17시</option>
+                                <option>18시</option>
+                                <option>19시</option>
+                                <option>20시</option>
+                                <option>21시</option>
+                                <option>22시</option>
+                                <option>23시</option>
+                            </select>
+                        </div>
+                        <div class="select_type01 selectbox last">
+                            <label for="sel02">00시</label>
+                            <select name="" id="sel02" title="할인쿠폰">
+                                <option>00시</option>
+                                <option>01시</option>
+                                <option>02시</option>
+                                <option>03시</option>
+                                <option>04시</option>
+                                <option>05시</option>
+                                <option>06시</option>
+                                <option>07시</option>
+                                <option>08시</option>
+                                <option>09시</option>
+                                <option>10시</option>
+                                <option>11시</option>
+                                <option>12시</option>
+                                <option>13시</option>
+                                <option>14시</option>
+                                <option>15시</option>
+                                <option>16시</option>
+                                <option>17시</option>
+                                <option>18시</option>
+                                <option>19시</option>
+                                <option>20시</option>
+                                <option>21시</option>
+                                <option>22시</option>
+                                <option>23시</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="make_input">
+                    <label>발송내용</label>
+                    <div class="inform_type01">
+                        <textarea class="textarea_edit" placeholder="메세지 내용을 입력해 주세요"></textarea>
+                    </div>
+                </div>
+                <div class="make_input">
+                    <label>파일 첨부<span>최대 5개까지 가능</span></label>
+                    <div class="inform_type01">
+                        <div class="uploaded_file">
+                            로고파일 최종 ai
+                            <span>21KB</span>
+                            <button class="remove_file"></button>
+                        </div>
+                        <div class="uploaded_file">
+                            로고파일 최종 ai 로고파일 최종 ai 로고파일 최종 ai 로고파일 최종 ai 로고파일 최종 ai.png
+                            <span>21KB</span>
+                            <button class="remove_file"></button>
+                        </div>
+
+                        <div class="upload_file_block" id="fileupload-list"></div>
+                        <div id="container_" class="container">
+                            <div class="progress_cancel_center">
+                                <p class="progress_tit">파일 전송 중</p>
+                                <button type="button">전송취소</button>
+                            </div>
+                            <div id="o_1bqh29kmk1ip11oho1k681eml8sua" class="row">
+                                <div class="file_info">
+                                    <div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+                                    <div class="col-sm-1">29.4 MB</div>
+                                </div>
+                                <div class="progress_box">
+                                    <div class="progress">
+                                        <div role="progressbar" class="progress-bar progress-bar-info" style="width: 30%;"></div> <!-- class="progress-bar-striped" 혹은 class="progress-bar-warning" 추가 시 전송 오류 색상 노출됨 -->
+                                    </div>
+                                    <p class="progress_control"><button type="button"><img src="/image/pc/message/ic_puse.png" alt="전송멈춤"></button></p>
+                                </div>
+                            </div>
+                            <div id="o_1bqh29kmk1ip11oho1k681eml8sua1" class="row danger">
+                                <div class="file_info">
+                                    <div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+                                    <div class="col-sm-1">29.4 MB</div>
+                                </div>
+                                <div class="progress_box">
+                                    <div class="progress">
+                                        <div role="progressbar" class="progress-bar progress-bar-info" style="width: 30%;"></div> <!-- class="progress-bar-striped" 혹은 class="progress-bar-warning" 추가 시 전송 오류 색상 노출됨 -->
+                                    </div>
+                                    <p class="progress_control"><button type="button"><img src="/image/pc/message/ic_replay.png" alt="재전송"></button></p>
+                                </div>
+                            </div>
+                            <div id="o_1bqh29kmk1ip11oho1k681eml8sua2" class="row">
+                                <div class="file_info">
+                                    <div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+                                    <div class="col-sm-1">29.4 MB</div>
+                                </div>
+                            </div>
+                            <div id="uploadList"></div>
+                        </div>
+                        <div class="file_upload">
+                            <button class="plus"><img src="/image/pc/orderjob/ic-add-16-px.png">파일추가</button>
+                            <div class="MultiFile-wrap" id="fileupload">
+                                <input type="file" id="fileupload" name="files" multiple="" class="MultiFile-applied" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="make_input last">
+                    <div class="input_check block">
+                        <input type="checkbox" id="deli_completed" title="배송 완료 처리하기" />
+                        <label for="deli_completed">배송 완료 처리하기</label>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer_area">
+                <button>내용 초기화</button>
+                <button class="submit" disabled>예약하기</button>
+            </div>
+            <span class="comment">메시지 발송 시간은 네트워크 및 서버 상황에 따라 예약 발송 시간과 다소 차이가 있을 수 있습니다.</span>
+        </div>
+        <div class="cont_area scrollbar-inner"  style="display: none;">
+            <div class="">
+                <ul class="com_pad msg_item_list">
+                    <li>
+                        <div class="top_area">
+                            <p class="state send_scheduled"></p> <!-- 진행중 : progress / 접수대기 : waiting / 늦은배송 : delay / 거부됨 : deny / 취소요청 : cancel -->
+                            <p class="short_date">
+                                2019.02.06 09:00
+                            </p>
+                        </div>
+                        <dl>
+                            <a href="javascript:void(0)" class="toggle_message" onclick="toggleMessage(this)">
+                                로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는 로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는
+                            </a>
+                        </dl>
+                        <div class="btn_area_s">
+                            <p><button type="button" class="full">예약취소</button></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="top_area">
+                            <p class="state send_scheduled"></p> <!-- 진행중 : progress / 접수대기 : waiting / 늦은배송 : delay / 거부됨 : deny / 취소요청 : cancel -->
+                            <p class="short_date">
+                                2019.02.06 09:00
+                            </p>
+                        </div>
+                        <dl>
+                            <a href="javascript:void(0)" class="toggle_message" onclick="toggleMessage(this)">
+                                로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는 로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는
+                            </a>
+                            <span class="file_num">첨부파일 8종</span>
+                            <ul class="file_list">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </dl>
+                        <div class="btn_area_s">
+                            <p><button type="button" class="full">예약취소</button></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="top_area">
+                            <p class="state send_scheduled"></p> <!-- 진행중 : progress / 접수대기 : waiting / 늦은배송 : delay / 거부됨 : deny / 취소요청 : cancel -->
+                            <p class="short_date">
+                                2019.02.06 09:00
+                            </p>
+                        </div>
+                        <dl>
+                            <a href="javascript:void(0)" class="toggle_message" onclick="toggleMessage(this)">
+                                로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는 로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는
+                            </a>
+                            <span class="file_num">첨부파일 4종</span>
+                            <ul class="file_list">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </dl>
+                        <div class="btn_area_s">
+                            <p><button type="button" class="full">예약취소</button></p>
+                        </div>
+                    </li>
+
+                    <li class="disabled">
+                        <div class="top_area">
+                            <p class="state send_scheduled"></p> <!-- 진행중 : progress / 접수대기 : waiting / 늦은배송 : delay / 거부됨 : deny / 취소요청 : cancel -->
+                            <p class="short_date">
+                                2019.02.06 09:00
+                            </p>
+                        </div>
+                        <dl>
+                            <a href="javascript:void(0)" class="toggle_message" onclick="toggleMessage(this)">
+                                로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는 로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는로고와 명함 시안 2종 전달 드립니다. 시안 A의 경우 고객님의 요청에 따른 컨셉으로 진행되었고 컨셉 B는 전문성을 강조되는
+                            </a>
+                            <span class="file_num">첨부파일 10종</span>
+                            <ul class="file_list">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_designmockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        mockup_for_superman_final_design.zip
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        슈퍼맨 로고 디자인 최종.jpg
+                                        <span>123kb</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </dl>
+                    </li>
+                </ul>
+                <button class="more_list">더 보기<img src="/image/mobile/orderjob/ic-arrow-down-16-px.png"></button>
+                <span class="footer_comment">발송완료된 메시지는 최대 6개월까지 보관됩니다. </span>
+            </div>
+        </div>
+        <div class="cont_area" style="display: none;">
+            <div class="empty_list">
+                예약 메시지가 없습니다.
+            </div>
+        </div>
+        <p class="btn_msg_close"><button type="button" onclick="commmLayer.close('msg_reservation')">닫기</button></p>
+    </div>
+</section>
+
+
+<section class="pop_layer ship_information_layer">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <div class="tit">배송조회</div>
+        <div class="layer_cont">
+            <div class="com_pad msg_item_list border_b">
+                <dl>
+                    <dt><img src="//images.otwojob.com/product/W/F/h/WFhJfw37SpmzSd0.jpg/o2j/resize/54x40"></dt>
+                    <dd>
+                        <p class="tit"><strong>[번역]</strong> 리뉴얼 EVENT 좋아요/조회수/팔로워/리뉴얼 EVENT 좋아요/조회수/팔로워/</p>
+                        <p class="current"><span class="discount">30%</span>24,000<em>원~</em></p>
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="empty_msg" style="display: none;">
+                정보를 불러올 수 없습니다.<br>
+                잠시 후 다시 시도해 주세요.<br>
+                <div class="etc_inform">
+                    <a href="javascript:void(0)">새로고침</a><br>
+                    #한진택배# 고객센터 :1588-0011
+                </div>
+            </div>
+
+            <div class="data_list">
+                <table class="detail_table" >
+                    <colgroup>
+                        <col width="33%">
+                        <col width="*">
+                        <col width="33%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>택배사</th>
+                        <th>송장번호</th>
+                        <th>대표번호</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>한진택배</td>
+                        <td>504726812741</td>
+                        <td>010-1234-1234</td>
+                    </tr>
+                    <tr>
+                        <td>한진택배</td>
+                        <td>504726812741</td>
+                        <td>010-1234-1234</td>
+                    </tr>
+                    <tr>
+                        <td>한진택배</td>
+                        <td>504726812741</td>
+                        <td>010-1234-1234</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="detail_table"  >
+                    <colgroup>
+                        <col width="25%">
+                        <col width="22%">
+                        <col width="18%">
+                        <col width="*">
+                        <col width="13%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>위치</th>
+                        <th>배송상태</th>
+                        <th>연락처</th>
+                        <th>기타</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2018 10.02<br>15:28</td>
+                        <td>북가좌(대)</td>
+                        <td>배송완료</td>
+                        <td>010-1234-1234</td>
+                        <td>-</td>
+                    </tr>
+                    </tbody>
+                </table>he
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm" onclick="$('.ship_information_layer').hide();">닫기</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="pop_layer account_regist">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <button class="close_btn" onclick="layerClose('account_regist')"></button>
+        <h2 class="tit">계좌번호 정보 입력 </h2>
+        <div class="layer_cont">
+            <div class="write_type01">
+                <div class="inform">
+                    <label>예금주</label>
+                    <input type="text" class="text_inform" placeholder="예금주명을 입력해 주세요">
+                </div>
+                <div class="inform">
+                    <label>은행명</label>
+                    <select class="with_placeholder" required>
+                        <option value="" disabled selected>은행을 선택해 주세요</option> <!-- placeholder-->
+                        <option >기업은행</option>
+                        <option >신한은행</option>
+                        <option >국민은행</option>
+                        <option >하나은행</option>
+                        <option >제일은행</option>
+                    </select>
+                </div>
+                <div class="inform">
+                    <label>계좌번호</label>
+                    <input type="text" class="text_inform type02" placeholder="(-) 없이 입력해 주세요">
+                    <button class="auth">인증하기</button>
+                </div>
+                <span class="info_msg error">계좌 정보를 다시 한 번 확인해주세요. </span>
+                <!--<span class="info_msg info">인증이 완료되었습니다. </span>-->
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm" onclick="layerClose('account_regist')">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="floating_overlay_box open_msg_reservation">
+    <div class="layer_box">
+        <a href="javascript:void(0)"><img src="/image/mobile/temp/popup-msg-reservation.gif"></a>
+        <div class="btn_area">
+            <button type="button" class="close_today" onclick="closeEventBanner('open_msg_reservation')">다시 보지 않기</button>
+            <button type="button" class="close_layer" onclick="$('.open_msg_reservation').hide()">닫기</button>
+        </div>
+    </div>
+</section>
+
+<section class="floating_overlay_box auth_floating">
+    <div class="layer_box">
+        <a href="javascript:void(0);" class="btn_close" onclick="closeEventBanner('auth_floating')">
+            <img src="/image/mobile/common/btn-close-white-16-px.png" alt="팝업닫기" />
+        </a>
+        <img class="main_image" src="/image/mobile/temp/auth-popup.png">
+        <a href="javascript:void(0)" class="direct_link">본인 인증하기</a>
+    </div>
+</section>
+
+
+<script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    //header
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout12/header.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#header').html(data);
+               }
+           });
+    //search_wrap
+    $.ajax({
+        type: 'GET',
+        url: '/m/pub-ia/template/layout12/search_wrap.html',
+        dataType: 'html',
+        cache: false,
+        async: false,
+        success: function (data) {
+            $('.search_wrap').html(data);
+        }
+    });
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout12/all_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.all_menu').html(data);
+               }
+           });
+    //gnb
+    $.ajax({
+        type: 'GET',
+        url: '/m/pub-ia/template/layout12/gnb.html',
+        dataType: 'html',
+        cache: false,
+        async: false,
+        success: function (data) {
+            $('#gnb').html(data);
+        }
+    });
+    //content
+    $.ajax({
+               type: 'GET',
+               url: '/m/'+getParameterByName('page'),
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#content').html(data);
+               }
+           });
+    //aside_menu
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout12/aside_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.aside_menu').html(data);
+               }
+           });
+    //footer
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout12/footer.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#footer').html(data);
+               }
+           });
+</script>
+    <script type="text/javascript" src="/js/mobile/otwojob.util.js"></script>
+    <script type="text/javascript" src="/js/mobile/otwojob.app.js"></script>
+    <script type="text/javascript" src="/js/mobile/otwojob.main.js"></script>
+    <script type="text/javascript" src="/js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

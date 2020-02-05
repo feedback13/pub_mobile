@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/style.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header" id="header">
+	<h1 class="blind">OTWOJOB</h1>
+	<h2>재능등록</h2>
+	<button type="button" class="btn_back">뒤로가기</button>
+</header>
+<!-- //header -->
+
+<!-- content -->
+<section class="content" id="content">
+
+	<!-- 컨텐츠 시작 -->
+	<div class="bg_color01">
+		<!-- tab_type02 -->
+		<div class="tab_type02">
+			<ol class="list">
+				<li class="on">기본정보입력</li>
+				<li>상세내용입력</li>
+			</ol>
+		</div>
+		<!-- //tab_type02 -->
+
+		<div class="inner_container">
+
+			<!-- basic_info_form -->
+			<div class="basic_info_form">
+				<h3 class="blind">기본정보입력</h3>
+
+				<h4 class="blind">이미지 및 제목 입력</h4>
+
+				<p class="text_type01"><span class="required">필수입력 정보입니다.</span></p>
+				<fieldset class="form_join">
+					<legend class="blind"></legend>
+
+					<div class="write first wide">
+						<div class="image_input_wrap">
+							<div class="user_image_wrap"><!-- 이미지 업로드 후 -->
+								<div class="image">
+									<img src="../image/mobile/temp/@user_image.png" alt="">
+								</div>
+								<button type="button" class="del">삭제</button>
+							</div>
+						</div>
+						<p class="text_type02">대표이미지는 480*372에 맞게 올려주세요.</p>
+						<p class="text_type02">Gif파일의 경우 업로드가 제한됩니다.</p>
+					</div>
+					<div class="write">
+						<div class="input_wrap wide required">
+							<input type="text" title="제목" placeholder="제목입력">
+						</div>
+					</div>
+					<div class="write">
+						<div class="input_wrap half_size required">
+							<select class="full_width">
+								<option>카테고리 1차</option>
+							</select>
+						</div>
+						<div class="input_wrap half_size last">
+							<select class="full_width">
+								<option>카테고리 2차</option>
+							</select>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- tit_wrap -->
+				<div class="tit_wrap type03">
+					<h4 class="sec_title">기본가격 및 옵션 설정</h4>
+				</div>
+				<!-- //tit_wrap -->
+
+				<fieldset class="form_join">
+					<legend class="blind"></legend>
+
+					<div class="write first">
+						<div class="input_wrap wide required">
+							<div class="input_c">
+								<div class="input_w">
+									<input type="text" class="align_right" title="기본금액" placeholder="기본금액(VAT 포함)">
+								</div>
+								<p class="unit">원</p>
+							</div>
+						</div>
+					</div>
+					<div class="write">
+						<div class="input_wrap wide required last">
+							<select class="full_width last">
+								<option>기본 작업기간 선택</option>
+								<option>기본 작업기간 : 1일</option>
+							</select>
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="form_join">
+					<legend class="blind"></legend>
+					<div class="write first">
+						<div class="input_wrap divide66 first">
+							<div class="input_c borderRight">
+								<div class="input_w">
+									<input type="text" class="align_right" title="빠른작업 추가 금액" placeholder="빠른작업 추가 금액">
+								</div>
+								<p class="unit">원</p>
+							</div>
+						</div>
+						<div class="input_wrap divide34 last">
+							<select class="full_width last">
+								<option>작업기간</option>
+							</select>
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="form_join">
+					<legend class="blind"></legend>
+					<div class="write first">
+						<div class="input_wrap divide90">
+							<input type="text" title="옵션명" placeholder="옵션명 입력 (최대 40자)">
+						</div>
+						<div class="input_wrap divide10">
+							<button type="button" class="btn_del"></button>
+						</div>
+					</div>
+					<div class="write">
+						<div class="input_wrap divide66 first">
+							<div class="input_c borderRight">
+								<div class="input_w">
+									<input type="text" class="align_right" title="옵션 추가 금액" placeholder="옵션 추가 금액">
+								</div>
+								<p class="unit">원</p>
+							</div>
+						</div>
+						<div class="input_wrap divide34 last">
+							<select class="full_width last">
+								<option>작업기간</option>
+							</select>
+						</div>
+					</div>
+					<div class="write type01">
+						<div class="add_option">
+							<button type="button"><img src="../image/mobile/detail/ico_plus.png" width="12" alt=""> 옵션추가</button>
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="form_join">
+					<legend class="blind"></legend>
+					<div class="write first transfer_charge">
+						<div class="input_wrap divide66 first">
+							<div class="input_c borderRight">
+								<label for="" class="i_tit">배송비</label>
+								<div class="input_w">
+									<input type="text" class="align_right place_right" title="배송비" placeholder="0">
+								</div>
+								<p class="unit">원</p>
+							</div>
+						</div>
+						<div class="input_wrap divide34 last">
+							<div class="checkbox_wrap">
+								<label for="opt1" class="form_label">
+									<input type="checkbox" id="opt1" title="">
+									<span class="txt">없음</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- tit_wrap -->
+				<div class="tit_wrap type03">
+					<h4 class="sec_title">판매규정</h4>
+				</div>
+				<!-- //tit_wrap -->
+
+				<fieldset class="form_join">
+					<legend class="blind"></legend>
+					<div class="write">
+						<div class="input_wrap wide">
+							<p class="text_type02 required required01"><label for="purchase01">구매자 지시사항<span class="small">(결제 후 필요한 자료 등 지시항을 입력)</span></label></p>
+							<div class="textarea_wrap">
+								<textarea cols="" rows="3" id="purchase01">
+								</textarea>
+							</div>
+						</div>
+					</div>
+					<div class="write">
+						<div class="input_wrap wide">
+							<p class="text_type02 required required01"><label for="purchase02">A/S규정<span class="small">(구매자가 수정, A/S 등을 요청할 경웨 대비한 규정 입력)</span></label></p>
+							<div class="textarea_wrap">
+								<textarea rows="3" id="purchase02">
+								</textarea>
+							</div>
+						</div>
+					</div>
+					<div class="write">
+						<div class="input_wrap wide">
+							<p class="text_type02 required required01"><label for="purchase03">환불규정<span class="small">(환불, 취소 등을 요청할 경우에 대한 규정 입력)</span></label></p>
+							<div class="textarea_wrap">
+								<textarea rows="3" id="purchase03">
+								</textarea>
+							</div>
+						</div>
+					</div>
+					<div class="write">
+						<div class="input_wrap wide">
+							<p class="text_type02 required01"><label for="tags">태그<span class="small">(아이템과 관련된 키워드를 공백으로 구분하여 입력하시면 검색 시 노출에 유리, 예) 포토샵 사진)</span></label></p>
+							<div class="textarea_wrap">
+								<textarea rows="2" id="tags">
+								</textarea>
+							</div>
+						</div>
+					</div>
+					<div class="write">
+						<div class="input_wrap wide required">
+							<input type="text" title="문의전화" placeholder="문의전화(결제를 완료한 구매자만 확인가능)">
+						</div>
+					</div>
+				</fieldset>
+
+				<div class="alarm_txt01">
+					<h3 class="a_tit">알림</h3>
+					<p class="desc">등록한 재능은 관리자의 승인절차를 거쳐 정상적으로 승인이 완료된 재능만 오투잡에 노출됩니다.<br>등록제한 키워드가 있을 경우 승인이 되지 않을 수 있습니다.</p>
+					<p class="go_link"><a href="#">재능 가이드 보기 &gt;</a></p>
+				</div>
+
+				<div class="btn_wrap">
+					<div class="btn_cover_full">
+						<button type="button" class="btn_type btn_type02">저장 후 다음</button>
+					</div>
+				</div>
+
+			</div>
+			<!-- //basic_info_form -->
+
+		</div>
+	</div>
+	<!-- //컨텐츠 끝 -->
+
+</section>
+<!-- //content -->
+
+<!-- footer -->
+<footer class="footer" id="footer">
+	<div class="inner_container">
+		<ul class="utils">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">사업자정보확인</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">개인정보처리방침</a></li>
+		</ul>
+		<button type="button" class="more_infos"><span class="bul">(주)사람인HR 사업자정보</span></button>
+		<div class="infos_txt">
+			<p class="line">㈜ 사람인 | 대표 : 김용환 | 대표전화 : 09-2025-2707</p>
+			<p class="line">주소 : 서울 구로구 디지털로34길 43  코오롱싸이언스밸리 1차 201호 (구로동)</p>
+			<p class="line">개인정보보호 책임자 : 강봉관 | 사업자등록번호 : 113-86—0917</p>
+			<p class="line"> 통신판매업 : 제 2339호 | 직업정보제공사업 : 서울 관악 제 2005-6호</p>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

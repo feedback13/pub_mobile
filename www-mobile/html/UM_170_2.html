@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/style.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/short_event.css"> <!-- [dev] 이벤트 페이지에만 발생 -->
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header" id="header">
+	<h1 class="blind">OTWOJOB</h1>
+	<h2>새 단장 기념 이벤트</h2>
+	<button type="button" class="btn_back">뒤로가기</button>
+	<button type="button" class="btn_home">홈</button>
+</header>
+<!-- //header -->
+
+<!-- content -->
+<section class="content" id="content">
+	<div id="event_170405">
+		<!-- 컨텐츠 시작 -->
+		<div class="event_tab">
+			<ul class="steptab on2">
+				<li class="soon1"><a href="#"><i></i>이벤트 1탄</a></li>
+				<li class="soon2"><a href="#"><i></i>이벤트 2탄</a></li>
+				<li class="soon3"><a href="#"><i></i>coming soon</a></li>
+			</ul>
+		</div>
+		<div class="event1_area" id="flatarea1">
+			<div class="inner">
+				<img src="../image/mobile/event/20170405/event_tit1.jpg" alt="오투잡! 새단장 기념 이벤트 2탄 오투잡과 함께 매일매일 설레여봄 두근두근~ 하루에 한번씩 행운의 룰렛 돌리고 경품 받자! 3일 연속 출첵하면 보너스 기회까지!" class="tit" />
+			</div>
+		</div>
+
+		<div class="event3_area" id="flatarea2">
+			<div class="inner">
+				<dl>
+					<dt><em class="blind">event 01</em></dt>
+					<dd>
+						<p class="evt_tit">
+							매일매일 돌리자,<br>
+							<strong>도전!<i>행운의 룰렛</i></strong>
+						</p>
+						<p class="evt_txt">
+							매일매일 오투잡 홈페이지 방문하고!<br>
+							<strong>행운의 룰렛을 돌릴 수 있는 기회</strong>를 얻으세요!
+						</p>
+						<div class="evt_date">
+							<i>이벤트 기간</i> 2017.4.18(화) ~ 2017.4.27(목)
+						</div>
+					</dd>
+				</dl>
+
+				<p class="roulette_num"><span>룰렛기회</span><span class="number">1</span></p>
+				<div class="roulette_area">
+					<div class="roulette">
+						<div class="img"><img src="../../image/mobile/event/20170405/roulette_circle.png" id="roulette_base" alt="룰렛 돌림판"></div>
+						<a href="javascript:void(0);" onclick="rotationtest();" class="button_start"><img src="../../image/mobile/event/20170405/roulette_btn.png" alt="룰렛돌리기 START"></a>
+						<div class="pin">&nbsp;</div>
+					</div>
+				</div>
+				<script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/jQueryRotate.2.2.js"></script>
+				<script type="text/javascript">
+					// ajax를 통해 동적으로 페이지를 append 할때 append후에 호출됩니다.
+					// page onload 시에도 같이 사용됩니다.
+					var onMallPageLoaded = function () {
+
+						// 기존 onload 에서 수행하던 script 를 삽입합니다.
+						// brand 페이지의 dom 접근은 $("[selector]") 를 사용하는 대신 pageMaster.brand.find("[selector]") 와 같이 사용해주시고,
+						// mall 페이지는 pageMaster.mall 을 사용해 주십시요.
+
+						//예시.
+						//pageMaster.mall.find(".script_test").html("mall 로딩완료 스크립트 테스트");
+					}
+
+					var isAvail = true;
+					var rotationtest = function() {
+						if(isAvail) {
+							isAvail = false;
+							$(".hand").hide();
+							//pageMaster.mall.find(".button_start").attr("onclick", "return false;");
+							/*$.getJSON("/mall/event/roulette-proc.jsp", function(json) {
+							 if(json.result) {
+							 if(json.gift == 0) {
+							 // 물량 소진된 경우
+							 //showPopupLayer("/mall/popup/roulette-no.jsp", 540, 350);
+							 setTimeout("setAvail(true)", 1000 * 1);
+							 } else {*/
+							var duration = 5000;
+							var pieAngle = 360 * 10;
+							var angle = 0;
+							angle = (pieAngle - ((/*json.gift*/5 * 60) - 0));
+
+							$("#roulette_base").rotate({
+								duration: duration,
+								animateTo: angle,
+								callback: function () {
+									switch(5/*json.gift*/) {
+										case 2:
+										case 5:
+											// 포인트에 당첨된 경우
+											alert('당첨을 축하드립니다');
+											//showPopupLayer("/mall/popup/roulette-point.jsp?gift=" + json.gift, 540, 425);
+											break;
+										default:
+											// 쿠폰에 당첨된 경우
+											//showPopupLayer("/mall/popup/roulette-coupon.jsp?gift=" + json.gift, 540, 425);
+									}
+									setTimeout("setAvail(true)", 1000 * 1);
+								}
+							});
+							/*}
+							 } else {
+							 alert(json.msg);
+							 setTimeout("setAvail(true)", 1000 * 1);
+							 }
+							 });*/
+
+						} else {
+
+						}
+
+					}
+
+					function setAvail(b) {
+						isAvail = b;
+					}
+				</script>
+			</div>
+			<div class="roulette_guide"><img src="../../image/mobile/event/20170405/roulette_guide_170414.png" alt="이벤트 참여방법 01. 1일1회참여가능, 02 당첨여부 즉시확인, 03 당첨포인트는 참여 ID로 실시간 적립 경품은 회원정보상의 휴대폰번호로 5/8일 일괄발송 3일연속 룰렛을 돌린경우, 그 다음날 룰렛 기회가 한번 더! 주어집니다."></div>
+			<div class="roulette_tit"><img src="../../image/mobile/event/20170405/tit_roulette_situation.png" alt="나의 룰렛 참여 현황"></div>
+			<div class="roulette_situation">
+				<ul>
+					<li class="border_t border_l">
+						<p class="on">
+							<span class="roulette_date">4/18</span>
+							<span class="roulette_yn">완료</span> <!-- [dev] 참여 완료시 텍스트 변경 -->
+						</p>
+					</li>
+					<li class="border_t">
+						<p>
+							<span class="roulette_date">4/19</span>
+							<span class="roulette_yn">참여</span>
+						<p>
+					</li>
+					<li class="border_t">
+						<p>
+							<span class="roulette_date">4/20</span>
+							<span class="roulette_yn">참여</span>
+						</p>
+					</li>
+					<li class="border_t">
+						<p>
+							<span class="roulette_date">4/21</span>
+							<span class="roulette_yn">참여</span>
+						</p>
+					</li>
+					<li class="border_t">
+						<p>
+							<span class="roulette_date">4/22</span>
+							<span class="roulette_yn">참여</span>
+						</p>
+					</li>
+					<li class="border_l">
+						<p>
+							<span class="roulette_date">4/23</span>
+							<span class="roulette_yn">참여</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="roulette_date">4/24</span>
+							<span class="roulette_yn">참여</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="roulette_date">4/25</span>
+							<span class="roulette_yn">참여</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="roulette_date">4/26</span>
+							<span class="roulette_yn">참여</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span class="roulette_date">4/27</span>
+							<span class="roulette_yn">참여</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="event4_area">
+			<div class="inner">
+				<strong>꼭 확인하세요!</strong>
+				<ul>
+					<li><span class="bold_txt">본 이벤트는 「룰렛돌리기」버튼을 클릭하셔야 참여하실 수 있습니다.</span></li>
+					<li>룰렛기회는 1일 1회 발생되며, 참여하지 않은 경우 발생된 룰렛 기회는 누적되지 않고 사라집니다.</li>
+					<li>3일 연속 룰렛을 돌린 경우 추가 1회의 기회가 더 제공됩니다. 또한 추가 1회의 기회가 주어지고 나면 당일을 기준으로 3일 카운트가 다시 시작됩니다.</li>
+					<li>경품 당첨자에 한해 회원정보에 등록된 회원정보상의 휴대폰 번호로 경품이 발송되며 이벤트 응모 당시 회원정보상의 휴대폰 번호를 꼭  확인하시길 바랍니다. (회원정보 오류 및 미수정에 따른 경품 재발송은 되지 않습니다.)</li>
+					<li>기프트콘 발송대행을 위해 위탁업체인 (주)다우기술 도넛북 서비스에서 개인정보 위탁 처리합니다.(발송 후 지체 없이 파기)</li>
+					<li>본 이벤트에 부정한 방법으로 이용 시 당첨이 취소될 수 있습니다.
+					<li>본 이벤트는 내부 사정에 의해 변경될 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="event5_area" id="flatarea3">
+			<div class="inner">
+				<dl>
+					<dt><em class="blind">event 02</em></dt>
+					<dd>
+						<p class="evt_tit">
+							<em>오투잡 개편 소식을</em><br />
+							<strong><i>SNS공유</i>하고 선물 받자!</strong>
+						</p>
+						<p class="evt_txt">
+							오투잡을 소문 내자! <br />
+							<i>새로워진 오투잡을 공유하면</i> 추첨을 통해 푸짐한 경품을 드립니다.
+						</p>
+						<div class="evt_date">
+							<div class="area"><i>이벤트 기간</i> 2017.4.3(월) ~ 2017.5.3(수)&nbsp;</div>
+							<div class="area"><i>당첨자 발표</i> 2017.5.10(수) 사이트 내 발표</div>
+							<div class="area">
+								<i class="gift">경 품</i>
+								<ul>
+									<li>
+										<img src="../image/mobile/common/event_img1.png" alt="신세계 상품권 이미지" /><br />
+										신세계 상품권 <br /> 100,000원
+										<em>3 명</em>
+									</li>
+									<li>
+										<img src="../image/mobile/common/event_img2.png" alt="스타벅스 커피 이미지" /><br />
+										스타벅스 <br /> 아메리카노
+										<em>197 명</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<img src="../image/mobile/common/event_img3.png" alt="이벤트 참여방법 step1 소문내고싶은 SNS를 선택 하여 공유 step2 공유한 SNS 주소와 축하메시지 댓글 작성! step3 댓글등록 버튼 클릭하면 참여완료!" title="이벤트 참여방법" class="event_img3" />
+				<div class="share_info">
+					<h2>공유하고 댓글 이벤트 <strong>참여하기</strong></h2>
+					<div class="graybox">
+						<div class="btn_area">
+							<a href="#" class="btn_facebook"><em class="blind">페이스북</em></a>
+							<a href="#" class="btn_twitter"><em class="blind">트위터</em></a>
+							<a href="#" class="btn_blog"><em class="blind">네이버 블러그</em></a>
+						</div>
+						<div class="reply">
+							<div><textarea cols="10" rows="4" placeholder="SNS에 공유한 URL과 축하메시지를 남겨주세요."></textarea></div>
+							<span><i>0</i>/150자</span>
+							<button>댓글등록</button>
+						</div>
+					</div>
+					<div class="reply_list">
+						<p>댓글 <i>1,785</i></p>
+						<ul>
+							<li>
+								<span class="name">닉네임</span>
+								<p class="tit">내용내용내용내용내용</p>
+								<span>2017-04-01</span>
+							</li>
+							<li>
+								<span class="name">닉네임</span>
+								<p class="tit">내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+								<span>2017-04-01</span>
+							</li>
+							<li>
+								<span class="name">닉네임</span>
+								<p class="tit">내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+								<span>2017-04-01</span>
+							</li>
+						</ul>
+						<!-- paging -->
+						<div class="paging">
+							<a href="#none" class="prev"></a>
+							<span class="pg_num">
+								<a href="#none" class="on">1</a><!-- 선택된 페이지에 class="on" 추가-->
+								<a href="#none">2</a>
+								<a href="#none">3</a>
+								<a href="#none">4</a>
+								<a href="#none">5</a>
+							</span>
+							<a href="#none" class="next"></a>
+						</div>
+						<!-- //paging -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="event6_area">
+			<div class="inner">
+				<strong>꼭 확인하세요!</strong>
+				<ul>
+					<li>이벤트는 SNS공유 완료 후,「댓글등록」버튼을 클릭하셔야 참여하실 수 있습니다.</li>
+					<li>당첨자에 한해 회원정보에 등록된 회원정보상의 휴대폰 번호로 경품이 발송되며 이벤트 응모 당시 <br />
+					회원정보상의 휴대폰 번호를 꼭 확인하시길 바랍니다.(회원정보 오류 및 미수정에 따른 경품 재발송은 되지 않습니다.)</li>
+					<li>기프트콘 발송대행을 위해 위탁업체인 (주)다우기술 도넛북 서비스에서 개인정보 위탁 처리합니다.(발송 후 지체 없이 파기)</li>
+					<li>본 이벤트에 부정한 방법으로 이용 시 당첨이 취소될 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="aside_btn">
+			<a href="#flatarea2">룰렛이벤트</a>
+			<a href="#flatarea3">공유하기이벤트</a>
+		</div>
+		<!-- //컨텐츠 끝 -->
+	</div>
+
+</section>
+<!-- //content -->
+
+<div class="event_layer" style="display:block">
+	<div class="dimm"></div>
+	<div class="in_layer">
+		<h2 class="tit">당첨을 축하합니다</h2>
+        <button type="button" class="closer"></button>
+        <article class="layer_cont">
+            <div class="event_170405">
+                <p class="sub_title">[당첨내역]</p>
+                <p class="main_title">스타벅스 아메리카노<br>Tall size 기프트콘 1개</p>
+                <p class="main_cont">당첨된 경품은 5/8일 회원정보의<br>휴대폰번호로 발송됩니다.</p>
+                <p class="sub_cont">"확인" 버튼을 누르시면 경품 발송을 위해 (주)다우기술 도넛북 서비스에서 개인정보의 휴대폰번호를 위탁 처리하며 해당 정보는 경품 발송 후 지체 없이 파기됩니다.</p>
+                <p class="pop_btn_area"><button type="botton" class="pop_btn">확인</button></p>
+            </div>
+        </article>
+	</div>
+</div>
+
+<!-- footer -->
+<footer class="footer" id="footer">
+	<div class="inner_container">
+		<ul class="utils">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">사업자정보확인</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">개인정보처리방침</a></li>
+		</ul>
+		<button type="button" class="more_infos"><span class="bul">(주)사람인HR 사업자정보</span></button>
+		<div class="infos_txt">
+			<p class="line">㈜ 사람인 | 대표 : 김용환 | 대표전화 : 09-2025-2707</p>
+			<p class="line">주소 : 서울 구로구 디지털로34길 43  코오롱싸이언스밸리 1차 201호 (구로동)</p>
+			<p class="line">개인정보보호 책임자 : 강봉관 | 사업자등록번호 : 113-86—0917</p>
+			<p class="line"> 통신판매업 : 제 2339호 | 직업정보제공사업 : 서울 관악 제 2005-6호</p>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

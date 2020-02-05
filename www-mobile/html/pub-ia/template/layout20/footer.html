@@ -1,0 +1,141 @@
+<div class="message_foot">
+    <div class="comment_banner grey priority_2">
+        <button class="close_btn"></button>
+        <label>응대가능시간 10:00~20:30 (토/일요일 제외)</label>
+        <span>응대가능시간이 아닐 때는 응답이 지연될 수 있으며, 전화상담을 할 수 없습니다.</span>
+    </div>
+    <div class="comment_banner green priority_1">
+        <button class="close_btn"></button>
+        <label class="tel">IT 개발 전화상담 기능 오픈!</label>
+        <span>전화상담을 받지 않으시려면 <b>스케줄관리</b>에서 <b>전화상담</b> 기능을 꺼주세요. </span>
+        <a href="javascript:void(0)">기능 끄러 가기</a>
+    </div>
+
+    <div class="floating_main">
+        <a href="javascript:void(0)" class="orange">가격 제안</a>
+        <a href="javascript:void(0)" class="orange" onclick="layerPop.init('send_address_infomation', '')">연락처 전달</a>
+        <a href="javascript:void(0)" class="green tel">전화상담</a>
+    </div>
+
+    <div class="message_box " style="display:none;">
+        <div id="container_" class="container">
+            <div class="progress_cancel_center">
+                <p class="progress_tit">파일 전송 중</p>
+                <button type="button">전송취소</button>
+            </div>
+            <div id="o_1bqh29kmk1ip11oho1k681eml8sua" class="row">
+                <div class="file_info">
+                    <div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+                    <div class="col-sm-1">29.4 MB</div>
+                </div>
+                <div class="progress_box">
+                    <div class="progress">
+                        <div role="progressbar" class="progress-bar progress-bar-info" style="width: 30%;"></div> <!-- class="progress-bar-striped" 혹은 class="progress-bar-warning" 추가 시 전송 오류 색상 노출됨 -->
+                    </div>
+                    <p class="progress_control"><button type="button"><img src="/image/mobile/message/ic_puse.png" alt="전송멈춤"></button></p>
+                </div>
+            </div>
+            <div id="o_1bqh29kmk1ip11oho1k681eml8sua1" class="row">
+                <div class="file_info">
+                    <div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+                    <div class="col-sm-1">29.4 MB</div>
+                </div>
+                <div class="progress_box">
+                    <div class="progress">
+                        <div role="progressbar" class="progress-bar progress-bar-info" style="width: 30%;"></div> <!-- class="progress-bar-striped" 혹은 class="progress-bar-warning" 추가 시 전송 오류 색상 노출됨 -->
+                    </div>
+                    <p class="progress_control"><button type="button"><img src="/image/mobile/message/ic_replay.png" alt="재전송"></button></p>
+                </div>
+            </div>
+            <div id="o_1bqh29kmk1ip11oho1k681eml8sua2" class="row">
+                <div class="file_info">
+                    <div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+                    <div class="col-sm-1">29.4 MB</div>
+                </div>
+            </div>
+            <div id="uploadList"></div>
+        </div>
+    </div>
+
+    <div class="bottom_box" style="display:none;">
+        <a href="javascript:moveToBottomScroll()">
+            <img src="/image/mobile/etc/btn-bottom.png">
+        </a>
+    </div>
+
+    <div class="option_box" style="display:block;">
+        <div class="option_paging">
+            <!-- panels -->
+            <div >
+                <ul>
+                    <li><button type="button" class="ic_file" onclick="layerPop.init('msg_file_upload', '');">파일전송</button></li>
+                    <li><button type="button" class="ic_deliver" onclick="layerPop.init('msg_order_deliver', 'full');">주문배송</button></li>
+                    <li><button type="button" class="ic_pay" onclick="layerPop.init('msg_add_payment', 'full');">추가결제</button></li>
+                    <li><button type="button" class="ic_money" onclick="layerPop.init('msg_price_suggest', 'full');">가격제안</button></li>
+                    <li><button type="button" class="ic_extension" onclick="layerPop.init('msg_order_cancel', 'full');">기간연장</button></li>
+                    <li><button type="button" class="ic_cancle_order" onclick="layerPop.init('msg_order_cancel', 'full');">주문취소</button></li>
+                    <li><button type="button" class="ic_complain" onclick="layerPop.init('msg_report', '');">신고하기</button></li>
+                    <li><button type="button" class="ic_orderjob" onclick="layerPop.init('msg_report', '');">오더하기</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="option_paging_btns">
+            <button class="option_paging_btn" id="option_pagin_btn_0" onclick="optionBoxPaging.moveTo(0)" disabled>&nbsp;</button>
+            <button class="option_paging_btn" id="option_pagin_btn_1" onclick="optionBoxPaging.moveTo(1)">&nbsp;</button>
+        </div>
+    </div>
+
+    <div class="sticker_box">
+        <button class="close_box" onclick="$('.sticker_box').hide()"></button>
+        <img src="">
+    </div>
+    <div class="sticker_list">
+        <div class="scrollbar-inner">
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-01.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-04.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-05.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-06.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-07.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-10.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-13.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-14.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-15.png"></button>
+
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-01.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-04.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-05.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-06.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-07.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-10.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-13.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-14.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-15.png"></button>
+
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-01.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-04.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-05.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-06.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-07.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-10.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-13.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-14.png"></button>
+            <button type="button" class="sticker" onclick="setSticker(this)"><img src="/image/pc/sticker/sticker-01-15.png"></button>
+        </div>
+    </div>
+
+    <div class="message_write row02"> <!-- 글자 입력 sihft + enter 시 row02 추가 -->
+        <p class="btn_option"><button type="button" class="">옵션</button></p>
+        <div class="message_input">
+            <button class="sticker_btn" onclick="stickerBox.openList()"></button>
+            <p><textarea type="text" cols="5" rows="1" placeholder="메시지를 입력해 주세요."></textarea></p>
+        </div>
+        <p class="btn_send"><button type="button" class="">전송</button></p> <!-- [개발] 글자 입력 시 on 추가 -->
+    </div>
+</div>
+
+
+<!-- 검색 시 노출 -->
+<div class="message_search_controll">
+    <button type="button" class="btn_up">위로</button>
+    <button type="button" class="btn_down">아래로</button>
+</div>

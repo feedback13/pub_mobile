@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/style.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header" id="header">
+	<h1 class="blind">OTWOJOB</h1>
+	<h2>아이디 찾기</h2>
+	<button type="button" class="btn_back">뒤로가기</button>
+</header>
+<!-- //header -->
+
+<!-- content -->
+<section class="content" id="content">
+
+	<!-- 컨텐츠 시작 -->
+	<div class="bg_color01">
+		<div class="inner_container type02">
+			<p class="txt_msg no_top">오투잡에 등록되어 있는 회원정보로 아이디를 찾을 수 있습니다. 아래의 정보를 입력해주세요.</p>
+
+			<!-- cont_wrap -->
+			<article class="cont_wrap">
+				<!-- form_join -->
+				<fieldset class="form_join type02">
+					<legend class="blind">아이디 찾기</legend>
+
+					<div class="write first">
+						<ul class="tab_btn">
+							<li><a href="#tab_phone" class="on">휴대폰 번호 인증</a></li>
+							<li><a href="#tab_mail">이메일 주소 인증</a></li>
+						</ul>
+					</div>
+					<!-- 휴대폰 번호 인증 -->
+					<div class="tab_content" id="tab_phone">
+						<div class="write">
+							<div class="input_wrap">
+								<p class="type_three">
+									<select class="full_width">
+										<option >010</option>
+										<option >011</option>
+									</select>
+								</p>
+								<p class="type_three"><span class="space_right"><input type="text" title="휴대폰번호 중간"></span><span class="bul line"></span></p>
+								<p class="type_three"><span class="space_left"><input type="text" title="휴대폰번호 끝"></span></p>
+							</div>
+							<button type="button" class="btn_confirm">인증</button>
+						</div>
+						<div class="write">
+							<div class="input_wrap">
+								<input type="text" title="인증번호" placeholder="인증번호">
+							</div>
+							<button type="button" class="btn_confirm">확인</button>
+						</div>
+					</div>
+					<!-- //휴대폰 번호 인증 -->
+
+					<!-- 이메일 주소 인증 -->
+					<div class="tab_content" id="tab_mail">
+						<div class="write">
+							<div class="input_wrap wide">
+								<input type="text" title="이름" placeholder="이름">
+							</div>
+						</div>
+						<div class="write">
+							<div class="input_wrap wide">
+								<p class="type_three">
+									<span class="space_right"><input type="text" title="메일 아이디" placeholder="이메일"></span>
+									<span class="bul mail">@</span>
+								</p>
+								<p class="type_three"><span class="space_left"><input type="text" title="메일주소"></span></p>
+								<p class="type_three">
+									<select class="full_width type_left">
+										<option>직접입력</option>
+									</select>
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- //이메일 주소 인증 -->
+				</fieldset>
+				<!-- //form_join -->
+			</article>
+			<!-- //cont_wrap -->
+
+			<!-- btn_wrap -->
+			<div class="btn_wrap">
+				<div class="btn_cover_full">
+					<button type="button" class="btn_type btn_type02"><span class="check">아이디 찾기</span></button>
+				</div>
+			</div>
+			<!-- //btn_wrap -->
+		</div>
+	</div>
+	<!-- //컨텐츠 끝 -->
+
+</section>
+<!-- //content -->
+
+<!-- footer -->
+<footer class="footer_member" id="footer">
+	<div class="inner_container">
+		Copyright ⓒ ㈜사람인HR. All right reserved.
+	</div>
+</footer>
+<!-- //footer -->
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

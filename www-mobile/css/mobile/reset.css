@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/**
+
+ GUIDANCE 0.1
+
+ # divide 기준 : 원래 크기에서 1.8로 나누어 사용한다.
+ 1~3px은 작업자의 요령으로 조정할 수 있다.
+ 특이 케이스의 경우 divide 계수를 코멘트로 남긴다.
+
+ # font-size
+ 32pt -> 18px
+ 30pt -> 17px
+ 28pt -> 16px
+ 26pt -> 14px
+ 24pt -> 13px
+ 22pt 이하 -> 12px
+
+**/
+
+/* 실서버 배포 시에 아래 font-face 구간은 제거 요망 */
+
+* {font-family:Malgun Gothic}
+
+/* normalize */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, summary, time, video { margin:0; padding:0; border:0; font:inherit; color:inherit; vertical-align:baseline; background:transparent;}
+input, select, textarea, button { font:inherit; color:inherit;}
+body { line-height:1;}
+article, aside, dialog, figure, footer, header, hgroup, nav, section, blockquote { display:block;}
+ul, ol, li{ list-style:none;}
+blockquote, q { quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none;}
+ins { text-decoration:underline;}
+del { text-decoration:line-through;}
+mark { background:none;}
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help;}
+table { border-spacing:0; border-collapse:collapse;}
+hr { display:none;}
+img { border:0 none; vertical-align:middle;}
+input, button, select, a, img { vertical-align:middle;}
+button { position:relative; background:none; border:0 none; cursor:pointer; font-family:inherit; margin:0; padding:0;}
+button * { margin:0; padding:0;}
+button:focus {outline: none;}
+button::-moz-focus-inner { padding:0; border:0;}
+a { text-decoration:none; margin:0; padding:0;}
+a:link { text-decoration:none;}
+a:hover { text-decoration:none;}
+a:visited { text-decoration:none;}
+a:active { text-decoration:none;}
+* { box-sizing:border-box;}
+textarea { margin:0; padding:0; vertical-align:middle;}
+pre {word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;}
+
+/* common */
+.blind { position:absolute; top:-99999px; left:-99999px; z-index:-1000;}
+.dp_none { display:none;}
+.ellipsis {overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+
+/* skip_content */
+#skip_content a { position:absolute; top:0px; left:0px; z-index:9999; width:100%; height:1px;	margin-top:-1px; display:block;	background-color:white; font-size:14px; font-weight:bold; color:#111; line-height:1; text-align:center; overflow:hidden;}
+#skip_content a:focus,
+#skip_content a:active { margin-top:0px; height:auto; padding:10px 0px;}
+
+/*텍스트 플러그인*/
+.cke_editable{font-size: 13px;line-height: 1.6;
+	/* Fix for missing scrollbars with RTL texts. (#10488) */
+	word-wrap: break-word;}
+.cke_contents_ltr blockquote{padding-left: 20px;padding-right: 8px;border-left-width: 5px;}
+.cke_contents_rtl blockquote{padding-left: 8px;padding-right: 20px;border-right-width: 5px;}
+.marker{background-color: Yellow;}
+
+/* table 정렬 */
+table td.td_text_right {padding-right:5px;text-align:right;}
+table td.td_text_left {padding-left:5px;text-align:left;}
+
+/* 여백 */
+.pl10 {padding-left:10px;}

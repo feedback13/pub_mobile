@@ -1,0 +1,130 @@
+<!doctype html>
+<!--
+  ~ Copyright (c) 2017. (주)사람인HR.
+  ~ All rights reserved.
+  -->
+
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>오투잡</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="/js/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/orderjob.css">
+
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/jquery/jquery-ui.min.js"></script>
+    <script src="/js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header orderjob title_bar" id="header"></header>
+<!-- //header -->
+
+<!-- search_wrap -->
+<!--<div class="search_wrap"></div>-->
+<!-- //search_wrap -->
+
+<!-- all_menu -->
+<section class="all_menu"></section>
+<!-- //all_menu -->
+
+<!-- content -->
+<section class="content" id="content"></section>
+<!-- //content -->
+
+<!-- aside_menu -->
+<aside class="aside_menu"></aside>
+<!-- //aside_menu -->
+
+<!-- footer -->
+<footer class="footer" id="footer"></footer>
+<!-- //footer -->
+
+<script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    //header
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout02/header.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#header').html(data);
+               }
+           });
+    //search_wrap
+/*    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout02/search_wrap.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.search_wrap').html(data);
+               }
+           });*/
+    //all_menu
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout02/all_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.all_menu').html(data);
+               }
+           });
+    //content
+    $.ajax({
+               type: 'GET',
+               url: '/m/'+getParameterByName('page'),
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#content').html(data);
+               }
+           });
+    //aside_menu
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout02/aside_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.aside_menu').html(data);
+               }
+           });
+    //footer
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout02/footer.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#footer').html(data);
+               }
+           });
+</script>
+<script type="text/javascript" src="/js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="/js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="/js/mobile/orderjob.app.js"></script>
+<script type="text/javascript" src="/js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

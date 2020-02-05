@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/style.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header" id="header">
+	<h1 class="blind">OTWOJOB</h1>
+	<h2>수수료증빙수단변경</h2>
+	<button type="button" class="btn_back">뒤로가기</button>
+</header>
+<!-- //header -->
+
+<!-- content -->
+<section class="content" id="content">
+
+	<!-- 컨텐츠 시작 -->
+	<div class="bg_color01">
+		<div class="inner_container type07">
+
+			<p class="text_type04">
+				수수료 증빙 수단을 변경합니다.<br>
+				(변경 된 수단은 사업자 승인완료 후 익월발행부터 적용됩니다.)
+			</p>
+
+			<!-- form_join -->
+			<fieldset class="form_join">
+				<legend class="blind">수수료 증빙 수단</legend>
+				<div class="write">
+					<div class="checkbox_wrap type_left">
+						<label for="a01"><input type="checkbox" id="a01"><span class="txt">세금계산서</span></label>
+						<label for="a02" class="second_form02"><input type="checkbox" id="a02"><span class="txt">현금영수증</span></label>
+						<label for="a03" class="second_form02"><input type="checkbox" id="a03"><span class="txt">발급안함</span></label>
+					</div>
+				</div>
+			</fieldset>
+			<!-- //form_join -->
+
+			<!-- form_join 세금계산서 -->
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">세금계산서 발급</h3>
+			</div>
+
+			<p class="text_type04 type01">사업자일 경우 전자세금계산서를 받으실 담당자의 이메일 주소와 연락처를 입력해 주세요.</p>
+
+			<fieldset class="form_join">
+				<legend class="blind">세금계산서 수수료 증빙 수단</legend>
+				<div class="write first">
+					<div class="input_wrap wide">
+						<p class="type_three"><span class="space_right"><input type="text" title="이메일아이디"></span><span class="bul mail">@</span></p>
+						<p class="type_three"><span class="space_left"><input type="text" title="이메일 주소"></span><span class="bul"></span></p>
+						<p class="type_three ">
+							<select class="full_width last type_left">
+								<option >직접입력</option>
+							</select>
+						</p>
+					</div>
+				</div>
+				<div class="write">
+					<div class="input_wrap wide">
+						<p class="type_three">
+							<select class="full_width">
+								<option >010</option>
+								<option >011</option>
+							</select>
+						</p>
+						<p class="type_three"><span class="space_right"><input type="text" title="휴대폰번호 중간"></span><span class="bul line"></span></p>
+						<p class="type_three"><span class="space_left"><input type="text" title="휴대폰번호 끝"></span></p>
+					</div>
+				</div>
+				<!-- OTWOJOB-777 -->
+				<div class="write">
+					<dl class="info_wrap">
+						<dt>발급방식</dt>
+						<dd>월별 일괄 발행<br>(전월 1일부터 말일까지의 구매확정일 기준)</dd>
+					</dl>
+				</div>
+				<!-- //OTWOJOB-777 -->
+			</fieldset>
+			<!-- //form_join -->
+
+			<!-- form_join 현금영수증 -->
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">현금영수증 발급</h3>
+			</div>
+
+			<p class="text_type04 type01">
+				발급용도와 발급 수단을 선택해 주세요. <br>
+				선택한 발급용도로 발급된 현금영수증은 다른 용도로 재 발급 불가
+			</p>
+
+			<fieldset class="form_join">
+				<legend class="blind">현금영수증 수수료 증빙 수단</legend>
+				<div class="write first">
+					<div class="checkbox_wrap type_left">
+						<span class="tit">발급용도</span>
+						<label for="opt1"><input type="checkbox" id="opt1"><span class="txt">소득공제용</span></label>
+						<label for="opt2" class="second_form02"><input type="checkbox" id="opt2"><span class="txt">지출증빙용</span></label>
+					</div>
+				</div>
+				<div class="write">
+					<div class="checkbox_wrap type_left">
+						<span class="tit">발급수단</span>
+						<label for="ag"><input type="checkbox" id="ag"><span class="txt">휴대폰 번호</span></label>
+						<label for="ag2" class="second_form02"><input type="checkbox" id="ag2"><span class="txt">현금영수증카드</span></label>
+					</div>
+				</div>
+				<!-- 발급수단 휴대폰번호일때 -->
+				<div class="write">
+					<div class="input_wrap wide">
+						<p class="type_three">
+							<select class="full_width">
+								<option >010</option>
+								<option >011</option>
+							</select>
+						</p>
+						<p class="type_three"><span class="space_right"><input type="text" title="휴대폰번호 중간"></span><span class="bul line"></span></p>
+						<p class="type_three"><span class="space_left"><input type="text" title="휴대폰번호 끝"></span></p>
+					</div>
+				</div>
+				<!-- 발급수단 현금영수증카드일때 -->
+				<div class="write">
+					<div class="input_wrap wide">
+						<p class="type_four"><span class="space_right"><input type="text" title="휴대폰번호 중간" placeholder="카드번호"></span><span class="bul line"></span></p>
+						<p class="type_four"><span class="space_left space_right"><input type="text" title="휴대폰번호 중간"></span><span class="bul line"></span></p>
+						<p class="type_four"><span class="space_left space_right"><input type="text" title="휴대폰번호 끝"></span><span class="bul line"></span></p>
+						<p class="type_four"><span class="space_left"><input type="text" title="휴대폰번호 끝"></span></p>
+					</div>
+				</div>
+				<!-- OTWOJOB-777 -->
+				<div class="write">
+					<div class="checkbox_wrap type_left">
+						<span class="tit">발급방식</span>
+						<span>발생즉시 개별 발행 (구매확정일 기준)</span>
+					</div>
+				</div>
+				<!-- //OTWOJOB-777 -->
+			</fieldset>
+			<!-- //form_join -->
+
+			<!-- btn_wrap -->
+			<div class="btn_wrap">
+				<div class="btn_cover05 btn_first">
+					<div class="b_in_wrap">
+						<button type="button" class="btn_type btn_type01">취소</button>
+					</div>
+				</div>
+				<div class="btn_cover05 btn_last">
+					<div class="b_in_wrap">
+						<button type="button" class="btn_type btn_type02">변경</button>
+					</div>
+				</div>
+			</div>
+			<!-- //btn_wrap -->
+		</div>
+	</div>
+	<!-- //컨텐츠 끝 -->
+
+</section>
+<!-- //content -->
+
+<!-- footer -->
+<footer class="footer_member" id="footer">
+	<div class="inner_container">
+		Copyright ⓒ ㈜사람인HR. All right reserved.
+	</div>
+</footer>
+<!-- //footer -->
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

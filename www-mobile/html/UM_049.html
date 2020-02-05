@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/style.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header" id="header">
+	<h1 class="blind">OTWOJOB</h1>
+	<h2>판매 회원 전환</h2>
+	<button type="button" class="btn_back">뒤로가기</button>
+</header>
+<!-- //header -->
+
+<!-- content -->
+<section class="content" id="content">
+
+	<!-- 컨텐츠 시작 -->
+	<div class="bg_color01">
+		<div class="inner_container type06">
+
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">판매유형</h3>
+				<p class="ps_txt must">필수입력정보입니다.</p>
+			</div>
+
+			<fieldset class="form_join">
+				<legend class="blind"></legend>
+
+				<div class="write first">
+					<div class="input_wrap wide">
+						<p class="text">홍길동홍길동홍길동홍길동</p>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">판매자 정보</h3>
+			</div>
+
+			<fieldset class="form_join">
+				<legend class="blind"></legend>
+
+				<div class="write first">
+					<div class="input_wrap">
+						<input type="text" title="" placeholder="" value="홍길동" disabled="disabled">
+					</div>
+					<button type="button" class="btn_confirm">본인인증</button>
+				</div>
+				<div class="write">
+					<div class="input_wrap required">
+						<input type="text" title="" placeholder="우편번호">
+					</div>
+					<button type="button" class="btn_confirm">우편번호찾기</button>
+				</div>
+				<div class="write">
+					<div class="input_wrap wide required">
+						<input type="text" title="" placeholder="주소">
+					</div>
+				</div>
+				<div class="write">
+					<div class="input_wrap wide">
+						<input type="text" title="" placeholder="나머지주소">
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">출금 계좌 정보</h3>
+			</div>
+
+			<fieldset class="form_join">
+				<legend class="blind"></legend>
+
+				<div class="write first">
+					<div class="input_wrap wide required">
+						<input type="text" title="" placeholder="예금주">
+					</div>
+				</div>
+				<div class="write">
+					<div class="input_wrap wide required">
+						<select name="" id="" class="full_width last">
+							<option value="">은행명</option>
+						</select>
+					</div>
+				</div>
+				<div class="write">
+					<div class="input_wrap wide">
+						<input type="text" title="" placeholder="계좌번호 (-) 없이">
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">수수료에 대한 증빙</h3>
+			</div>
+
+			<p class="text_type02 type01">회사는 매월 판매 회원의 오투잡 서비스 수수료(20%) 부과에 대한 세금계산서 또는 현금영수증을 발급합니다.</p>
+
+			<fieldset class="form_join">
+				<legend class="blind"></legend>
+
+				<div class="write first">
+					<div class="input_wrap wide lh33">
+						<div class="type_three align_center">
+							<label for="check_method01"><input type="radio" id="check_method01" name="check_method"><span class="txt sm_font">세금계산서</span></label>
+						</div>
+						<div class="type_three align_center">
+							<label for="check_method02"><input type="radio" id="check_method02" name="check_method" checked="checked"><span class="txt sm_font">현금영수증</span></label>
+						</div>
+						<div class="type_three align_center">
+							<label for="check_method03"><input type="radio" id="check_method03" name="check_method"><span class="txt sm_font">발급안함</span></label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">현금영수증 발급</h3>
+			</div>
+
+			<p class="text_type02 type01">발급용도와 발급 수단을 선택해 주세요.<br>(선택한 발급용도로 발급된 현금영수증은 다른 용도로 재 발급 불가)</p>
+
+			<fieldset class="form_join">
+				<legend class="blind"></legend>
+
+				<div class="write first">
+					<div class="input_wrap divide25 lh33">
+						<p class="borderRight">발급용도</p>
+					</div>
+					<div class="input_wrap divide75 lh33">
+						<label for="use_for01" class="second_form02"><input type="radio" id="use_for01" name="use_for"><span class="txt sm_font">소득공제용</span></label>
+						<label for="use_for02" class="second_form03"><input type="radio" id="use_for02" name="use_for"><span class="txt sm_font">지출증빙용</span></label>
+					</div>
+				</div>
+				<div class="write">
+					<div class="input_wrap divide25 lh33">
+						<p class="borderRight">발급수단</p>
+					</div>
+					<div class="input_wrap divide75 lh33">
+						<label for="use_method01" class="second_form02"><input type="radio" id="use_method01" name="use_method"><span class="txt sm_font">휴대폰번호</span></label>
+						<label for="use_method02" class="second_form03"><input type="radio" id="use_method02" name="use_method"><span class="txt sm_font">현금영수증카드</span></label>
+					</div>
+				</div>
+				<div class="write">
+					<div class="input_wrap divide25 wide">
+						<select class="full_width">
+							<option>010</option>
+						</select>
+					</div>
+					<div class="input_wrap divide75">
+						<p class="type_two"><span class="space_right"><input type="text" title="휴대폰번호 중간"></span><span class="bul line"></span></p>
+						<p class="type_two"><span class="space_left"><input type="text" title="휴대폰번호 끝"></span></p>
+					</div>
+				</div>
+				<div class="write">
+					<div class="input_wrap wide">
+						<input title="현금 영수증 카드 번호" placeholder="현금 영수증 카드 번호" type="text" value="">
+					</div>
+				</div>
+				<!-- OTWOJOB-777 -->
+				<div class="write">
+					<dl class="info_wrap">
+						<dt>발급방식</dt>
+						<dd>월별 일괄 발행<br>(전월 1일부터 말일까지의 구매확정일 기준)</dd>
+					</dl>
+				</div>
+				<!-- //OTWOJOB-777 -->
+			</fieldset>
+
+			<div class="alarm_txt01 type01">
+				<!-- list_type04 -->
+				<div class="list_type04">
+					<ul>
+						<li>판매 회원(사업자) 승인 시까지 별도의 기간이 소요되며, 정보가 올바르지 않을 경우 승인 거절이 될 수 있습니다.</li>
+						<li>판매 회원 승인 관련 문의사항은 1:1문의 혹은 고객센터 (02-2025-2707)로 연락 주시기 바랍니다.</li>
+						<li>오투잡은 납세 정책에 따라 모든 거래에 대해 판매회원을 대행하여 영수증을 국세청에 전송합니다. <a href="#" class="go_link underline">자세히보기 &gt;</a></li>
+					</ul>
+				</div>
+				<!-- //list_type04 -->
+			</div>
+
+
+			<div class="btn_wrap">
+				<div class="btn_cover05 btn_first">
+					<div class="b_in_wrap">
+						<button type="button" class="btn_type btn_type03">취소</button>
+					</div>
+				</div>
+				<div class="btn_cover05 btn_last">
+					<div class="b_in_wrap">
+						<button type="button" class="btn_type btn_type02">전환하기</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 컨텐츠 끝 -->
+
+</section>
+<!-- //content -->
+
+<!-- footer -->
+<footer class="footer_member" id="footer">
+	<div class="inner_container">
+		<p>Copyright ⓒ ㈜사람인HR. All right reserved.</p>
+	</div>
+</footer>
+<!-- //footer -->
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

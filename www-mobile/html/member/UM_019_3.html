@@ -1,0 +1,197 @@
+	<!-- 컨텐츠 시작 -->
+	<div class="bg_color01">
+		<div class="inner_container type14 responsive">
+			<a href="#" class="logo_sub01"><img src="/image/mobile/common/logo_sub1.png" alt="OTWOJOB"></a>
+
+			<div class="member_form">
+				<div class="area_member_txt">
+					<p class="txt_style03">$개인$ 판매회원으로 전환</p>
+				</div>
+			</div>
+
+			<!-- cont_wrap -->
+			<article class="cont_wrap">
+				<!-- form_join -->
+				<fieldset class="form_join">
+					<legend class="blind">이메일가입</legend>
+					<div class="write first">
+						<div class="agree_txt">
+							<label for="agree1" class="form_type01 member"><input type="checkbox" id="agree1"><span class="txt">판매회원으로 함께 가입</span></label>
+						</div>
+					</div>
+					<div class="write">
+						<div class="input_wrap required">
+							<input type="text" title="이메일주소" placeholder="이메일 주소">
+							<span class="email_tit">asdf@saramin.co.kr</span>
+						</div>
+						<button type="button" class="btn_confirm_new" onclick="memberDivOpen('email_confirm')">인증하기</button>
+						<p class="warning" id="">[$test@test2.co.kr$]으로 발송된 인증메일의 인증링크를 유효시간 30분 안에 클릭해주세요.</span></p> <!-- step01 -->
+						<p class="confirm" id="">인증이 완료 되었습니다.</p> <!-- step02 -->
+						<p class="warning" id="">[$test@test2.co.kr$](은)는 이미 가입되어 있는 이메일주소 입니다. <span class="btn_write_unit"><a href="#">로그인</a> <a href="#">비밀번호 찾기</a></span></p> <!-- 이미가입시 -->
+					</div>
+					<div class="write">
+						<div class="confirm_box">
+							<label for="agree2" class="form_type01 member"><input type="checkbox" id="agree2"><span class="txt">(선택) 이메일을 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree');">마케팅정보 수신</a> 및 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree02');">오더정보 수신</a>에 동의합니다.</span></label>
+							<p class="confirm_box_info">
+								<span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="write hide" id="event_info_agree">
+						<div class="write_agree_form">
+							<p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree');">X</a></p>
+							<div class="txt_box">
+								• 수집ㆍ이용목적<br>
+								&nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+								• 수집항목: 이메일 수신동의<br>
+								• 보유 및 이용기간: 서비스 이용시까지<br><br>
+								※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+							</div>
+						</div>
+					</div>
+					<div class="write hide" id="event_info_agree02">
+						<div class="write_agree_form">
+							<p class="txt_tit">오더잡 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree02');">X</a></p>
+							<div class="txt_box">
+								• 수집ㆍ이용목적<br>
+								&nbsp;&nbsp;&nbsp;- 오더정보 정보 전송<br>
+								• 수집항목: SMS/MMS 수신동의<br>
+								• 보유 및 이용기간: 서비스 이용시까지<br><br>
+								※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+							</div>
+						</div>
+					</div>
+
+					<div class="write">
+						<div class="input_wrap required">
+							<input type="text" title="닉네임" placeholder="닉네임">
+						</div>
+						<p class="warning" id="">비밀번호를 찾기 위한 정보이므로 정확하게 입력해주세요.</p>
+					</div>
+					<div class="write">
+						<div class="input_wrap required">
+							<input type="text" title="비밀번호" placeholder="비밀번호">
+						</div>
+						<p class="warning" id="">8~31자 이내로 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
+					</div>
+					<p class="password_text">
+						비밀번호는 8~32자 이내로 영문 (대문자,소문자), 숫자, 특수 문자 3가지를 조합하셔서 작성하시면 됩니다.<br>
+						단, 3자리 이상 키보드 자판 연속 배열 입력은 불가합니다.<br>
+						사용 가능한 특수 기호문자는 ! @ # $ % ^ &amp; * ( ) - + = { } [ ] 입니다.
+					</p>
+				</fieldset>
+
+				<fieldset class="form_join">
+					<legend class="blind">제휴코드번호입력</legend>
+					<div class="write first">
+						<div class="input_wrap">
+							<input type="text" title="제휴코드번호입력" placeholder="제휴코드번호입력">
+						</div>
+					</div>
+				</fieldset>
+
+				<div class="area_member_cont">
+					<div class="form_join_txt02">
+						<label for="agree_all_check" class="agree_all_check member on" >
+							<input type="checkbox" id="agree_all_check" checked="checked">
+							<p>
+								본인은 만 14세 이상이며,
+								<a href="javascript:void(0);" onclick="memberDivOpen('common_agree01');">오투잡 이용약관</a>,
+								<a href="javascript:void(0);" onclick="memberDivOpen('common_agree03');">개인정보 수집 및 이용</a>,
+								<a href="javascript:void(0);" onclick="memberDivOpen('common_agree04');">개인정보 제3자 제공 및 위탁사항</a>
+								내용을 확인하였으며 동의합니다.
+							</p>
+						</label>
+					</div>
+				</div>
+				<div class="form_join hide" id="common_agree01">
+					<div class="write">
+						<div class="write_agree_form">
+							<p class="txt_tit">오투잡 이용약관<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('common_agree01');">X</a></p>
+							<div class="txt_box">
+								오투잡 서비스이용약관<br><br>
+
+								제 1장 총칙  <br>
+								제 1조 (목적) <br>
+								본 약관은 ㈜사람인HR(이하"회사")이 운영하는 웹사이트
+								(이하 “사이트”)를 통해 인터넷 관련 서비스를 제공함에 있어,
+								회사가 제공하는 서비스와
+								관련하여, 이를 이용하는 가입자(이하 “회원” 또는 “개인회원”)의 이용조건 및 제반 절차,
+								기타 필요한 사항을 규정함을 목적으로 합니다. <br><br>
+								제 2조 (용어의 정의)
+								본 약관에서 사용하는 용어의 정의는 아래와 같습니다. <br>
+								① “사이트”라 함은 “회사”가 서비스를 “회원” 에게 제공하기 위하여 단말기
+								(PC, TV, 휴대형단말기 등의 각종 유무선 장치를 포함) 등 정보통신설비를 이용하여
+								설정한 가상의 영업장 또는 회사가 운영하는 서비스를 제공받을 수 있는 아래의 사이트로 정의합니다.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form_join hide" id="common_agree03">
+					<div class="write">
+						<div class="write_agree_form">
+							<p class="txt_tit">개인정보 수집 및 이용<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('common_agree03');">X</a></p>
+							<div class="txt_box">
+								오투잡 서비스이용약관<br><br>
+
+								제 1장 총칙  <br>
+								제 1조 (목적) <br>
+								본 약관은 ㈜사람인HR(이하"회사")이 운영하는 웹사이트
+								(이하 “사이트”)를 통해 인터넷 관련 서비스를 제공함에 있어,
+								회사가 제공하는 서비스와
+								관련하여, 이를 이용하는 가입자(이하 “회원” 또는 “개인회원”)의 이용조건 및 제반 절차,
+								기타 필요한 사항을 규정함을 목적으로 합니다. <br><br>
+								제 2조 (용어의 정의)
+								본 약관에서 사용하는 용어의 정의는 아래와 같습니다. <br>
+								① “사이트”라 함은 “회사”가 서비스를 “회원” 에게 제공하기 위하여 단말기
+								(PC, TV, 휴대형단말기 등의 각종 유무선 장치를 포함) 등 정보통신설비를 이용하여
+								설정한 가상의 영업장 또는 회사가 운영하는 서비스를 제공받을 수 있는 아래의 사이트로 정의합니다.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form_join hide" id="common_agree04">
+					<div class="write">
+						<div class="write_agree_form">
+							<p class="txt_tit">개인정보 제3자 제공 및 위탁사항<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('common_agree03');">X</a></p>
+							<div class="txt_box">
+								1.	개인정보 제3자 제공<br>
+								가. 회사는「1. 개인정보 수집 및 이용 현황」에서 고지한 범위 내에서만 개인정보를 사용하며, 원칙적으로 이용자의 개인정보를 제3자에게 제공하지 않습니다.<br>
+								나. 회사가 제공하는 서비스를 통하여 회원 간의 거래관계가 이루어진 경우, 원활한 거래이행을 위하여 관련 정보는 필요한 범위 내에서 회원이 동의한 경우
+								아래와 같이 판매자에게 제공합니다.<br>
+								1) 제공받는 자: 재능판매자<br>
+								2) 제공하는 항목: 구매자ID, 구매기록<br>
+								3) 제공받는 자의 이용목적: 서비스 제공, 구매자확인 및 상담<br>
+								4) 보유 및 이용기간: 서비스 제공 완료 시 지체없이 파기<br>
+								다. 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우.<br>
+								※ 귀하께서는 개인정보의 제3자 제공에 대해, 동의하지 않을 수 있고 언제든지 제3자 제공 동의를 철회할 수 있습니다. 다만, 제3자 제공에 기반한 관련된 일부 서비스의 이용이 제한될 수 있습니다(회원가입 서비스는 이용하실 수 있습니다.) <br><br>
+
+								2.	개인정보 취급위탁<br>
+								회사는 개인정보의 처리와 관련하여 아래와 같이 업무를 위탁하고 있으며, 관계법령에 따라 위탁 처리되는 개인정보가 안전하게 관리될 수 있도록 필요한 조치를 취하고 있습니다. 또한 위탁 처리하는 정보는 서비스 제공에 필요한 최소한의 범위에 국한됩니다. 회사에서 위탁처리 되고 있는 업무는 다음과 같고, 위탁사항이 변경되는 경우 해당 사실을 알려드리겠습니다. <br>
+								수탁업체 및 위탁업무 내용 <br>
+								나이스평가정보(주): 휴대폰 및 아이핀 본인인증, 실명확인 <br>
+								케이지이니시스: 결제처리(신용카드, 휴대폰, 실시간계좌이체, 무통장입금, 현금영수증발급) <br>
+								(주)다우기술 : SMS발송, 모바일쿠폰 발송<br>
+								웹케시㈜ : 세금계산서 발급
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn_wrap">
+					<div class="btn_cover_full">
+						<div class="b_in_wrap">
+							<button type="button" class="btn_type btn_login"><span>동의하고 회원가입</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- //form_join -->
+			</article>
+		</div>
+	</div>
+	<!-- //컨텐츠 끝 -->

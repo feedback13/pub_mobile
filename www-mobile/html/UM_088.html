@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/style.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- 로딩이미지 -->
+<div class="loading"><div class="deem"></div><img src="../image/mobile/common/loading.gif" alt="로딩이미지" /></div>
+<!-- //로딩이미지 -->
+
+<!-- header -->
+<header class="header title_bar" id="header">
+	<h1 class="blind">OTWOJOB</h1>
+	<h2>주문/결제</h2><!-- [dev] OTWOJOB-719 : 운영과 타이틀 맞췄습니다. -->
+	<button type="button" class="btn_back">뒤로가기</button>
+</header>
+<!-- //header -->
+
+<!-- content -->
+<section class="content" id="content">
+
+	<!-- 컨텐츠 시작 -->
+	<div class="bg_color01">
+		<div class="inner_container type06">
+
+			<!-- list_type -->
+			<div class="list_type08">
+				<!-- item -->
+				<!-- [dev] OTWOJOB-719 : 기존 -->
+				<article class="item first">
+					<h3 class="i_tit"><a href="#">주문내역</a></h3>
+					<div class="item_cont">
+						<div class="image_item">
+							<div class="img"><a href="#"><img src="../image/mobile/temp/@item001.png" alt=""></a></div>
+							<div class="desc_wrap">
+								<p class="category">
+									<span class="main">디자인</span>
+									<span class="sub">전단지/홍보물</span>
+								</p>
+								<h4 class="cate_tit"><a href="#">고객맞춤 디자인/센스 풀 가동/감동 있는 디자인! 몽키디자인!</a></h4>
+							</div>
+						</div>
+						<!-- 오더잡경우 -->
+						<div class="image_item">
+							<div class="desc_wrap">
+								<p class="category">
+									<span class="main">디자인</span>
+									<span class="sub">전단지/홍보물</span>
+								</p>
+								<h4 class="cate_tit"><a href="#">고객맞춤 디자인/센스 풀 가동/감동 있는 디자인! 몽키디자인!</a></h4>
+							</div>
+						</div>
+						<!-- //오더잡경우 -->
+						<p class="txt_tit">기본 (5일/5,000원) 1개 / 5,000원</p>
+						<p class="txt01">옵션1 : 빠른작업 / 1일 / 1개 / 100,000원</p>
+						<p class="txt01">옵션2 : 컬러추가 / 화이트 / 1개 / 20,000원</p>
+						<div class="pay_list">
+							<p class="plus"><span class="tit">추가결제</span>프리미엄 디자인 (50,000원 X 2)</p>
+						</div>
+						<div class="last_order_cont">
+							<h4 class="tit">주문금액</h4>
+							<p class="price"><span>130,000</span>원</p>
+						</div>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item -->
+				<!-- [dev] OTWOJOB-719 : 운영과 소스 맞췄습니다. -->
+				<article class="item">
+					<h3 class="i_tit"><a href="#">할인포인트</a></h3>
+					<div class="item_cont">
+						<div class="divide_cont">
+							<div class="l_side">
+								<h4 class="s_tit">사용가능 포인트</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">12,500P</p>
+							</div>
+						</div>
+						<div class="divide_cont01">
+							<h4 class="s_tit">사용</h4>
+							<div class="c_box">
+								<div class="input_box"><input type="text" class="full_width align_right" value="1,500P"></div>
+								<button type="button" class="btn_do btn_type btn_type05">사용</button>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item -->
+				<!-- [dev] OTWOJOB-719 : 운영과 소스 맞췄습니다. -->
+				<article class="item">
+					<h3 class="i_tit"><a href="#">최종결제금액</a></h3>
+					<div class="item_cont">
+						<div class="divide_cont">
+							<div class="l_side">
+								<h4 class="s_tit">주문금액</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">30,000원</p>
+							</div>
+						</div>
+						<div class="divide_cont line">
+							<div class="l_side">
+								<h4 class="s_tit">할인금액</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">-1,000원</p>
+							</div>
+						</div>
+						<div class="divide_cont line">
+							<div class="l_side">
+								<h4 class="s_tit">배송금액</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">+2,500원</p>
+							</div>
+						</div>
+						<div class="last_order_cont">
+							<h4 class="tit type01">총 결제금액</h4>
+							<p class="price type01"><span>5,000</span>원</p>
+						</div>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item -->
+				<!-- [dev] OTWOJOB-719 : 운영과 소스 맞췄습니다. -->
+				<article class="item">
+					<h3 class="i_tit"><a href="#">결제수단</a></h3>
+					<div class="item_cont">
+						<!-- pay_method_select -->
+						<div class="pay_method_select">
+							<div class="line">
+								<div class="side_tobe">
+									<a href="#" class="btn_method method01 on">신용카드</a>
+									<a href="#" class="btn_method method02">무통장입금</a>
+									<a href="#" class="btn_method method04">휴대폰</a>
+								</div>
+							</div>
+							<div class="line">
+								<a href="#" class="btn_method method05 full_btn">
+									<span class="txt">O캐시</span>
+									<div class="cash_wrap">
+										<span class="c_tit">사용가능금액</span>
+										<span class="cash">151,000원</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</article -->
+				<!-- //item -->
+
+				<!-- item - 현금영수증 -->
+				<!-- [dev] OTWOJOB-719 : 운영과 소스 맞췄습니다. -->
+				<article id="article_cash_receipt" class="item" style="display: block;">
+					<div class="item_cont">
+						<div class="divide_cont">
+							<div class="l_side"><h3 id="h_cash_receipt" class="s_tit type01">현금영수증 신청함</h3></div>
+							<div class="r_side"><button type="button" class="fn_change btn_type btn_type05 sm" id="btn_cash_receipt_update">변경</button></div>
+						</div>
+					</div>
+					<div id="div_cash_receipt_info" class="item_cont type01" style="display:block">
+						<div class="txt02">
+							<h4 class="s_tit">개인소득공제용<br>휴대폰번호 : 010-2356-1234</h4>
+						</div>
+					</div>
+					<div id="div_cash_receipt_input1" class="item_cont type01" style="display:block">
+						<p>
+							<label for="enter01">
+								<input type="radio" id="enter01" name="cash_receipt" title="신청안함" value="N">
+								<span class="txt">신청안함</span>
+							</label>
+							<label for="enter02" class="second_form02">
+								<input type="radio" id="enter02" name="cash_receipt" title="신청함" value="Y" checked="checked">
+								<span class="txt">신청함</span>
+							</label>
+						</p>
+					</div>
+					<div id="div_cash_receipt_input2" class="item_cont type01" style="display:block">
+						<p class="line">
+							<label for="income01">
+								<input id="income01" name="usageType" type="radio" value="PERSONAL" checked="checked">
+								<span class="txt">개인소득공제용</span>
+							</label>
+							<label for="income02" class="second_form02">
+								<input id="income02" name="usageType" type="radio" value="BUSINESS">
+								<span class="txt">사업자증빙용</span>
+							</label>
+						</p>
+						<p class="line">
+							<select name="cash_receipt_publish_type" id="cash_receipt_publish_type" title="발급방법 옵션" class="full_width">
+								<option value="PHONE_NO">휴대전화번호</option>
+								<option value="CARD_NO">현금영수증카드번호</option>
+							</select>
+						</p>
+						<p id="div_card" class="line" style="display:none">
+							<input type="number" title="현금영수증카드번호" class="full_width" maxlength="19" onkeydown="return NumberUtil.onlyNumber(event);" onkeyup="CommonUtil.banKorean(this);" oninput="NumberUtil.maxLengthCheck(this);">
+						</p>
+						<div id="div_phone" class="line input_divide_wrap type01" style="display:block">
+							<div class="input_box select">
+								<select id="phone_num1">
+									<option value="010" selected="selected">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select>
+							</div>
+							<div class="input_box">
+								<input id="phone_num2" title="휴대전화번호" class="" type="number" value="2356" maxlength="4" onkeydown="return NumberUtil.onlyNumber(event);" onkeyup="CommonUtil.banKorean(this);" oninput="NumberUtil.maxLengthCheck(this);">
+							</div>
+							<div class="input_box last">
+								<input id="phone_num3" title="휴대전화번호" class="" type="number" value="1234" maxlength="4" onkeydown="return NumberUtil.onlyNumber(event);" onkeyup="CommonUtil.banKorean(this);" oninput="NumberUtil.maxLengthCheck(this);">
+							</div>
+						</div>
+						<div id="div_biz" class="line input_divide_wrap type01" style="display:none">
+							<div class="input_box">
+								<input type="number" title="사업자등록번호" id="biz_num1" class="" value="" maxlength="3" onkeydown="return NumberUtil.onlyNumber(event);" onkeyup="CommonUtil.banKorean(this);" oninput="NumberUtil.maxLengthCheck(this);">
+							</div>
+							<div class="input_box">
+								<input type="number" title="사업자등록번호" id="biz_num2" class="" value="" maxlength="2" onkeydown="return NumberUtil.onlyNumber(event);" onkeyup="CommonUtil.banKorean(this);" oninput="NumberUtil.maxLengthCheck(this);">
+							</div>
+							<div class="input_box last">
+								<input type="number" title="사업자등록번호" id="biz_num3" class="" value="" maxlength="5" onkeydown="return NumberUtil.onlyNumber(event);" onkeyup="CommonUtil.banKorean(this);" oninput="NumberUtil.maxLengthCheck(this);">
+							</div>
+						</div>
+						<p id="p_publishName" class="line" style="display:block">
+							<input type="text" title="수령인" name="publishName" id="publishName" class="full_width" placeholder="수령인" value="오투잡">
+						</p>
+						<p id="p_save_cash" class="line" style="display:block">
+							<label for="save_cash_application"><input type="checkbox" id="save_cash_application"><span class="txt">현재 현금영수증 신청정보를 저장합니다.</span></label>
+						</p>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item - 환불방법 폼 -->
+				<!-- [dev] OTWOJOB-719 : 운영과 소스 맞췄습니다. -->
+				<article class="item" id="div_refund" style="display: block;">
+					<div class="item_cont">
+						<div class="divide_cont">
+							<div class="l_side"><h3 class="s_tit type01">환불방법</h3><span class="s_txt">본인 계좌 환불</span></div>
+							<div class="r_side"><button type="button" class="fn_change btn_type btn_type05 sm" id="btn_refund_update">변경</button></div>
+						</div>
+					</div>
+					<div class="item_cont type01" id="div_refund_info" style="display:block">
+						<div class="txt02">
+							<p><span class="name">송지영</span><span class="bank_name">신한은행(조흥)</span></p><!-- [dev] OTWOJOB-719 : 이름부분에 있던 주석 제거 -->
+							<p>12345678941</p>
+						</div>
+						<div class="txt03"><!-- [dev] OTWOJOB-719 : 내용추가 -->
+							<span>*주의* 입금자와 동일한 경우에만 환불이 가능합니다.<br>환불 계좌를 잘못 입력한 경우 취소 및 환불이 되지 않을 수 있습니다.</span><br>
+							입력된 환불계좌는 개인정보 > 환불계좌 정보에 저장됩니다.<br>
+							환불계좌 입력 이후부터 환불 처리는 입력하신 환불 계좌로 입금됩니다.
+						</div>
+					</div>
+					<div class="item_cont type01" id="div_refund_input" style="display:block">
+						<p><input type="text" title="예금주를 입력하세요." id="" placeholder="예금주"></p><!-- [dev] OTWOJOB-719 : 예금주 추가 -->
+						<p class="line"><!-- [dev] OTWOJOB-719 : class 추가 -->
+							<select id="refundBank" name="bankCode" class="full_width">
+								<option value="00" selected="selected">은행선택</option>
+								<option value="39">경남은행</option>
+								<option value="34">광주은행</option>
+								<option value="04">KB국민은행</option>
+								<option value="03">기업은행</option>
+								<option value="11">NH농협은행</option>
+								<option value="31">대구은행</option>
+								<option value="55">도이치</option>
+								<option value="32">부산은행</option>
+								<option value="50">상호저축은행</option>
+								<option value="45">새마을금고</option>
+								<option value="07">수협중앙회</option>
+								<option value="48">신용협동조합</option>
+								<option value="88">신한은행(조흥)</option>
+								<option value="20">우리은행</option>
+								<option value="71">우체국</option>
+								<option value="37">전북은행</option>
+								<option value="35">제주은행</option>
+								<option value="81">KEB하나은행</option>
+								<option value="53">한국씨티은행</option>
+								<option value="60">BOA(뱅크오브아메리카)</option>
+								<option value="">HSBC</option>
+								<option value="23">SC은행</option>
+							</select>
+						</p>
+						<p class="line">
+							<input title="환불계좌번호" id="bankAccount" type="number" class="full_width align_right" onkeydown="return NumberUtil.onlyNumber(event);" onkeyup="CommonUtil.banKorean(this);" placeholder="계좌번호를 입력해 주세요.">
+						</p>
+						<div class="txt03"><!-- [dev] OTWOJOB-719 : 내용추가 -->
+							<span>*주의* 입금자와 동일한 경우에만 환불이 가능합니다.<br>환불 계좌를 잘못 입력한 경우 취소 및 환불이 되지 않을 수 있습니다.</span><br>
+							입력된 환불계좌는 개인정보 > 환불계좌 정보에 저장됩니다.<br>
+							환불계좌 입력 이후부터 환불 처리는 입력하신 환불 계좌로 입금됩니다.
+						</div>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item -->
+				<!-- [dev] OTWOJOB-719 : 운영과 소스 맞췄습니다. -->
+				<article class="item">
+					<div class="item_cont">
+						<label for="agree01"><input type="checkbox" id="agree01"><strong class="txt">개인정보 제3자 제공 동의</strong></label>
+					</div>
+					<div class="item_cont type02">
+						<p class="color_type01"><label for="agree02"><input type="checkbox" id="agree02"><span class="txt">위 주문내역 확인 및 결제 진행 동의</span></label></p>
+						<p class="txt03">
+							구매하신 상품의 서비스 제공  및  주문 처리를 위해 개인정보를 제공받는 판매자 : <span>potwojob</span>
+						</p>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<p style="margin-top:20px"><mark style="background-color:yellow">이 아래는 기존 소스입니다.</mark></p>
+				<!-- item -->
+				<article class="item">
+					<h3 class="i_tit"><a href="#">할인쿠폰</a></h3>
+					<div class="item_cont">
+						<div class="divide_cont">
+							<div class="l_side">
+								<h4 class="s_tit">사용가능 쿠폰</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">1건</p>
+							</div>
+						</div>
+						<div class="line">
+							<select name="" id="" class="full_width">
+								<option value="">신규상품 런칭기념 할인(1,000원)</option>
+							</select>
+						</div>
+						<div class="last_order_cont">
+							<h4 class="tit">즉시할인 적용</h4>
+							<p class="price">-1,000원</p>
+						</div>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item -->
+				<article class="item">
+					<h3 class="i_tit"><a href="#">할인쿠폰</a></h3>
+					<div class="item_cont">
+						<div class="divide_cont">
+							<div class="l_side">
+								<h4 class="s_tit">사용가능 포인트</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">12,500P</p>
+							</div>
+						</div>
+						<div class="divide_cont01">
+							<h4 class="s_tit">사용</h4>
+							<div class="c_box">
+								<div class="input_box"><input type="text" class="full_width align_right" value="1,500P"></div>
+								<button type="button" class="btn_do btn_type btn_type05">전액사용</button>
+							</div>
+						</div>
+						<div class="last_order_cont">
+							<h4 class="tit">즉시할인 적용</h4>
+							<p class="price">-1,000원</p>
+						</div>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item -->
+				<article class="item">
+					<h3 class="i_tit"><a href="#">최종결제금액</a></h3>
+					<div class="item_cont">
+						<div class="divide_cont">
+							<div class="l_side">
+								<h4 class="s_tit">주문금액</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">30,000원</p>
+							</div>
+						</div>
+						<div class="divide_cont line">
+							<div class="l_side">
+								<h4 class="s_tit">할인금액</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">-1,000원</p>
+							</div>
+						</div>
+						<div class="divide_cont line">
+							<div class="l_side">
+								<h4 class="s_tit">배송금액</h4>
+							</div>
+							<div class="r_side">
+								<p class="txt02">+2,500원</p>
+							</div>
+						</div>
+						<div class="last_order_cont">
+							<h4 class="tit type01">총 결제금액</h4>
+							<p class="price type01"><span>5,000</span>원</p>
+						</div>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item -->
+				<article class="item">
+					<h3 class="i_tit"><a href="#">결제수단</a></h3>
+					<div class="item_cont">
+
+						<!-- pay_method_select -->
+						<div class="pay_method_select">
+							<div class="line">
+								<div class="side_tobe">
+									<a href="#" class="btn_method method01 on">신용카드</a>
+									<a href="#" class="btn_method method02">무통장입금</a>
+									<a href="#" class="btn_method method04">휴대폰</a>
+								</div>
+							</div>
+							<div class="line">
+								<a href="#" class="btn_method method05 full_btn">
+									<span class="txt">O캐시</span>
+									<div class="cash_wrap">
+										<span class="c_tit">사용가능금액</span>
+										<span class="cash">151,000원</span>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<!-- 실시간 계좌이체 경우 -->
+						<!-- <div class="pay_method_select">
+							<div class="line">
+								<div class="side l_side">
+									<a href="#" class="btn_method method01">신용카드</a>
+								</div>
+								<div class="side r_side">
+									<a href="#" class="btn_method method02 on">무통장입금</a>
+								</div>
+							</div>
+							<div class="line">
+								<div class="side l_side">
+									<a href="#" class="btn_method method03">실시간 계좌이체</a>
+								</div>
+								<div class="side r_side">
+									<a href="#" class="btn_method method04">휴대폰</a>
+								</div>
+							</div>
+							<div class="line">
+								<a href="#" class="btn_method method05 full_btn">
+									<span class="txt">O캐시</span>
+									<div class="cash_wrap">
+										<span class="c_tit">사용가능금액</span>
+										<span class="cash">151,000원</span>
+									</div>
+								</a>
+							</div>
+						</div> -->
+						<!-- //pay_method_select -->
+ 
+						<!-- 가상계좌 -->
+						<div class="method_cont method02">
+							<p class="select_wrap">
+								<select class="full_width">
+									<option value="">은행선택</option>
+								</select>
+							</p>
+							<div class="divide_txt_wrap">
+								<h4 class="d_tit">환불방법</h4>
+								<div class="txt_wrap">
+									<p class="txt02">본인계좌환불</p>
+									<p class="bank_wrap"><span class="name">오투잡</span><span class="bank_name">국민은행</span></p>
+									<p class="bank_account">123457-04-789123</p>
+								</div>
+								<button type="button" class="fn_change btn_type btn_type05 sm">변경</button>
+							</div>
+							<p class="help_txt"><a href="#">영수증/계산서 발행 안내 <img src="../image/mobile/common/ico_triangle.png" width="5" alt=""></a></p>
+						</div>
+						<!-- //가상계좌 -->
+
+					</div>
+				</article -->
+				<!-- //item -->
+
+				<!-- item -->
+				<article class="item">
+					<div class="item_cont">
+						<div class="tit_cont_wrap">
+							<h3 class="i_tit">현금영수증 신청</h3>
+							<div class="desc_cont">
+								<label for="color01"><input type="radio" id="color01" name="color_select" checked="checked"><span class="txt">신청함</span></label>
+								<label for="color02" class="second_form02"><input type="radio" id="color02" name="color_select"><span class="txt">신청안함</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="item_cont type01">
+						<div class="divide_cont">
+							<div class="l_side">
+								<h4 class="s_tit">개인소득공제<br>휴대폰번호 : 010-1234-5678</h4>
+							</div>
+							<div class="r_side">
+								<button type="button" class="btn_type btn_type05 sm">변경</button>
+							</div>
+						</div>
+					</div>
+					<div class="item_cont type01">
+						<p>
+							<label for="income01"><input type="radio" id="income01" name="income_check" checked="checked"><span class="txt">개인소득공제용</span></label>
+							<label for="income02" class="second_form02"><input type="radio" id="income02" name="income_check"><span class="txt">사업자증빙용</span></label>
+						</p>
+						<p class="line">
+							<select name="" id="" class="full_width">
+								<option value="">현금영수증카드번호</option>
+							</select>
+						</p>
+						<p class="line">
+							<input type="text" class="full_width">
+						</p>
+						<div class="line input_divide_wrap type01">
+							<div class="input_box select">
+								<select name="" id="">
+									<option value="">010</option>
+								</select>
+							</div>
+							<div class="input_box">
+								<input type="text">
+							</div>
+							<div class="input_box last">
+								<input type="text">
+							</div>
+						</div>
+						<div class="line input_divide_wrap type01">
+							<div class="input_box">
+								<input type="text">
+							</div>
+							<div class="input_box">
+								<input type="text">
+							</div>
+							<div class="input_box last">
+								<input type="text">
+							</div>
+						</div>
+						<p class="line">
+							<input type="text" class="full_width" placeholder="수령인">
+						</p>
+						<p class="line">
+							<label for="save_dicuss"><input type="checkbox" id="save_dicuss"><span class="txt">현재 현금영수증 신청정보를 저장합니다.</span></label>
+						</p>
+					</div>
+				</article>
+				<!-- //item -->
+
+				<!-- item -->
+				<article class="item">
+					<div class="item_cont">
+						<label for="agree01"><input type="checkbox" id="agree01" checked="checked"><strong class="txt">개인정보 제3자 제공 동의</strong></label>
+					</div>
+					<div class="item_cont type02">
+						<p class="color_type01"><label for="agree02"><input type="checkbox" id="agree02"><span class="txt">위 주문내역 확인 및 결제 진행 동의</span></label></p>
+						<p class="txt03">
+							구매하신 상품의 서비스 제공  및  주문 처리를 위해 개인정보를 제공받는 판매자 : <span>jiangsphoto</span>
+						</p>
+					</div>
+				</article>
+				<!-- //item -->
+				<p style="margin-top:20px"><mark style="background-color:yellow">여기까지 기존 소스입니다.</mark></p>
+			</div>
+			<!-- //list_type -->
+
+			<div class="btn_wrap">
+				<div class="btn_cover_full">
+					<button type="button" class="btn_type btn_type02" onclick="OTWOJOB.loadingOpen()">결제하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 컨텐츠 끝 -->
+</section>
+<!-- //content -->
+
+<!-- aside_menu -->
+<aside class="aside_menu">
+	<div class="btn_top"><span><em class="blind">TOP</em></span></div>
+	<div class="item_wrap">
+		<div class="item item01">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside1.png" alt=""></span>
+				<span class="txt">홈</span>
+			</a>
+		</div>
+		<div class="item item02">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside2.png" alt=""></span>
+				<span class="txt">마이페이지</span>
+			</a>
+		</div>
+		<div class="item item03">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside3.png" alt=""></span>
+				<span class="txt">메시지</span>
+			</a>
+		</div>
+		<div class="item item04">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside4.png" alt=""></span>
+				<span class="txt">오더잡</span>
+			</a>
+		</div>
+	</div>
+</aside>
+<!-- //aside_menu -->
+
+<!-- footer -->
+<footer class="footer" id="footer">
+	<div class="inner_container">
+		<ul class="utils">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">사업자정보확인</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">개인정보처리방침</a></li>
+		</ul>
+		<button type="button" class="more_infos"><span class="bul">(주)사람인HR 사업자정보</span></button>
+		<div class="infos_txt">
+			<p class="line">㈜ 사람인 | 대표 : 김용환 | 대표전화 : 09-2025-2707</p>
+			<p class="line">주소 : 서울 구로구 디지털로34길 43  코오롱싸이언스밸리 1차 201호 (구로동)</p>
+			<p class="line">개인정보보호 책임자 : 강봉관 | 사업자등록번호 : 113-86—0917</p>
+			<p class="line"> 통신판매업 : 제 2339호 | 직업정보제공사업 : 서울 관악 제 2005-6호</p>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

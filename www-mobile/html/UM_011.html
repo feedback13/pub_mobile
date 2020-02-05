@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../js/jquery/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/orderjob.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="question_header" id="header">
+	<button class="page_back"><img src="/image/mobile/orderjob/ic-back-black-26-px.png"></button>
+
+	<!-- 첫번째 페이지의 경우 -->
+	<!--<h2>오더등록</h2>-->
+
+	<a href="javascript:void(0)" class="load_history">이전 오더 불러오기</a>
+</header>
+<!-- //header -->
+
+<!-- content -->
+<section class="question_content" id="content">
+	<!-- 첫번째 페이지의 경우 -->
+	<section class="page_num_1" style="display: none;">
+		<div class="main_category_img">
+			<img src="/image/mobile/orderjob/img-catagory-25.png">  <!-- 카테고리별 코드에 따른 이미지 변경 -->
+		</div>
+
+		<h1>$디자인$ 작업에
+			딱 맞는 오더 제안을 받기 위해
+			꼭 필요한 몇 가지 질문에 답해 주세요.</h1>
+
+		<span class="tip_comment">상세하게 응답하면 더 많은 제안을 받을 수 있습니다</span>
+	</section>
+
+	<!-- 1줄짜리 라디오버튼 -->
+	<section class="page_num_2 category_select"  style="display: none;">
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 4%;">&nbsp;</div>
+			<span class="guide">4% 완료 (1/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">어떤 분야의 작업자를 찾으시나요?</label>
+
+			<div class="answer">
+				<div class="custom_selectbox">
+					<button class="select_header">
+						1차 카테고리
+					</button>
+					<ul>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category11">
+								<label for="category11" class="radiomark">
+									<span class="orderjob_category category_11"></span>디자인
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category13">
+								<label for="category13" class="radiomark">
+									<span class="orderjob_category category_13"></span>마케팅
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category10">
+								<label for="category10" class="radiomark">
+									<span class="orderjob_category category_10"></span>번역
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category12">
+								<label for="category12" class="radiomark">
+									<span class="orderjob_category category_12"></span>비즈니스문서
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category23">
+								<label for="category23" class="radiomark">
+									<span class="orderjob_category category_23"></span>창작/작문
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category14">
+								<label for="category14" class="radiomark">
+									<span class="orderjob_category category_14"></span>음악/더빙
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category25">
+								<label for="category25" class="radiomark">
+									<span class="orderjob_category category_25"></span>영상/애니
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category15">
+								<label for="category15" class="radiomark">
+									<span class="orderjob_category category_15"></span>IT개발
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal left_icon">
+								<input type="radio" name="category1" id="category17">
+								<label for="category17" class="radiomark">
+									<span class="orderjob_category category_17"></span>전문가컨설팅
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="custom_selectbox">
+					<button class="select_header">
+						2차 카테고리
+					</button>
+					<ul>
+						<li>
+							<div class="answer_radio horizontal">
+								<input type="radio" name="category2" id="category111">
+								<label for="category111" class="radiomark">
+									로고/CI&BI
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal">
+								<input type="radio" name="category2" id="category112">
+								<label for="category112" class="radiomark">
+									캐리커처/인물
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal">
+								<input type="radio" name="category2" id="category113">
+								<label for="category113" class="radiomark">
+									일러스트
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal">
+								<input type="radio" name="category2" id="category114">
+								<label for="category114" class="radiomark">
+									배너/상세페이지
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Textarea -->
+	<section class="page_num_3" style="display: none;">
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 4%;">&nbsp;</div>
+			<span class="guide">4% 완료 (1/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">프로젝트명을 입력해 주세요.</label>
+
+			<div class="answer">
+				<div class="input_field">
+					<textarea placeholder="예)&#13;&#10;- 아두이노 ESP8266 서버 초음파센서 및 GET 전송 작업요청!&#13;&#10;- 반응형 웹페이지 개발 요청합니다.&#13;&#10;- 온라인 서비스 강화를 위한 반응형 Web사이트 개발"></textarea>
+					<span class="text_size">1 / 4000</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Input Text (가격입력) -->
+	<section class="page_num_4" >
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 28%;">&nbsp;</div>
+			<span class="guide">28% 완료 (3/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">희망금액은 얼마인가요?</label>
+
+			<div class="answer">
+				<div class="input_field">
+					<input type="number" placeholder="최소금액">원~
+					<span class="korean_price">일억 팔천칠백오십만 육천칠백육십원</span><br>
+					<input type="number" placeholder="최대금액">원
+					<span class="korean_price">칠천오백삼십오만 육천칠백육십원</span>
+				</div>
+				<span class="comment">최소 5,000원 이상 1,000원 단위로 입력 가능합니다.</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- 라디오박스 (세로형 이미지) -->
+	<section class="page_num_5 category_select" style="display: none;">
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 42%;">&nbsp;</div>
+			<span class="guide">42% 완료 (6/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">미팅이 필요하신가요?</label>
+
+			<div class="answer">
+				<div class="custom_selectbox">
+					<button class="select_header">
+						미팅 유무
+					</button>
+					<ul>
+						<li>
+							<div class="answer_radio center_icon vertical">
+								<input type="radio" name="meeting1" id="meeting1">
+								<label for="meeting1" class="radiomark">
+									<img src="/image/mobile/orderjob/ic-order-meeting-no-270-px.png"><br>
+									필요없어요
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio center_icon vertical">
+								<input type="radio" name="meeting1" id="meeting2">
+								<label for="meeting2" class="radiomark">
+									<img src="/image/mobile/orderjob/ic-order-meeting-yes-270-px.png"><br>
+									필요해요
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="custom_selectbox">
+					<button class="select_header">
+						미팅할 지역을 선택해 주세요
+					</button>
+					<ul>
+						<li>
+							<div class="answer_radio horizontal">
+								<input type="radio" name="category2" id="seoul">
+								<label for="seoul" class="radiomark">
+									서울/경기
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal">
+								<input type="radio" name="category2" id="chung">
+								<label for="chung" class="radiomark">
+									충청
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio horizontal">
+								<input type="radio" name="category2" id="gyungsang">
+								<label for="gyungsang" class="radiomark">
+									경상
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="input_field">
+					<input type="text" class="full" placeholder="직접 입력해 주세요.">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 라디오 버튼 (세로형이미지2) -->
+	<section class="page_num_6 category_select" style="display: none;" >
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 42%;">&nbsp;</div>
+			<span class="guide">42% 완료 (6/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">기획 단계를 알려주세요.</label>
+
+			<div class="answer">
+				<div class="custom_selectbox">
+					<button class="select_header">
+						기획 단계
+					</button>
+					<ul>
+						<li>
+							<div class="answer_radio center_icon vertical">
+								<input type="radio" name="plan1" id="plan1">
+								<label for="plan1" class="radiomark">
+									<img src="/image/mobile/orderjob/ic-order-plan-idea-162-px.png"><br>
+									아이디어만 보유
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio center_icon vertical">
+								<input type="radio" name="plan1" id="plan2">
+								<label for="plan2" class="radiomark">
+									<img src="/image/mobile/orderjob/ic-order-plan-making-162-px.png"><br>
+									기획 중
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio center_icon vertical">
+								<input type="radio" name="plan1" id="plan3">
+								<label for="plan3" class="radiomark">
+									<img src="/image/mobile/orderjob/ic-order-plan-detail-162-px.png"><br>
+									기획완료
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 체크박스 -->
+	<section class="page_num_6 " style="display: none;">
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 42%;">&nbsp;</div>
+			<span class="guide">42% 완료 (6/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">필요한 개발 언어와 DB를 선택해 주세요.</label>
+
+			<div class="answer">
+				<div class="answer_check small_check">
+					<input type="checkbox" id="option1" name="option">
+					<label for="option1" class="checkmark">
+						<h3 class="check_title">PHP</h3>
+					</label>
+				</div>
+				<div class="answer_check small_check">
+					<input type="checkbox" id="option2" name="option">
+					<label for="option2" class="checkmark">
+						<h3 class="check_title">Javascript</h3>
+					</label>
+				</div>
+				<div class="answer_check small_check">
+					<input type="checkbox" id="option3" name="option">
+					<label for="option3" class="checkmark">
+						<h3 class="check_title">Jquery</h3>
+					</label>
+				</div>
+				<div class="answer_check small_check">
+					<input type="checkbox" id="option4" name="option">
+					<label for="option4" class="checkmark">
+						<h3 class="check_title">HTML/CSS</h3>
+					</label>
+				</div>
+				<div class="answer_check small_check">
+					<input type="checkbox" id="option5" name="option">
+					<label for="option5" class="checkmark">
+						<h3 class="check_title">Oracle</h3>
+					</label>
+				</div>
+				<div class="answer_check small_check">
+					<input type="checkbox" id="option_custom" name="option">
+					<label for="option_custom" class="checkmark">
+						<h3 class="check_title">직접입력</h3>
+					</label>
+				</div>
+				<div class="input_field">
+					<input type="text" class="full" placeholder="직접 입력해 주세요.">
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- 달력(날짜선택) -->
+	<section class="page_num_7 " style="display: none;">
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 42%;">&nbsp;</div>
+			<span class="guide">42% 완료 (6/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">오더 마감일을 입력해 주세요.</label>
+
+			<div class="answer">
+				<div class="input_field">
+					<label>오더 마감일</label>
+					<input type="text" class="full input_calendar" placeholder="오더 마감일">
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- 파일 업로드 -->
+	<section class="page_num_8"  style="display: none;">
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 85%;">&nbsp;</div>
+			<span class="guide">85% 완료 (10/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question optional">참고할 첨부파일이 있다면 등록해 주세요.</label>
+
+			<div class="answer">
+				<div class="file_list">
+					<div class="uploaded_file"> 
+						<b>브랜딩_포트폴리오2브랜딩_포트폴리오2브랜딩_포트폴리오2브랜딩_포트폴리오2브랜딩_포트폴리오2브랜딩_포트폴리오2브랜딩_포트폴리오2.pdf</b>
+						<span>(136mb)</span>
+						<button><img src="/image/mobile/orderjob/btn-close-16-px.png"></button>
+					</div>
+					<div class="uploaded_file">
+						<b>포트폴리오2.pdf</b>
+						<span>(136mb)</span>
+						<button><img src="/image/mobile/orderjob/btn-close-16-px.png"></button>
+					</div>
+				</div>
+
+				<div id="container_" class="container">
+					<div class="progress_cancel_center">
+						<p class="progress_tit">파일 전송 중</p>
+						<button type="button">전송취소</button>
+					</div>
+					<div id="o_1bqh29kmk1ip11oho1k681eml8sua" class="row">
+						<div class="file_info">
+							<div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+							<div class="col-sm-1">29.4 MB</div>
+						</div>
+						<div class="progress_box">
+							<div class="progress">
+								<div role="progressbar" class="progress-bar progress-bar-info" style="width: 30%;"></div> <!-- class="progress-bar-striped" 혹은 class="progress-bar-warning" 추가 시 전송 오류 색상 노출됨 -->
+							</div>
+							<p class="progress_control"><button type="button"><img src="/image/mobile/message/ic_puse.png" alt="전송멈춤"></button></p>
+						</div>
+					</div>
+					<div id="o_1bqh29kmk1ip11oho1k681eml8sua1" class="row">
+						<div class="file_info">
+							<div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+							<div class="col-sm-1">29.4 MB</div>
+						</div>
+						<div class="progress_box">
+							<div class="progress">
+								<div role="progressbar" class="progress-bar progress-bar-info" style="width: 30%;"></div> <!-- class="progress-bar-striped" 혹은 class="progress-bar-warning" 추가 시 전송 오류 색상 노출됨 -->
+							</div>
+							<p class="progress_control"><button type="button"><img src="/image/mobile/message/ic_replay.png" alt="재전송"></button></p>
+						</div>
+					</div>
+					<div id="o_1bqh29kmk1ip11oho1k681eml8sua2" class="row">
+						<div class="file_info">
+							<div class="col-sm-3">PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장PC_오투잡_홍보메일_추석광고연장.zip</div>
+							<div class="col-sm-1">29.4 MB</div>
+						</div>
+					</div>
+					<div id="uploadList"></div>
+				</div>
+
+				<div class="input_field">
+					<div class="upload_file_block" id="fileupload-list"></div>
+					<div class="file_upload">
+						<div class="MultiFile-wrap" id="file_upload"><input type="file" id="file_upload" name="attachFile" value="" class="MultiFile-applied">
+							<img src="/image/mobile/orderjob/ic-order-upload-162-px.png"><br>
+							파일 업로드
+						</div>
+					</div>
+				</div>
+				<span class="comment">최대 200M까지 파일을 올리실 수 있습니다.</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- 체크박스(내용 포함) -->
+	<section class="page_num_9 "style="display: none;" >
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 91%;">&nbsp;</div>
+			<span class="guide">91% 완료 (12/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question optional">더 안전한 오더를 위해 부가서비스를 선택하실 수 있습니다.</label>
+
+			<div class="answer">
+				<div class="answer_check full">
+					<input type="checkbox" id="secret1" name="secret_pledge">
+					<label for="secret1" class="checkmark">
+						<h2 class="check_title">NDA 비밀유지서약 - 무료</h2>
+						<div class="check_contents">오더잡 거래 시 작업 내용이 기밀로 유지되어야 하는 경우 판매자에게 작업 내용을 유출하지 않겠다는 서약을 받습니다.</div>
+					</label>
+				</div>
+				<div class="answer_check full">
+					<input type="checkbox" id="secret2" name="secret_pledge">
+					<label for="secret2" class="checkmark">
+						<h2 class="check_title">안심계약서 작성 – 5,000원 (VAT별도)</h2>
+						<div class="check_contents">계약서 없이 진행하기에 불안한 오더잡 거래의 경우 전자계약서 작성한 후 더 안전하게 거래하세요. 계약서는 오더를 결제한 이후 마이페이지에서 작성합니다.</div>
+					</label>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 라디오박스 (세로형 이미지) -->
+	<section class="page_num_10" style="display:none;">
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 100%;">&nbsp;</div>
+			<span class="guide">100% 완료 (13/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">오더 공개 범위를 선택해 주세요.</label>
+
+			<div class="answer">
+				<div class="custom_selectbox">
+					<button class="select_header">
+						오더 공개 범위
+					</button>
+					<ul>
+						<li>
+							<div class="answer_radio center_icon vertical">
+								<input type="radio" name="order1" id="order1">
+								<label for="order1" class="radiomark" style="padding-top: 10px;">
+									<img src="/image/mobile/orderjob/ic-order-open-recommend-270-px.png" style="width: 54%;"><br>
+									추천 판매자 오더
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="answer_radio center_icon vertical">
+								<input type="radio" name="order1" id="order2">
+								<label for="order2" class="radiomark"  style="padding-top: 10px;">
+									<img src="/image/mobile/orderjob/ic-order-open-all-270-px.png" style="width: 54%;"><br>
+									판매자 오더
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<span class="comment">추천판매자 오더 : 오투잡이 엄선한 신뢰도 높은 판매자에게만 오더<br>
+판매자 오더 : 오더하는 카테고리 판매자 전체에게 오더</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- Array -->
+	<section class="page_num_11"  style="display: none;">
+		<div class="order_gauge">
+			<div class="current_gauge" style="width: 100%;">&nbsp;</div>
+			<span class="guide">100% 완료 (13/13)</span>
+		</div>
+
+		<div class="qna_part">
+			<label class="question">참고할 url이 있다면 등록해 주세요.</label>
+
+			<div class="answer">
+				<div class="input_field">
+					<div class="array_sets">
+						<input type="hidden" name="array_list">
+						<span id="ec0ed253-fc3d-972e-b1fb-37215f94ebbe">www.naver.com<button type="button" onclick="arraySetField.removeArray(this.parentElement, '')"><img src="https://images.otwojob.com/image/mobile/orderjob/btn-close-black-16-px.png"></button></span>
+						<input type="text" class="array_input" onkeydown="arraySetField.keydownEvent(this, event)" onkeyup="arraySetField.keyupEvent(this, event)">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+<footer class="question_footer">
+	<!-- 첫번째 페이지의 경우 -->
+	<!--<button>오더 등록 시작<img src="/image/mobile/orderjob/ic-arrow-right-xl-white.png"></button>-->
+	<!--<button disabled>다음<img src="/image/mobile/orderjob/ic-arrow-right-xl-white.png"></button>-->
+
+	<!-- 마지막 페이지의 경우 -->
+	<button>오더 등록<img src="/image/mobile/orderjob/ic-arrow-right-xl-white.png"></button>
+</footer>
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+<script type="text/javascript" src="../js/mobile/orderjob.app.js"></script>
+</body>
+</html>

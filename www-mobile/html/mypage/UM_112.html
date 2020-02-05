@@ -1,0 +1,145 @@
+	<!-- 컨텐츠 시작 -->
+	<div class="bg_color01">
+		<div class="inner_container type07">
+
+			<div class="tab_type01">
+				<ul class="length02">
+					<li><a href="#" >기본회원 정보</a></li>
+					<li><a href="#" class="on">판매회원 정보</a></li>
+				</ul>
+			</div>
+
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">판매자 정보</h3>
+				<p class="ps_txt must">필수입력정보입니다.</p>
+			</div>
+
+			<fieldset class="form_join">
+				<legend class="blind"></legend>
+
+				<div class="write first">
+					<h4 class="s_tit"><span class="required">판매유형</span></h4>
+					<div class="box_cont">
+						<p>사업자(개인)</p>
+						<button type="button" class="btn_modify">수정</button>
+					</div>
+				</div>
+				<div class="write">
+					<h4 class="s_tit"><span class="required">회사명</span></h4>
+					<div class="box_cont">
+						<p>오투잡</p>
+						<button type="button" class="btn_modify">수정</button>
+					</div>
+				</div>
+				<div class="write">
+					<h4 class="s_tit"><span class="required">사업자등록번호</span></h4>
+					<div class="box_cont">
+						<p>1138600917</p>
+					</div>
+				</div>
+				<div class="write">
+					<h4 class="s_tit"><span class="required">대표자명</span></h4>
+					<div class="box_cont">
+						<p>홍길동</p>
+					</div>
+				</div>
+				<div class="write">
+					<h4 class="s_tit"><span class="required">주소</span></h4>
+					<div class="box_cont">
+						<p>123-456</p>
+						<p class="para">서울특별시 구로구 디지털로 34길 43 코오롱 싸이언스밸리 1차 201호</p>
+					</div>
+				</div>
+				<div class="write">
+					<h4 class="s_tit"><span class="required">대표번호</span></h4>
+					<div class="box_cont">
+						<p>02-222-3333</p>
+					</div>
+				</div>
+				<div class="write">
+					<h4 class="s_tit"><span class="required">업태</span></h4>
+					<div class="box_cont">
+						<p>IT</p>
+					</div>
+				</div>
+				<div class="write">
+					<h4 class="s_tit"><span class="required">종목</span></h4>
+					<div class="box_cont">
+						<p>서비스</p>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">출금 계좌 정보</h3>
+			</div>
+
+			<fieldset class="form_join">
+				<legend class="blind"></legend>
+
+				<div class="write first" >
+					<h4 class="s_tit"><span class="required">계좌번호</span></h4>
+					<div class="box_cont">
+						<p>송중기</p>
+						<p>국민은행</p>
+						<p>100245675987</p>
+						<p class="word error" id="account_certify">미인증 계좌입니다.</p>
+						<button type="button" class="btn_confirm type03" onclick="openLay('account_regist')">수정</button>
+					</div>
+				</div>
+
+				<!-- 게좌정보가 없는경우 -->
+				<div class="write first" style="display: none;">
+					<h4 class="s_tit"><span class="required">계좌번호</span></h4>
+					<div class="box_cont">
+						<p>등록된 계좌가 없습니다</p>
+						<button type="button" class="btn_confirm type02" onclick="openLay('account_regist')">계좌등록</button>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="alarm_txt01 type03">
+				<div class="list_type04 infotext grey">
+					<ul>
+						<li><p>수익금은 매일 1회, 등록된 출금 계좌로 전액 자동 출금 처리<br>
+							(토요일/일요일/공휴일 제외)</p></li>
+						<li><p>전일 14시 ~ 당일 14시까지 발생한 수익금에 한하여<br>
+							다음날 오전 11시~오후 4시 사이 출금</p></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="tit_wrap type01">
+				<h3 class="sec_title">수수료 증빙</h3>
+			</div>
+
+			<fieldset class="form_join">
+				<legend class="blind"></legend>
+
+				<div class="write first">
+					<h4 class="s_tit"><span class="required">수수료 증빙</span></h4>
+					<div class="box_cont">
+						<p>세금계산서</p>
+						<p>gml1234@test.com</p>
+						<p>010-1234-5678</p>
+						<button type="button" class="btn_confirm type02">수정</button>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="btn_wrap">
+				<div class="btn_cover05 btn_first">
+					<div class="b_in_wrap">
+						<button type="button" class="btn_type btn_type01">취소</button>
+					</div>
+				</div>
+				<div class="btn_cover05 btn_last">
+					<div class="b_in_wrap">
+						<button type="button" class="btn_type btn_type02">수정</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //컨텐츠 끝 -->

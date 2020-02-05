@@ -1,0 +1,172 @@
+<!doctype html>
+<!--
+  ~ Copyright (c) 2017. (주)사람인HR.
+  ~ All rights reserved.
+  -->
+
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>오투잡</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/short_event.css">
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/mobile/otwojob.vendor.js"></script>
+    <script type="text/javascript" src="/js/jquery/detectmobilebrowser.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header" id="header"></header>
+<!-- //header -->
+
+<!-- search_wrap -->
+<!--<div class="search_wrap"></div>-->
+<div class="search_wrap search_bar" style="display:none"></div>
+<!-- //search_wrap -->
+
+<!-- all_menu -->
+<section class="all_menu"></section>
+<!-- //all_menu -->
+
+<!-- content -->
+<section class="content" id="content"></section>
+<!-- //content -->
+
+<!-- aside_menu -->
+<aside class="aside_menu"></aside>
+<!-- //aside_menu -->
+
+<!-- footer -->
+<footer class="footer_member" id="footer"></footer>
+<!-- //footer -->
+
+<!-- layer popup : APP 설치1 1334 -->
+<div class="pop_layer" id="app_setting1" style="display: none;">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">쿠폰 사용 조건</h2>
+        <div class="layer_cont">
+            <ul class="pop_layer_list">
+                <li><b>이벤트 기간: 2017년 11월 07일~2017년 12월 30일</b>
+                    <ul>
+                        <li>- 이벤트 기간 내 APP 설치한 경우 다운로드 할 수 있습니다.</li>
+                        <li>- 한 아이디 당 1회만 발급됩니다.</li>
+                        <li>- 최대 5만원 할인</li>
+                        <li>- 다른 쿠폰과 중복 사용할 수 없습니다.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //layer popup : APP 설치1 -->
+
+<!-- layer popup : APP 설치2 1334 -->
+<div class="pop_layer" id="app_setting2" style="display: none;">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">쿠폰 사용 조건</h2>
+        <div class="layer_cont">
+            <ul class="pop_layer_list">
+                <li><b>이벤트 기간: 2017년 11월 07일~2017년 12월 30일</b>
+                    <ul>
+                        <li>- 이벤트 기간 내 APP Push 수신 동의한 경우 다운로드 할 수 있습니다.</li>
+                        <li>- Push 수신동의 후 한 아이디 당 1회만 다운 받을 수 있습니다.</li>
+                        <li>- 최대 5만원 할인</li>
+                        <li>- 다른 쿠폰과 중복 사용할 수 없습니다.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //layer popup : APP 설치2 -->
+
+<script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    //header
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout13/header.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#header').html(data);
+               }
+           });
+    //search_wrap
+    $.ajax({
+        type: 'GET',
+        url: '/m/pub-ia/template/layout13/search_wrap.html',
+        dataType: 'html',
+        cache: false,
+        async: false,
+        success: function (data) {
+            $('.search_wrap').html(data);
+        }
+    });
+    //all_menu
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout13/all_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.all_menu').html(data);
+               }
+           });
+    //content
+    $.ajax({
+               type: 'GET',
+               url: '/m/'+getParameterByName('page'),
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#content').html(data);
+               }
+           });
+    //aside_menu
+    $.ajax({
+        type: 'GET',
+        url: '/m/pub-ia/template/layout13/aside_menu.html',
+        dataType: 'html',
+        cache: false,
+        async: false,
+        success: function (data) {
+            $('.aside_menu').html(data);
+        }
+    });
+    //footer
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout13/footer.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#footer').html(data);
+               }
+           });
+</script>
+    <script type="text/javascript" src="/js/mobile/otwojob.util.js"></script>
+    <script type="text/javascript" src="/js/mobile/otwojob.app.js"></script>
+    <script type="text/javascript" src="/js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

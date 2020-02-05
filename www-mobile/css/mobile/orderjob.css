@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,700');
+
+html {height: 100%; -webkit-overflow-scrolling: touch; overflow-y: auto;}
+textarea:focus {border: 0; box-shadow: none; outline: none;}
+input[type=number], input[type=text], input[type=password],
+textarea {-webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none; box-shadow: none;}
+input[type=number]:focus, input[type=text]:focus {border: none; outline: none; box-shadow: none;}
+
+.header {height: 50px; line-height: 50px; border-bottom: 1px solid #eaeaea;}
+.header.orderjob {background-color: #fff; position: relative;}
+.header .btn_back {position:absolute;left:10px;/*bottom:9px;*/ top:30px;width:26px;height:26px;margin-top:-16px;background: url('../../image/mobile/orderjob/ic-back-black-26-px.png') no-repeat 50% 50%;background-size:26px auto;text-indent:-9999px}
+.header h2 {font-size: 18px; font-weight: 500; letter-spacing: -0.8px; display: block; text-align: center; color: #212121; line-height: 46px;}
+
+/* footer */
+.footer {background:#e5e5e5;color:#666;font-size:12px;padding:17px 0 90px;text-align:center;}
+.footer .utils {padding-bottom:5px;border-bottom:1px solid #dadada}
+.footer .utils.no_border {border-bottom:0 none;}
+.footer .utils li {display:inline-block;padding:0 2px 0 4px;margin:0 0 5px;border-left:1px solid #b7b7b7;height:12px;line-height:6px}
+.footer .utils li:first-child {border-left:0 none}
+.footer .utils li:nth-child(4) {color:#f9530b}
+.footer .more_infos {width:100%;display:block;padding:15px 0}
+.footer .more_infos .bul {display:inline-block;background:url('https://images.otwojob.com/image/mobile/common/ico_footer_infos.png') no-repeat right center;background-size:11px auto;padding-right:15px}
+.footer .more_infos.on .bul {background:url('https://images.otwojob.com/image/mobile/common/ico_footer_infos_on.png') no-repeat right center;background-size:11px auto}
+.footer .infos_txt {line-height:1.5;display:none}
+.footer .infos_txt a {line-height:1.5;text-decoration:none;margin:0 0 3px 10px;display:inline-block;border-bottom:1px solid #777}
+.footer_index {background:#dadada;padding:15px 0 70px;text-align:center;color:#777;font-size:12px} /* font.divide :2 */
+.footer_index .utils li {display:inline-block;padding:0 3px 0 5px;margin:0 0 5px;border-left:1px solid #aeaeae;height:12px;line-height:6px}
+.footer_index .utils li:first-child {border-left:0 none}
+.footer_index .utils li:nth-child(4) {color:#f9530b}
+.footer_index .infos {margin:15px 0 0;line-height:1.5}
+.footer_index .infos a {line-height:1.5;text-decoration:none;margin:0 0 3px 10px;display:inline-block;border-bottom:1px solid #777}
+.footer_index.bottom {margin-bottom:55px}
+.footer_member {background:#f2f2f2;color:#999;font-size:14px;padding:15px 0;text-align:center}
+.footer_member.type01 {background:#fff}
+@media all and (max-width:340px) {	.footer .infos {letter-spacing:-0.5px}	}
+
+.scroll_tabs.fixed {position:fixed;left:0px;right:0px;top:50px;z-index:5}
+
+.question_header {display: inline-block; width: 100%; height: 46px; text-align: center; position: relative; background-color: #fff;}
+.question_header .page_back {display: inline-block; width: 26px; height: 26px; left: 10px; top: 11px; position: absolute;}
+.question_header .page_back img {display: inline-block; width: 100%; height: 100%;}
+.question_header h2 {font-size: 18px; font-weight: 500; line-height: 46px; letter-spacing: -0.8px; color: #212121; text-align: center;}
+.question_header .load_history {position: absolute; display: inline-block; font-size: 14px; font-weight: 500; line-height: normal; letter-spacing: -0.6px; color: #212121; top: 14px; right: 12px;}
+
+.question_content {display: inline-block; width: 100%; background-color: #fff; text-align: left; margin-bottom: 60px;}
+.question_content .main_category_img {display: inline-block; width: 100%; margin-bottom: 19px;}
+.question_content .main_category_img img {width: 100%;}
+.question_content h1 {font-size: 22px; font-weight: 600; line-height: 1.45; letter-spacing: -0.9px; color: #212121; padding: 0 20px; word-break: keep-all;}
+.question_content .tip_comment {display: inline-block; font-size: 14px; line-height: normal; letter-spacing: -0.6px; color: #999; position: relative; padding-left: 24px;  margin: 16px 20px 0;}
+.question_content .tip_comment:before {content: ''; font-size: 11px; font-weight: bold; letter-spacing: normal; line-height: 15px; color: #fff; text-align: center; width: 25px; height: 15px; border-radius: 4px; background: url('../../image/mobile/orderjob/badge-tip-15-px.png') no-repeat center center; background-size: 25px 15px; position: absolute; left: -5px; top: 0px;}
+
+.question_content .order_complete {display: inline-block; width: 100%; background-color: #fff; text-align: center;  padding: 50px 0;}
+.question_content .order_complete > img {display: inline-block; width: 100px; height: 100px; margin-bottom: 20px;}
+.question_content .order_complete > h1 {font-size: 22px; line-height: normal; line-height: 1.36; letter-spacing: -0.9px; color: #212121; text-align: center; display: block; font-weight: normal; margin-bottom: 20px;}
+.question_content .order_complete > h1 b {font-weight: bold;}
+
+.another_talents {display: inline-block; width: 100%; background-color: #f4f5f6; padding: 20px 10px 17px 10px;}
+.another_talents > label {font-size: 20px; line-height: 1.25; letter-spacing: -0.8px; color: #212121; display: block; text-align: center; margin-bottom: 20px;}
+.another_talents > label b {font-weight: bold;}
+.another_talents ul {margin-bottom: 15px;}
+.another_talents ul li { background-color: #fff; position: relative; padding-left: 44.1%; border-radius: 0.6rem; margin-bottom: 0.6rem;}
+.another_talents ul li:last-child {margin-bottom: 0;}
+.another_talents ul li .image {height: 100%; width: 44.1%; display: inline-block; position: absolute; left:0; top: 0;}
+.another_talents ul li .image .best_rank {position: absolute;  top: 0px; left: 0.6rem; background: url('../../image/mobile/ico/icon-best-ranking-flag.png') no-repeat 50% 0%; background-size: 100%; color: #fff; text-align: center; font-family: Roboto; font-weight: bold; font-size: 0.7rem; display: inline-block;width: 1.2rem; height: 1.44rem; padding-top: 0.13rem;}
+.another_talents ul li .image .sale_discount,
+.another_talents ul li .image .hotdeal_discount { width: 2rem; height: 2.24rem; position: absolute; right: 0.3rem; top: 0.3rem; color: #fff; font-family: Roboto; font-weight: bold; font-size: 0.95rem; text-align: center; letter-spacing: -0.01rem;}
+.another_talents ul li .image .sale_discount {background: url('../../image/mobile/common/badge-sale-34-px.png') no-repeat 50% 50%; background-size: 100%; padding-top: 0.65rem;}
+.another_talents ul li .image .hotdeal_discount {background: url('../../image/mobile/common/badge-hotdeal-34-px.png') no-repeat 50% 50%; background-size: 100%; padding-top: 0.75rem;}
+.another_talents ul li .image .sale_discount:after,
+.another_talents ul li .image .hotdeal_discount:after {font-family: Roboto, Malgun Gothic; content: "\25"; font-size: 0.3rem; font-weight: normal;}
+.another_talents ul li .image img {width: 100%; height: 100%; border-radius: 0.6rem 0 0 0.6rem;}
+.another_talents ul li .outer_wrap {display: inline-block; padding: 0.5rem; width: 100%; height: 100%; position: relative;}
+.another_talents ul li .outer_wrap .tit {font-size: 0.9rem;overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; height: 2.1rem;line-height: 1.1rem;}
+.another_talents ul li .outer_wrap .price_wrap {position:relative; height: 1.9rem; margin: 0.7rem 0;}
+.another_talents ul li .outer_wrap .price_wrap p {display: inline-block;}
+.another_talents ul li .outer_wrap .price_wrap .prev {color: #999; font-size: 0.65rem; text-decoration: line-through;}
+.another_talents ul li .outer_wrap .price_wrap .prev:after {content:"\C6D0";}
+.another_talents ul li .outer_wrap .price_wrap .current {position: absolute; bottom: 0; left: 0; color: #212121; font-size: 0.85rem; font-weight: bold;}
+.another_talents ul li .outer_wrap .price_wrap .current:after {content:"\C6D0";}
+.another_talents ul li .outer_wrap .price_wrap .discount {float: left; color: #2b89e3; font-size: 0.85rem; margin-right: 0.3rem;}
+.another_talents ul li .outer_wrap .desc_wrap .like_wrap .star_grade_s .txt {color: #666; font-size: 0.7rem;}
+.another_talents ul li .outer_wrap .desc_wrap .like_wrap .like_num {background: url('https://images.otwojob.com/image/mobile/index/ico_heart.png') no-repeat 80% 100%; position: absolute; right: 0.6rem;bottom: 0.6rem; width: 1.1rem; height: 1.1rem; background-size: 0.8rem 0.8rem;}
+.another_talents ul li .outer_wrap .desc_wrap .like_wrap .like_num.off {background-image: url('https://images.otwojob.com/image/mobile/index/ico_heart_blank.png');}
+.another_talents ul li .outer_wrap .desc_wrap .like_wrap .btn_order {display: inline-block; width: 40px; height: 40px; background: url('../../image/mobile/common/btn-order-40-px.png') no-repeat center center; background-size: 40px 40px; position: absolute; right: 8px; bottom: 8px;}
+.another_talents ul li .outer_wrap .desc_wrap .like_wrap .special {position: absolute; width: 1.4rem; height: 1.4rem; right: 0.4rem; bottom: 2.2rem; display: inline-block;}
+.another_talents .more_talents {width: 100%; display: inline-block; height: 50px; border: 1px solid #e1e1e1; background-color: #fff; text-align: center; font-size: 16px; letter-spacing: -0.6px; color: #666; }
+.another_talents .more_talents > img {width: 20px; height: 20px; margin-left: 6.5px;}
+
+.question_footer {display: inline-block; width: 100%; position: fixed; bottom: 0; left: 0;}
+.question_footer > button {display: inline-block; width: 100%; height: 60px; background-color: #4ec5ca; text-align: center; font-size: 24px; line-height: 60px; letter-spacing: -1px; color: #fff; }
+.question_footer > button:disabled {background-color: #d8d8d8;}
+.question_footer > button > img {width: 10px; height: 19px; display: inline-block; margin-left: 12px;}
+
+.orderjob_header {display: inline-block; width: 100%; height: 46px; text-align: center; position: relative; background-color: #fff; border-bottom: 1px solid #eaeaea; line-height: 46px;}
+
+.order_gauge {display: inline-block; width: calc(100% - 20px); position: relative;  height: 4px; border-radius: 5px; background-color: #eaeaea; margin-left: 10px;}
+/*.order_gauge:before {content: ''; display: inline-block; width: 100%; position: absolute; left: 0; top: 0;}*/
+.order_gauge .current_gauge {background: linear-gradient(99deg, #13a9bd, #51e9d8); display: inline-block; height: 4px; border-radius: 5px;}
+.order_gauge .guide {position: absolute; right: 0; bottom: -20px; font-size: 11px; font-weight: 500; line-height: normal; letter-spacing: -0.5px; color: #999;}
+
+.qna_part {padding: 0 10px; margin-top: 15px; overflow-y: auto; max-height: calc(100vh - 139px); display: inline-block; width: 100%; padding-bottom: 10px;}
+.qna_part .question {margin-bottom: 20px; font-size: 18px; font-weight: 600; letter-spacing: -1px; color: #212121; line-height: 1.67; display: inline-block;}
+.qna_part .question.optional {position: relative;}
+.qna_part .question.optional:after {content: ''; display: inline-block; width: 35px; height: 19px; background: url('../../image/mobile/orderjob/badge-option.png') no-repeat center center; background-size: 35px 19px; font-size: 11px; line-height: 19px; letter-spacing: -1.2px; color: #666; text-align: center; vertical-align: middle; margin-left: 5px;}
+
+.answer {display: inline-block; width: 100%;}
+.answer .custom_selectbox {display: inline-block; width: 100%; margin-bottom: 20px;}
+.answer .custom_selectbox > button.select_header {display: inline-block; width: 100%; font-size: 16px; letter-spacing: -0.7px; color: #666;  background: url('../../image/mobile/orderjob/ic-arrow-up-16-px.png') no-repeat right 5px center; background-size: 16px 16px; position: relative; text-align: left; line-height: normal; margin-bottom: 5px;}
+.answer .custom_selectbox > button.select_header.selected {background: url('../../image/mobile/orderjob/ic-arrow-down-16-px.png') no-repeat right 5px center; background-size: 16px 16px; }
+.answer .custom_selectbox > button.select_header:after {content: ''; position: absolute; display: inline-block; left: 0; bottom: -5px; width: 100%; height: 1px; background-color: #666;}
+
+.answer .answer_radio {display: inline-block; position: relative;  max-width: 100%; position: relative; cursor: pointer; font-size: 18px; letter-spacing: -0.8px; color: #212121; text-align: left; padding: 0 17px; margin-top: 8px;}
+.answer .answer_radio:first-child {margin-left:0px;}
+.answer .answer_radio input[type=radio] {position: absolute; opacity: 0; cursor: pointer;}
+.answer .answer_radio > img {display: inline-block; margin-bottom: 15px;}
+.answer .answer_radio input + .radiomark {max-width: 100%; left: 0; top: 0;position: absolute; width: 100%; height: 100%; cursor: pointer; border-radius: 4px; border: solid 1px #eaeaea; margin: 0; padding: 0 17px;}
+.answer .answer_radio input:checked + .radiomark {border: 1px solid #4ec5ca;  background-color: #f5ffff;}
+.answer .answer_radio.horizontal {min-height: 62px; line-height: 62px; width: 100%;}
+.answer .answer_radio.vertical { width: 100%; padding: 20px 0 16px; min-height: 160px; }
+.answer .answer_radio.left_icon input + .radiomark {padding-left: 64px; }
+.answer .answer_radio.center_icon {text-align: center; padding: 16px;}
+.answer .answer_radio.center_icon > label {line-height: normal; padding-top: 20px;}
+.answer .answer_radio.center_icon > label > img {display: inline-block; max-width: 54.7%; margin-bottom: 10px;}
+.answer .answer_radio .orderjob_category {display: inline-block; position: absolute; left: 0; top: 0;}
+
+.answer .answer_check {display: inline-block; position: relative; width: 100%; margin-bottom:10px; /*margin-right: 10px;*/ float: left; min-height: 62px;}
+.answer > .answer_check:nth-child(2n) {margin-right: 0;}
+.answer .answer_check:last-child {margin-bottom:0px;}
+.answer .answer_check h2 {padding: 16px 0 19px 38px; font-size: 18px; letter-spacing: -0.9px; color: #212121; width: 100%; border-bottom: 1px solid #f5f5f5; line-height: 23px;}
+.answer .answer_check h3 {padding-left: 38px; font-size: 17px; letter-spacing: normal; color: #666; line-height: 29px;}
+.answer .answer_check > label > h3 {padding-left: 46px; font-size: 17px; letter-spacing: normal; color: #666; line-height: normal; display: table-cell; height: 62px; width: 100%; /*padding-top: 16px;*/ word-break: break-all; vertical-align: middle;}
+.answer .answer_check .check_contents {padding: 0 18px 16px 38px; font-size: 14px; letter-spacing: -0.7px; width: 100%; line-height: 1.57; margin-top: 10px; color: #999;}
+.answer .answer_check input[type=checkbox] {position: absolute; opacity: 0; cursor: pointer;}
+.answer .answer_check input[type=checkbox] + .checkmark {background:  transparent url('../../image/mobile/orderjob/btn-check-off-28-px.png') no-repeat 10px 17px; background-size: 28px 28px; position: relative; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; border-radius: 4px; border: 1px solid #eaeaea; margin: 0; display: inline-block; padding: 0 10px;}
+.answer .answer_check input[type=checkbox]:checked + .checkmark {background:  #f5ffff url('../../image/mobile/orderjob/btn-check-on-28-px.png') no-repeat 10px 17px; background-size: 28px 28px; border: 1px solid #4ec5ca;}
+
+.answer .input_field {font-size: 18px; display: inline-block; width: 100%; letter-spacing: -0.8px; line-height: normal;}
+.answer .input_field > label {font-size: 16px; line-height: normal; letter-spacing: -0.7px; color: #666; position: relative; display: block;}
+.answer .input_field > label:after {content: ''; display: inline-block; width: 100%; height: 1px; background-color: #666; position: absolute; left: 0; bottom: -5px;}
+.answer .input_field > textarea {display: inline-block; width: 100%; min-height: calc(56vh); resize: none; border-radius: 4px; border: 1px solid #eaeaea; background-color: #fff; color: #212121; font-size: 18px; padding: 10px; line-height: 1.44; letter-spacing: -0.8px;}
+.answer .input_field > textarea::-webkit-input-placeholder, .answer > textarea:-moz-placeholder, .answer > textarea::-moz-placeholder, .answer > textarea:-ms-input-placeholder, .answer > textarea::placeholder {color: #999;}
+
+.answer .input_field input[type=number] {width: calc(100vw - 60px); height: 62px; border-radius: 4px; border: 1px solid #eaeaea; color: #212121; font-size: 18px; padding-left: 16px; margin-right: 8px;}
+.answer .input_field input[type=number]:first-child {margin-left: 0;}
+.answer .input_field input[type=number]::-webkit-input-placeholder, .answer input[type=number]:-moz-placeholder, .answer input[type=number]::-moz-placeholder, .answer input[type=number]:-ms-input-placeholder, .answer input[type=number]::placeholder,
+.answer .input_field input[type=text]::-webkit-input-placeholder, .answer input[type=text]:-moz-placeholder, .answer input[type=text]::-moz-placeholder, .answer input[type=text]:-ms-input-placeholder, .answer input[type=text]::placeholder {color: #999;}
+.answer .input_field input[type=text] {height: 62px; border-radius: 4px; border: 1px solid #eaeaea; color: #212121; padding-left: 20px; font-size: 18px; letter-spacing: -0.8px; line-height: normal;}
+.answer .input_field input[type=text].input_calendar {margin-top: 15px; width:137px;padding:15px 9px 9px 50px;border:1px solid #e5e5e5; background:url('../../image/mobile/orderjob/ic-calendar-24-px.png') no-repeat left 15px top 19px; background-size: 24px 24px;}
+.answer .input_field input[type=number].fixed, .answer .input_field input[type=text].fixed, .answer .input_field input[type=number]:focus, .answer .input_field input[type=text]:focus,
+.answer .input_field > textarea.fixed, .answer .input_field > textarea:focus {border: 1px solid #4ec5ca; background-color: #f5ffff;}
+.answer .input_field .korean_price {display: block; margin: 8px 0 16px 16px; font-size: 14px; line-height: normal; letter-spacing: -0.6px; color: #212121;}
+
+.answer .input_field input.file {width:28%; border:1px solid #bbb;border-right:0;color:#888;padding:0.9rem;outline:none;}
+.answer .input_field .file_upload {color:#212121;border:1px solid #eaeaea;border-radius: 4px;width:100%;background:#fff;display:inline-block;position:relative;overflow:hidden;cursor:pointer;font-size:18px;text-align:center; letter-spacing: -0.9px; border-radius: 4px; height: 120px;/* padding-top: 16px;*/}
+.answer .input_field .file_upload > .button_field {width: calc(100vw - 20px); height: 120px; display: table-cell; text-align: center; vertical-align: middle;}
+.answer .input_field .file_upload > .button_field > img {display: inline-block; width: 110px; height: 60px; text-align: center;}
+.answer .input_field .file_upload img {margin-bottom: 4px;}
+/*.answer .input_field .file_upload:before {content:'\D30C\C77C\20\C5C5\B85C\B4DC';position:absolute;left:0;right:0;text-align:center;cursor:pointer;line-height:40px}*/
+.answer .input_field .file_upload input {display:inline-block;position:absolute;height:120px;width:100%;cursor:pointer;opacity:0; left: 0; top: 0;}
+
+.answer .input_field > span.text_size {font-size: 12px; font-family: Roboto, Malgun Gothic; line-height: normal; color: #999; letter-spacing: normal; float: right; margin-top: 4px;}
+
+.answer .file_list {display: inline-block; width: 100%; margin-bottom: 10px;}
+.answer .file_list .uploaded_file {display: inline-block; width: 100%; height: 62px; border-radius: 4px; border: 1px solid #eaeaea; position: relative; padding-left:  20px; font-size: 18px; letter-spacing: -0.8px; color: #666; line-height: normal; margin-bottom: 8px;}
+.answer .file_list .uploaded_file:last-child {margin-bottom: 0;}
+.answer .file_list .uploaded_file > b {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: inline-block; max-width: calc(100vw - 145px); line-height: 57px;}
+.answer .file_list .uploaded_file > span {margin-left: 8px; font-size: 12px; letter-spacing: -0.6px; color: #999; line-height: 62px; vertical-align: top}
+.answer .file_list .uploaded_file > button {position: absolute; right: 20px; top: 23px; display: inline-block; width: 15px; height: 15px !important; border: none !important; border-radius: 0 !important; margin: 0 !important; }
+.answer .file_list .uploaded_file > button img {vertical-align: top; width: 100%; height: 100%;}
+
+.answer .full {width: 100% !important;}
+.answer span.comment,
+.order_change > .qna_part .category_answer .comment {font-size: 12px; line-height: normal; letter-spacing: -0.5px; color: #999; margin-top: 14px; display: inline-block;}
+
+.answer #container_ {z-index:100;width:100%;padding:15px;color:#666;background-color:#fcfcfc;border:1px solid #eaeaea;/* display:none; */ margin-bottom: 10px;}
+.answer #container_.no_special {bottom:56px}
+.answer #container_ .progress_cancel_center {margin-bottom:10px;}
+.answer #container_ .progress_cancel_center .progress_tit {display:inline-block;height:22px;padding:2px 0 0 25px;background:url('../../image/mobile/message/ic_file01_sm.png') no-repeat 0 0;background-size:22px 22px;color:#212121;font-weight:bold;}
+.answer #container_ .progress_cancel_center button {display:inline-block;padding:4px 5px 4px;font-size:11px;color:#fff;border-radius:9px;background-color:#808080;float:right;}
+.answer .row {overflow:hidden;}
+.answer .row {padding:2px 0 5px;}
+.answer .row .file_info {overflow:hidden;width:100%;padding-top:3px;line-height:1.2;}
+.answer .row .file_info .col-sm-3 {overflow:hidden;float:left;width:80%;color:#2470c9;text-overflow:ellipsis;white-space:nowrap;}
+.answer .row .file_info .col-sm-1 {float:right;width:20%;margin-top:5px;text-align:right;color:#999;font-size:10px;}
+.answer .row .progress_box {position:relative;}
+.answer .row .progress {width:80%;margin-top:5px; height: 8px;}
+.answer .row .progress_control {position:absolute;right:0;top:-6px;}
+.answer .row .progress_control button img {width:14px;height:14px;}
+.answer .row.upload_stop .file_info .col-sm-3 {color:#e62e2e;}
+
+.orderjob_container {display: inline-block; width: 100%; background-color: #fff; padding: 20px 0 0px}
+.orderjob_container.setting_field {padding: 0 ;}
+.orderjob_container .orderjob_content { padding: 0 10px;position: relative;}
+.orderjob_container .orderjob_content .content_info {display: inline-block;width: calc(100% + 20px);background: linear-gradient(131deg, #13a9bd, #51e9d8);margin: -20px -10px 0;padding: 20px 10px;}
+.orderjob_container .orderjob_content .content_info .content_header {font-size: 11px; line-height: normal; letter-spacing: -0.6px; color: #fff; position: relative;}
+.orderjob_container .orderjob_content .content_info .content_header span {height: 16px; padding: 0 4px; background-color: #222e4f; border-radius: 3px; font-family: Roboto, Malgun Gothic; font-weight: bold; letter-spacing: normal; line-height: 16px; color: #fff; display: inline-block;}
+.orderjob_container .orderjob_content .content_info .content_header > span {display: none;}
+.orderjob_container .orderjob_content .content_info .content_header b {position: absolute; right: 0; top: 0px;}
+.orderjob_container .orderjob_content .content_info .content_header > b {color: #fff;}
+.orderjob_container .orderjob_content .content_info > label {margin: 9px 0 8px; font-size: 22px; font-weight: 600; line-height: 1.36; letter-spacing: -1.2px; color: #fff; text-align: left; display: block;}
+.orderjob_container .orderjob_content > .orderjob_inform {margin-top: 8px; text-align: left; display: inline-block; width: 100%;}
+.orderjob_container .orderjob_content > .orderjob_inform > label {font-size: 12px; line-height: normal; letter-spacing: -0.6px; color: #999; display: block;}
+.orderjob_container .orderjob_content > .orderjob_inform > b {font-size: 17px; font-weight: bold; letter-spacing: -0.9px; color: #212121; margin-top: 4px; line-height: normal; display: inline-block;}
+.orderjob_container .orderjob_content .click_field {display: inline-block; background-color: transparent; position: absolute; left: 0; right: 0; bottom: 44px; top: -1px; }
+.orderjob_container .orderjob_content .ended_order {display: inline-block; width: calc(100% + 20px); height: 50px; background-color: #d8d8d8; text-align: center; line-height: 48px; font-size: 18px; font-weight: 500; letter-spacing: -0.3px; color: #212121; margin: -20px -10px 20px;}
+
+.orderjob_container .orderjob_sub_content {display: inline-block; width: 100%; margin-top: 16px; position: relative; margin-bottom: -2px;}
+.orderjob_container .orderjob_sub_content .toggle_btn {display: inline-block; width: 36px; height: 26px; position: absolute; right: 9px; top: -26px; border-radius: 4px 4px 0 0; box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1); background:#f5f5f5 url('../../image/mobile/orderjob/ic-arrow-up-16-px.png') no-repeat center center; background-size: 16px 16px; text-align: center;}
+.orderjob_container .orderjob_sub_content .toggle_btn.down { background:#f5f5f5 url('../../image/mobile/orderjob/ic-arrow-down-16-px.png') no-repeat center center; background-size: 16px 16px;}
+.orderjob_container .orderjob_sub_content .sub_informs {border-top: 1px solid #eaeaea; display: none; width: 100%; padding: 16px 10px;}
+.orderjob_container .orderjob_sub_content .sub_informs:last-child {border-bottom: 1px solid #eaeaea;/* margin-bottom: 6px;*/}
+.orderjob_container .orderjob_sub_content .sub_informs:empty {display: none !important; border: none; padding: 0;}
+.orderjob_container .orderjob_sub_content .sub_informs > .sub_inform {margin-bottom: 10px; display: inline-block; width: 100%;}
+.orderjob_container .orderjob_sub_content .sub_informs > .sub_inform:last-child {margin-bottom: 0;}
+.orderjob_container .orderjob_sub_content .sub_informs > .sub_inform > label {font-size: 12px; line-height: normal; letter-spacing: -0.8px; text-align: left; color: #999; display: inline-block; width: 100px; float: left;}
+.orderjob_container .orderjob_sub_content .sub_informs > .sub_inform > b {font-size: 14px; line-height: normal; letter-spacing: normal; color: #212121; width: calc(100vw - 120px); text-align: left; display: inline-block;}
+.orderjob_container .orderjob_sub_content .sub_informs > .sub_inform .sub_option_btn  {display: inline-block;margin: -2px 0 0 5px;color: #fff;background-color: #636363;border-radius: 4px;padding: 0 7px;width: auto;height: auto;border: none;vertical-align: middle;font-size: 11px;line-height: 20px;}
+.orderjob_container .orderjob_sub_content .sub_informs > span {font-size: 17px; line-height: 1.41; letter-spacing: -1.1px; color: #666;}
+.orderjob_container .orderjob_sub_content .sub_informs .attachment {display: inline-block; width: 100%; margin-bottom: 10px;}
+.orderjob_container .orderjob_sub_content .sub_informs .attachment > label {font-size: 12px; line-height: normal; letter-spacing: -0.8px; text-align: left; display: inline-block; width: 100%; color: #999; margin-bottom: 8px;}
+.orderjob_container .orderjob_sub_content .sub_informs .attachment > button {background:#fafafb url('../../image/mobile/orderjob/ic-file-01-md.png') no-repeat 10px 4px; background-size: 28px 28px;  display: inline-block; width: 100%; height: 36px; border-radius: 18px; font-size: 14px; line-height: 36px; letter-spacing: normal; color: #212121; padding-left: 43px; position: relative; margin-bottom: 10px; text-align: left; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.orderjob_container .orderjob_sub_content .sub_informs .attachment > button b {max-width: calc(100% - 74px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block;}
+.orderjob_container .orderjob_sub_content .sub_informs .attachment > button:last-child {margin-bottom: 0;}
+.orderjob_container .orderjob_sub_content .sub_informs .attachment > button.link {background:#fafafb url('../../image/mobile/orderjob/ic-link-16-px.png') no-repeat 16px 10px; background-size: 16px 16px;}
+.orderjob_container .orderjob_sub_content .sub_informs .attachment > button.link b {max-width: calc(100% - 10px);}
+.orderjob_container .orderjob_sub_content .sub_informs .attachment > button > span {font-size: 12px; line-height: normal; letter-spacing: normal; color: #666; position: absolute; right: 27px; top: 11px;}
+
+.orderjob_container .order_suggest {display: inline-block; width: 100%; background-color: #f5f5f5; padding: 20px 10px;}
+.orderjob_container .order_suggest > label {/*margin-left: 12px; */font-size :22px; font-weight: 600; line-height: 1.36; letter-spacing: -1.2px; color: #212121;}
+.orderjob_container .order_suggest > ul {display: inline-block; width: 100%;}
+.orderjob_container .order_suggest > ul li {display: inline-block; width: 100%; background-color: #fff; padding: 15px 10px; border: 1px solid #eaeaea; margin-top: 10px;}
+.orderjob_container .order_suggest > ul > li.choice {background-color: #f5ffff; background-size: 92px 93px; border: 1px solid rgb(78, 197, 202); position: relative;}
+.orderjob_container .order_suggest > ul > li.choice:after {content: ''; display: inline-block; position: absolute; width: 92px; height: 93px; background: url('../../image/mobile/orderjob/winner-92-px.png') no-repeat 0 0; background-size: 92px 93px; right: -5px; top: -5px; }
+.orderjob_container .order_suggest > ul li.disabled {position: relative; margin-top: 35px;}
+.orderjob_container .order_suggest > ul li.disabled:before {content: '\C8FC\BB38\D560\20\C218\20\C5C6\B294\20\C81C\C548\C785\B2C8\B2E4.'; display: inline-block; position: absolute; left: 0; right: 0; top: -25px; height: 25px; background-color: #999; text-align: center; font-size: 14px; line-height: 24px; letter-spacing: -1.2px; color: #fff;}
+.orderjob_container .order_suggest > ul li.disabled:after {content: ''; position: absolute; right: 0; left: 0; top: 0; bottom: 0; background-color: #e1e1e1; opacity: 0.8;}
+.orderjob_container .order_suggest > ul li.disabled .suggest_header {padding-bottom: 0; border-bottom: none;}
+.orderjob_container .order_suggest > ul li .suggest_header {display: inline-block; width: 100%; border-bottom: 1px solid #f5f5f5; padding-bottom: 16px; padding-top: 3px; position: relative;}
+.orderjob_container .order_suggest > ul li .suggest_header .profile {display: inline-block; width: calc(100% - 90px); margin-bottom: 16px; padding-left: 55px; font-size: 14px; line-height: normal; letter-spacing: normal; color: #212121; height: 40px;}
+.orderjob_container .order_suggest > ul li .suggest_header .profile .photo {width: 40px; height: 40px; border-radius: 50%; background: url('https://images.otwojob.com/image/mobile/index/host_null.png') no-repeat 0 0; background-size: 100%; display: inline-block; position: absolute; left: 0; top: 0;}
+.orderjob_container .order_suggest > ul li .suggest_header .profile .photo img {display: block; width: 100%; height: 100%; border-radius: 50%;}
+.orderjob_container .order_suggest > ul li .suggest_header .profile .star_grade {display:inline-block; margin-top: 4px;}
+.orderjob_container .order_suggest > ul li .suggest_header .profile .star_grade .stars {display:inline-block;width:80px;height:13px;overflow:hidden;background:url('https://images.otwojob.com/image/mobile/svg/star-gray-b.svg') 0 0 no-repeat;background-size:80px 13px} /* 1383 */
+.orderjob_container .order_suggest > ul li .suggest_header .profile .star_grade .stars .percent {display:block;width:0%;height:13px;overflow:hidden;background:url('https://images.otwojob.com/image/mobile/svg/star-yellow-b.svg') 0 0 no-repeat;background-size:80px 13px} /* 1383 */
+.orderjob_container .order_suggest > ul li .suggest_header .profile .star_grade .txt {font-size: 14px; color:#212121; line-height: normal; letter-spacing: normal;}
+.orderjob_container .order_suggest > ul li .suggest_header .account {display: inline-block; width: calc(100% - 90px);}
+.orderjob_container .order_suggest > ul li .suggest_header .account > div {display: inline-block;}
+.orderjob_container .order_suggest > ul li .suggest_header .account > div:first-child {margin-right: 25px; width: 50%;}
+.orderjob_container .order_suggest > ul li .suggest_header .account > div > label {font-size: 12px; line-height: normal; letter-spacing: -0.2px; color: #999; margin-bottom: 6px; display: block; text-align: left;}
+.orderjob_container .order_suggest > ul li .suggest_header .account > div > b {font-size: 17px; font-weight: bold; line-height: normal; letter-spacing: -0.3px; color: #212121;}
+.orderjob_container .order_suggest > ul li .suggest_header .header_btn {display: inline-block; position: absolute; right: 0; bottom: 15px;}
+.orderjob_container .order_suggest > ul li .suggest_header .header_btn button {display: inline-block; width: 90px; height: 35px; font-size: 15px; line-height: 35px; letter-spacing: -0.3px; text-align: center; border-radius: 2px; border: 1px solid #e1e1e1;  }
+.orderjob_container .order_suggest > ul li .suggest_header .header_btn button:last-child {margin-top: 8px;}
+.orderjob_container .order_suggest > ul li .suggest_header .header_btn button.talk_btn {color: #666; padding-left: 26px; background: #fff url('../../image/mobile/orderjob/ic-talk-28-px-2x.png') no-repeat 14px 4px; background-size: 28px 28px;}
+.orderjob_container .order_suggest > ul li .suggest_header .header_btn button.order_btn {background-color: #4ec5ca; color: #fff; padding: 0; margin-top: 8px; border: none;}
+.orderjob_container .order_suggest > ul li .suggest_body {display: inline-block; width: 100%;}
+.orderjob_container .order_suggest > ul li .suggest_body .body_content {margin-top: 16px; display: inline-block; width: 100%;}
+.orderjob_container .order_suggest > ul li .suggest_body .body_content b {font-size: 12px; font-weight: bold; line-height: 2; letter-spacing: normal; color: #212121;}
+.orderjob_container .order_suggest > ul li .suggest_body .body_content span {font-size: 17px; line-height: 1.41; letter-spacing: normal; color: #666;}
+.orderjob_container .order_suggest > ul li .suggest_body .body_content button.link,
+.orderjob_container .order_suggest > ul li .suggest_body .body_content button.attachment {background: #fafafb url('../../image/mobile/orderjob/ic-file-01-md.png') no-repeat 10px 4px; background-size: 28px 28px; display: inline-block; width: 100%; height: 36px; border-radius: 18px; font-size: 14px; line-height: 36px; letter-spacing: normal; color: #212121; padding-left: 43px; position: relative; margin-bottom: 10px; text-align: left;}
+.orderjob_container .order_suggest > ul li .suggest_body .body_content button.link b,
+.orderjob_container .order_suggest > ul li .suggest_body .body_content button.attachment b {max-width: calc(100% - 74px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; font-weight: normal; line-height: 36px;}
+.orderjob_container .order_suggest > ul li .suggest_body .body_content button.link > span,
+.orderjob_container .order_suggest > ul li .suggest_body .body_content button.attachment > span {font-size: 12px; line-height: normal; letter-spacing: normal; color: #666; position: absolute; right: 27px; top: 11px;}
+.orderjob_container .order_suggest > ul li .suggest_body .body_content button.link {background: #fafafb url('../../image/mobile/orderjob/ic-link-16-px.png') no-repeat 16px 10px; background-size: 16px 16px;}
+.orderjob_container .order_suggest > ul li .suggest_body .body_content button.link b {max-width: calc(100% - 10px);}
+.orderjob_container .order_suggest > ul li span.regist_date {font-size: 12px; line-height: normal; letter-spacing: normal; color: #999; display: inline-block; float: right; margin-top: 15px;}
+.orderjob_container .order_suggest .empty_order {background: url('../../image/mobile/orderjob/ic-nodata-60-px.png') no-repeat center top; background-size: 60px 60px; padding-top: 70px; font-size: 17px; line-height: 1.41; letter-spacing: normal; text-align: center; color: #666; margin-top: 10px;}
+
+.orderjob_container .order_suggest .recommend_seller {padding-top: 20px; display: inline-block; width: 100%;}
+.orderjob_container .order_suggest .recommend_seller > label {font-size: 22px; font-weight: 600; line-height: 1.36; letter-spacing: -1.2px; color: #212121;}
+.orderjob_container .order_suggest .other_sellers {display: inline-block; width: 100%; margin-top: 9px;}
+.orderjob_container .order_suggest .other_sellers li { text-align: center; font-size: 0.76rem; word-break: break-all; padding: 0; background-color: transparent; border: none; width: calc((100vw - 44px) / 4); float: left; margin-right: 8px; }
+.orderjob_container .order_suggest .other_sellers li:nth-child(4n),
+.orderjob_container .order_suggest .other_sellers li:last-child { margin-right: 0;}
+.orderjob_container .order_suggest .other_sellers li:nth-child(n+5) {margin-top: 5px;}
+.orderjob_container .order_suggest .other_sellers li .profile {display: inline-block; width: calc(18.3vw); height: calc(18.3vw); background-color: #fff; border: 1px solid #eaeaea; border-radius: 50%; padding-top: calc(1.181vw); margin-bottom : 3px;}
+.orderjob_container .order_suggest .other_sellers li .photo {display: inline-block; width: calc(15.5vw); height: calc(15.5vw); border: 1px solid #eaeaea; border-radius: 50%; background: url('https://images.otwojob.com/image/mobile/index/host_null.png') no-repeat 0 0; background-size: 100%;}
+.orderjob_container .order_suggest .other_sellers li .photo img {display: inline-block; width: 100%; height: 100%; border-radius: 50%;}
+.orderjob_container .order_suggest .other_sellers li.choice .profile {position: relative;}
+.orderjob_container .order_suggest .other_sellers li.choice .profile .photo {border: none;}
+.orderjob_container .order_suggest .other_sellers li.choice .profile:after {content: ''; text-align: center; background: transparent url('../../image/mobile/orderjob/img-seller-seleted.png') no-repeat center center; background-size: calc(18.3vw) calc(18.3vw); width:calc(18.3vw); height:calc(18.3vw); position: absolute; left: -1.2px; top: -1px; border-radius: 50%;}
+.orderjob_container .order_suggest .other_sellers li.cancel .profile .photo {position: relative;}
+.orderjob_container .order_suggest .other_sellers li.cancel .profile .photo:before {content: ''; background: #fff url('../../image/mobile/orderjob/ic-order-cancel.png') no-repeat center center; background-size: 80%; display: inline-block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; border-radius: 50%;}
+.orderjob_container .order_suggest .other_sellers li > span {display: inline-block; height: 40px;}
+
+.orderjob_container .order_suggest .order_editor {display: inline-block; width: 100%; margin-top: 20px;}
+.orderjob_container .order_suggest .order_editor .edit_contents {margin-top: 20px;}
+.orderjob_container .order_suggest .order_editor .edit_contents > label {font-size: 14px; line-height: normal; letter-spacing: -0.6px; color: #212121;}
+.orderjob_container .order_suggest .order_editor .input_field {margin-top: 8px; display: inline-block; width: 100%; }
+.orderjob_container .order_suggest .order_editor .input_field input[type=number],
+.orderjob_container .order_suggest .order_editor .input_field input[type=text] {display: inline-block; width: calc(100vw - 50px); height: 62px; background-color: #fff; border: 1px solid #eaeaea; border-radius: 4px; padding-left: 10px; line-height: 62px; text-align: left; font-size: 18px; letter-spacing: -0.8px; color: #666;}
+.orderjob_container .order_suggest .order_editor .input_field input[type=number]::placeholder,
+.orderjob_container .order_suggest .order_editor .input_field input[type=text]::placeholder {color: #999;}
+.orderjob_container .order_suggest .order_editor .input_field > span {display: inline-block; line-height: 62px; color: #212121; letter-spacing: -0.8px; font-size: 18px; margin-left: 7px;}
+.orderjob_container .order_suggest .order_editor .input_field textarea {display: inline-block; width: 100%; height: 200px; border-radius: 4px; background-color: #fff; border: 1px solid #eaeaea; padding: 20px 10px; font-size: 18px; line-height: 1.33; letter-spacing: -0.8px; color: #666; resize: none;}
+.orderjob_container .order_suggest .order_editor .input_field textarea::placeholder {color: #999;}
+.orderjob_container .order_suggest .order_editor .input_field .load_profile {float: right; display: inline-block; margin-top: 10px; font-size: 12px; line-height: normal; letter-spacing: -0.5px; color: #212121; text-decoration: underline; }
+
+
+.orderjob_container .order_suggest .order_editor .input_field input.file {width:28%; border:1px solid #bbb;border-right:0;color:#888;padding:0.9rem;outline:none;}
+.orderjob_container .order_suggest .order_editor .input_field .file_upload {color:#212121;border:1px solid #eaeaea;border-radius: 4px;width:100%;background:#fff;display:inline-block;position:relative;overflow:hidden;cursor:pointer;font-size:18px;text-align:center; letter-spacing: -0.9px; border-radius: 4px; height: 62px; padding-top: 19px;}
+.orderjob_container .order_suggest .order_editor .input_field .file_upload img {margin-bottom: 4px; margin-right: 15px; width: 16px; height: 16px;}
+/*.answer .input_field .file_upload:before {content:'\D30C\C77C\20\C5C5\B85C\B4DC';position:absolute;left:0;right:0;text-align:center;cursor:pointer;line-height:40px}*/
+.orderjob_container .order_suggest .order_editor .input_field .file_upload input {display:inline-block;position:absolute;height:62px;width:100%;cursor:pointer;opacity:0; left: 0; top: 0;}
+
+.orderjob_container .order_suggest .order_editor .input_field .file_list {display: inline; width: 100%; margin-bottom: 0;}
+.orderjob_container .order_suggest .order_editor .input_field .file_list .uploaded_file {display: inline-block; width: 100%; height: 62px; border-radius: 4px; border: 1px solid #eaeaea; position: relative; padding-left:  20px; font-size: 18px; letter-spacing: -0.8px; color: #666; line-height: normal; margin-bottom: 8px; background-color: #fff;}
+.orderjob_container .order_suggest .order_editor .input_field .file_list .uploaded_file:last-child {margin-bottom: 10px;}
+.orderjob_container .order_suggest .order_editor .input_field .file_list .uploaded_file > b {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: inline-block; max-width: calc(100vw - 145px); line-height: 57px;}
+.orderjob_container .order_suggest .order_editor .input_field .file_list .uploaded_file > span {margin-left: 8px; font-size: 12px; letter-spacing: -0.6px; color: #999; line-height: 62px; vertical-align: top}
+.orderjob_container .order_suggest .order_editor .input_field .file_list .uploaded_file > button {position: absolute; right: 20px; top: 23px; display: inline-block; width: 15px; height: 15px !important; border: none !important; border-radius: 0 !important; margin: 0 !important; }
+.orderjob_container .order_suggest .order_editor .input_field .file_list .uploaded_file > button img {vertical-align: top; width: 100%; height: 100%;}
+
+.orderjob_container .order_suggest .order_editor .input_field #container_ {z-index:100;width:100%;padding:15px;color:#666;background-color:#fcfcfc;border:1px solid #eaeaea;/* display:none; */ margin-bottom: 10px;}
+.orderjob_container .order_suggest .order_editor .input_field #container_.no_special {bottom:56px}
+.orderjob_container .order_suggest .order_editor .input_field #container_ .progress_cancel_center {margin-bottom:10px;}
+.orderjob_container .order_suggest .order_editor .input_field #container_ .progress_cancel_center .progress_tit {display:inline-block;height:22px;padding:2px 0 0 25px;background:url('../../image/mobile/message/ic_file01_sm.png') no-repeat 0 0;background-size:22px 22px;color:#212121;font-weight:bold;}
+.orderjob_container .order_suggest .order_editor .input_field #container_ .progress_cancel_center button {display:inline-block;padding:4px 5px 4px;font-size:11px;color:#fff;border-radius:9px;background-color:#808080;float:right;}
+.orderjob_container .order_suggest .order_editor .input_field .row {overflow:hidden;}
+.orderjob_container .order_suggest .order_editor .input_field .row {padding:2px 0 5px;}
+.orderjob_container .order_suggest .order_editor .input_field .row .file_info {overflow:hidden;width:100%;padding-top:3px;line-height:1.2;}
+.orderjob_container .order_suggest .order_editor .input_field .row .file_info .col-sm-3 {overflow:hidden;float:left;width:80%;color:#2470c9;text-overflow:ellipsis;white-space:nowrap;}
+.orderjob_container .order_suggest .order_editor .input_field .row .file_info .col-sm-1 {float:right;width:20%;margin-top:5px;text-align:right;color:#999;font-size:10px;}
+.orderjob_container .order_suggest .order_editor .input_field .row .progress_box {position:relative;}
+.orderjob_container .order_suggest .order_editor .input_field .row .progress {width:80%;height:8px; margin-top:5px;}
+.orderjob_container .order_suggest .order_editor .input_field .row .progress_control {position:absolute;right:0;top:-6px;}
+.orderjob_container .order_suggest .order_editor .input_field .row .progress_control button img {width:14px;height:14px;}
+.orderjob_container .order_suggest .order_editor .input_field .row.upload_stop .file_info .col-sm-3 {color:#e62e2e;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check {display: inline-block; position: relative; width: calc(50vw - 15px); margin-bottom:10px; margin-right: 10px; float: left; min-height: 62px; width: 100%; background-color: #fff;}
+.orderjob_container .order_suggest .order_editor .input_field > .answer_check:nth-child(2n) {margin-right: 0;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check:last-child {margin-bottom:0px;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check h2 {padding: 16px 0 19px 38px; font-size: 18px; letter-spacing: -0.9px; color: #212121; width: 100%; border-bottom: 1px solid #f5f5f5; line-height: 23px;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check h3 {padding-left: 38px; font-size: 17px; letter-spacing: normal; color: #666; line-height: 29px;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check > label > h3 {padding-left: 46px; font-size: 17px; letter-spacing: normal; color: #666; line-height: 56px; display: inline-block; height: 62px; width: 100%;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check .check_contents {padding: 0 18px 16px 38px; font-size: 14px; letter-spacing: -0.7px; width: 100%; line-height: 1.57; margin-top: 10px; color: #999;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check input[type=checkbox] {position: absolute; opacity: 0; cursor: pointer;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check input[type=checkbox] + .checkmark {background:  transparent url('../../image/mobile/orderjob/btn-check-off-28-px.png') no-repeat 10px 16px; background-size: 28px 28px; position: relative; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; border-radius: 4px; border: 1px solid #eaeaea; margin: 0; display: inline-block; padding: 0 10px;}
+.orderjob_container .order_suggest .order_editor .input_field .answer_check input[type=checkbox]:checked + .checkmark {background:  #f5ffff url('../../image/mobile/orderjob/btn-check-on-28-px.png') no-repeat 10px 16px; background-size: 28px 28px; border: 1px solid #4ec5ca;}
+.orderjob_container .order_suggest .order_editor button.submit_order {display: inline-block; width: 100%; height: 52px; line-height: 52px; text-align: center; border-radius: 4px; background-color: #4ec5ca; font-size: 24px; letter-spacing: -1px; color: #fff; margin-top: 20px; }
+
+.orderjob_container .order_suggest .suggest_guide {display: inline-block; width: 100%; margin-top: 20px;}
+.orderjob_container .order_suggest .suggest_guide > label {font-size: 12px; line-height: normal; letter-spacing: -0.6px; color: #666; margin-bottom: 8px; display: inline-block;}
+.orderjob_container .order_suggest .suggest_guide > ul {display: inline-block; width: 100%; word-break: break-all; font-size: 12px; letter-spacing: -0.6px; color: #999; line-height: normal; padding-left: 5px;}
+.orderjob_container .order_suggest .suggest_guide > ul li {display: inline-block; list-style: none; text-align: left;}
+.orderjob_container .order_suggest .suggest_guide > ul li:before {content: '\B7'; margin-left: -5px;}
+.orderjob_container .order_suggest .suggest_guide > ul li p {padding-left: 4.5px; display: inline;}
+.orderjob_container .order_suggest .suggest_guide > ul li p b {color: #ff5a12;}
+
+.input_field .array_sets {display: inline-block; width: 100%; border-radius: 4px; border: 1px solid #eaeaea; font-size: 17px; letter-spacing: -0.7px; line-height: normal; color: #666; padding: 8px 8px 0; text-align: left; background-color: #fff; letter-spacing: -1.2px;}
+.input_field .array_sets > span {height: 32px; line-height: 32px; display: inline-block; border-radius: 16px; border: 1px solid #eaeaea; margin-right: 8px; margin-bottom: 8px; max-width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; position: relative; padding: 0 30px 0 12px;}
+.input_field .array_sets > span:last-child {margin-right: 0;}
+.input_field .array_sets > span > button {display: inline-block; width: 16px; height: 16px !important; margin-left: 13px; vertical-align: top; border: none !important; margin-right: 0 !important; padding: 0 !important; position: absolute; top: 8px; right: 8px; font-size: 14px;}
+.input_field .array_sets > span > button > img {display: inline-block; width: 100%; height: 100%; vertical-align: top; }
+.input_field .array_sets > input[type=text] {border: none !important; box-shadow: none; width: 100% !important; height: 32px; line-height: 32px; font-size: 17px; margin-bottom: 8px;}
+.input_field > .input_field {margin-top: 0 !important;}
+
+.orderjob_container .order_question {display: inline-block; background-color: #fff; padding: 20px 10px; width: 100%;}
+.orderjob_container .order_question > label {font-size: 22px; font-weight: 600; line-height: 1.36; letter-spacing: -1.2px; color: #212121;}
+.orderjob_container .order_question .reply_brief {display: inline-block; width: 100%; height: 40px; position: relative; margin-top: 11px;}
+.orderjob_container .order_question .reply_brief input[type=text] {display: inline-block; width: calc(100% - 50px); height: 100%; border: 1px solid #eaeaea; border-right: none; border-radius: 2px 0 0 2px; padding-left: 10px; line-height: 40px;font-size: 14px; line-height: 40px; text-align: left; letter-spacing: normal;}
+.orderjob_container .order_question .reply_brief input[type=text]::placeholder {color: #999;}
+.orderjob_container .order_question .reply_brief button.reply_btn {width: 50px; height: 40px; display: inline-block; background-color: #4ec5ca; border-radius: 0 2px 2px 0; text-align: center; letter-spacing: -0.3px; color: #fff; line-height: 40px; position: absolute; right: 0; top: 0;}
+
+.orderjob_container .order_question .reply_writer {display: none; width: 100%; border: 1px solid #eaeaea; border-radius: 2px; margin-top: 11px; padding: 0 !important;}
+.orderjob_container .order_question .reply_writer textarea {display: inline-block; width: 100%; height: 140px; resize: none; padding: 12px 10px; font-size: 14px; line-height: normal; letter-spacing: normal; color: #212121; border: none;}
+.orderjob_container .order_question .reply_writer textarea::placeholder {color: #999;}
+.orderjob_container .order_question .reply_writer .writer_footer {display: inline-block; width: 100%; height: 40px; background-color: #f5f5f5; position: relative; font-size: 12px; color: #999; line-height: 40px; letter-spacing: normal; padding-left: 41px;}
+.orderjob_container .order_question .reply_writer .writer_footer .photo {width: 24px; height: 24px; border-radius: 50%; background: url('https://images.otwojob.com/image/mobile/index/host_null.png') no-repeat 0 0; background-size: 100%; display: inline-block; position: absolute; left: 9px; top: 9px;}
+.orderjob_container .order_question .reply_writer .writer_footer .photo img {display: inline-block; width: 100%; height: 100%; vertical-align: top; border-radius: 50%;}
+.orderjob_container .order_question .reply_writer .writer_footer .secret_check {display: inline-block; position: relative; max-width: 100%; padding-left: 18px; font-size: 12px; color: #999; letter-spacing: normal; vertical-align: top;}
+.orderjob_container .order_question .reply_writer .writer_footer .secret_check input[type=checkbox] {position: absolute; opacity: 0; cursor: pointer;}
+.orderjob_container .order_question .reply_writer .writer_footer .secret_check input[type=checkbox] + .checkmark {background:  transparent url('../../image/mobile/orderjob/ic-lock-normal-16-px.png') no-repeat left -1px; background-size: 16px 16px; position: absolute; left: 0; top: 12px; width: 100%; height: 16px; cursor: pointer; margin: 0; }
+.orderjob_container .order_question .reply_writer .writer_footer .secret_check input[type=checkbox]:checked + .checkmark {background:  transparent url('../../image/mobile/orderjob/ic-lock-selected-16-px.png') no-repeat left -1px; background-size: 16px 16px;}
+.orderjob_container .order_question .reply_writer .writer_footer .comment_total {font-size: 12px; color: #999; letter-spacing: normal; margin-left: 15px;}
+.orderjob_container .order_question .reply_writer .writer_footer .reply_btn {display: inline-block; width: 50px; height: 40px; border-radius: 0 2px 2px 0; background-color: #4ec5ca; text-align: center; line-height: 40px; font-size: 13px; letter-spacing: -0.3px; color: #fff; position: absolute; right: 0; top: 0;}
+
+.orderjob_container .order_question > .reply_list {display: inline-block; width: 100%; margin-top: 16px;}
+.orderjob_container .order_question > .reply_list li {display: inline-block; width: 100%; border-top: 1px solid #eaeaea;}
+.orderjob_container .order_question > .reply_list li:last-child {border-bottom: 1px solid #eaeaea;}
+.orderjob_container .order_question > .reply_list li > div {display: inline-block; width: 100%; position: relative; padding: 16px 0 16px 38px; }
+.orderjob_container .order_question > .reply_list li > div .etc_menu {position: absolute; display: inline-block; width: 18px; height: 18px; top: 15px; right: 5px;}
+.orderjob_container .order_question > .reply_list li > div .etc_menu img {width: 100%; height: 100%; display: inline-block;}
+.orderjob_container .order_question > .reply_list li > div .photo {width: 30px; height: 30px; border-radius: 50%; background: url('https://images.otwojob.com/image/mobile/index/host_null.png') no-repeat 0 0; background-size: 100%; display: inline-block; position: absolute; left: 0px; top: 19px;}
+.orderjob_container .order_question > .reply_list li > div .photo img {display: inline-block; width: 100%; height: 100%; vertical-align: top; border-radius: 50%;}
+.orderjob_container .order_question > .reply_list li > div .reply_header {font-size: 11px; line-height: normal; letter-spacing: normal; color: #999; text-align: left; display: block;}
+.orderjob_container .order_question > .reply_list li > div .reply_header .secret_reply {display: inline-block; width: 16px; height: 16px; margin-left: 3px; vertical-align: top;}
+.orderjob_container .order_question > .reply_list li > div .reply_content {font-size: 14px; line-height: normal; letter-spacing: normal; color: #212121; text-align: left; word-break: break-all; width: calc(100% - 30px);}
+.orderjob_container .order_question > .reply_list li > div .etc_menu_field {display: none; width: 45px; position: absolute; right: 0; top: 37px; border: 1px solid #eaeaea; background-color: #fff; z-index: 10;}
+.orderjob_container .order_question > .reply_list li > div .etc_menu_field button {display: inline-block; width: 100%; height: 30px; text-align: center; font-size: 12px; line-height: 30px; letter-spacing: -0.8px; color: #666;}
+
+.orderjob_container .order_question > .reply_list li > div.buyer_reply {background-color: #f5ffff; border-top: 1px solid #eaeaea; padding-left: 53px;}
+.orderjob_container .order_question > .reply_list li > div.buyer_reply .photo {left: 15px; top: 16px;}
+.orderjob_container .order_question > .reply_list li > div.buyer_reply:before {content: ''; display: inline-block; position: absolute; width: 10px; height: 10px; left: 1px; top: 11px; background: url('../../image/mobile/orderjob/icon-reply.png') no-repeat center center; background-size: 10px 10px;}
+
+.orderjob_container .submit_field {display: inline-block; width: 100%; padding: 20px 10px; text-align: center;}
+.orderjob_container .submit_field .like_btn {display: inline-block; width: 92px; height: 52px; border: 1px solid #eaeaea; border-radius: 4px;  line-height: 52px; background:  transparent url('../../image/mobile/orderjob/ic-heart-normal-20-px.png') no-repeat 20px 16px; background-size: 20px 20px;  padding-left: 50px; text-align: left; font-size: 24px; letter-spacing: -1px; color: #666;}
+.orderjob_container .submit_field .like_btn.on { background:  transparent url('../../image/mobile/orderjob/ic-heart-pressed-20-px.png') no-repeat 20px 16px; background-size: 20px 20px; }
+.orderjob_container .submit_field .submit_ordering {background-color: #4ec5ca; display: inline-block; height: 52px; width: calc(100vw - 120px); border-radius: 4px; font-size: 24px; line-height: 52px; letter-spacing: -1px; color: #fff; text-align: center;}
+.orderjob_container .submit_field .submit_ordering:disabled {background-color: #d8d8d8;}
+
+.orderjob_container .order_complete {display: inline-block; width: 100%; text-align: center; background: url('../../image/mobile/orderjob/ic-complete-order-100-px.png') no-repeat center 50px; background-size: 100px 100px; padding: 169px 0 50px; font-size: 22px; line-height: 1.36; letter-spacing: -0.9px; color: #212121;}
+.orderjob_container .order_complete .order_submit_btn {margin-top: 50px; display: inline-block; width: 198px; height: 52px; border-radius: 4px; background-color: #4ec5ca; line-height: 52px; font-size: 24px; letter-spacing: -1px; color: #fff;}
+.orderjob_container .other_suggest {display: inline-block; width: 100%; background-color: #f4f5f6; padding: 20px 10px; text-align: center; }
+.orderjob_container .other_suggest > label {font-size: 20px; line-height: 1.25; letter-spacing: -0.8px; color: #212121; display: block; text-align: center; margin-bottom: 9px;}
+.orderjob_container .other_suggest > label > b {font-weight: bold;}
+.orderjob_container .other_suggest > .orderjob_content {border-radius: 4px; border: 1px solid #eaeaea; background-color: #fff; padding: 14px 14px 58px 14px; text-align: left; display: inline-block; width: 100%; position: relative; margin-top: 11px;}
+.orderjob_container .other_suggest .orderjob_content .content_header {text-align: left;}
+.orderjob_container .other_suggest .orderjob_content .content_header b button.like_btn {display: inline-block; width: 14px; height: 14px; background: url('../../image/mobile/orderjob/ic-heart-normal-20-px.png') no-repeat center center; background-size: 14px 14px; }
+.orderjob_container .other_suggest .orderjob_content .content_header b button.like_btn.on {background: url('../../image/mobile/orderjob/ic-heart-pressed-20-px.png') no-repeat center center; background-size: 14px 14px;}
+.orderjob_container .other_suggest .orderjob_content > a {font-size: 17px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; letter-spacing: -0.9px; display: inline-block; width: 100%; font-weight: 600; line-height: normal; margin-top: 19px;}
+.orderjob_container .other_suggest .orderjob_content > .orderjob_inform {display: inline-block; width: auto; margin-right: calc(6vw);}
+.orderjob_container .other_suggest .orderjob_content > .orderjob_inform:last-child {margin-right: 0;}
+.orderjob_container .other_suggest .orderjob_content > .orderjob_inform label {font-size: 12px; color: #999; display: block; text-align: left; letter-spacing: -0.6px; line-height: normal;}
+.orderjob_container .other_suggest .orderjob_content > .orderjob_inform b {font-size: 17px; font-weight: bold; letter-spacing: -0.9px; color: #212121; margin-top: 3px;  display: block; line-height: normal;}
+.orderjob_container .other_suggest .orderjob_content .other_informs {display: inline-block; margin-top: 15px; border-top: 1px solid #eaeaea; padding-top: 14px; width: 100%; text-align: left; padding-left: 4px;}
+.orderjob_container .other_suggest .orderjob_content .other_informs >.other_inform {display: inline-block; margin-right: calc(35vw);}
+.orderjob_container .other_suggest .orderjob_content .other_informs >.other_inform:last-child {margin-right: 0;}
+.orderjob_container .other_suggest .orderjob_content .other_informs >.other_inform label {font-size: 12px; line-height: 20px; letter-spacing: -0.6px; color: #999; margin-right: 10px; display: inline-block; vertical-align: middle;}
+.orderjob_container .other_suggest .orderjob_content .other_informs >.other_inform b {font-size: 15px; line-height: 20px; letter-spacing: -0.8px; color: #212121; display: inline-block; vertical-align: middle;}
+.orderjob_container .other_suggest .orderjob_content .order_submit_btn {display: inline-block; background-color: #4ec5ca; height: 44px; text-align: center; line-height: 44px; font-size: 18px; letter-spacing: -1.5px; color: #fff; position: absolute; left: 0; right: 0; bottom: 0; width: 100%; border-radius: 0 0 4px 4px;}
+.orderjob_container .other_suggest .more_recommend {display: inline-block; width: 100%; height: 50px; margin-top: 20px; background-color: #fff; border: 1px solid #eaeaea; text-align: center; line-height: 50px; font-size: 16px; letter-spacing: -0.6px; color: #666;}
+.orderjob_container .other_suggest .more_recommend button {display: inline-block; width: 20px; height: 20px; margin-left: 13px;}
+.orderjob_container .other_suggest .more_recommend button img {width: 100%; height: 100%; }
+
+.orderjob_container > .order_regist {display: inline-block; width: 100%; height: 60px; background-color: #4ec5ca; line-height: 60px; text-align: center; font-size: 24px; letter-spacing: -1px; color: #fff; }
+
+.order_change {display: inline-block; width: 100%; padding: 10px;}
+.order_change > .qna_part {display: inline-block; width: 100%; margin: 0 0 20px; padding: 0; height: auto; max-height: initial; overflow: hidden;}
+.order_change > .qna_part > label.question { font-size: 18px; font-weight: 600;line-height: 1.67; letter-spacing: -0.8px; color: #212121; display: block; margin-bottom: 12px;}
+.order_change > .qna_part .category_answer {display: inline-block; width: 100%; font-size: 18px; line-height: normal; letter-spacing: -0.8px; color: #212121; padding-left: 15px;}
+.order_change > .qna_part .category_answer .devider {display: inline-block; width: 24px; height: 24px; border-radius: 12px; text-align: center; background: url('../../image/mobile/orderjob/ic-arrow-right-s.png') no-repeat center center; background-size: 5px 8px; border: 1px solid #ebebeb; margin: 0 8px; vertical-align: middle;}
+.order_change > .qna_part .answer input[type=text] {width: calc(100% - 35px); text-align: left; padding: 0 0 0 16px; line-height: 62px;}
+.order_change > .qna_part .answer input[type=text].input_calendar {padding: 0 0 0 50px; margin: 0;}
+.order_change > .qna_part .answer span.comment {margin-top: 8px;}
+.order_change > .qna_part .answer .answer_radio.vertical {min-height: 160px;}
+.order_change > .qna_part .answer .input_field .file_upload {padding-top: 0;}
+
+.pledge_form {display: none; width: 100%; background-color: #fff; /*margin-top: -50px;*/ z-index: 4000;}
+.pledge_form .form_header {display: inline-block; width: 100%; height: 50px; position: relative; line-height: 46px; text-align: center; font-size: 18px; font-weight: 500; letter-spacing: -0.8px; color: #212121; border-bottom: 1px solid #eaeaea; background-color: #fff; position: fixed; left: 0; top: 0; z-index: 4001;}
+.pledge_form .form_header .close_form {position: absolute; display: inline-block; width: 26px; height: 26px; left: 10px; top: 10px;}
+.pledge_form .form_header .close_form img {display: inline-block; width: 100%; height: 100%; vertical-align: top;}
+.pledge_form .form_body {padding: 20px 10px 100px; display: inline-block; width: 100%; /*height: calc(100vh - 165px); overflow-y: auto;*/ background-color: #fff; padding-top: 50px;}
+.pledge_form .form_body > label {display: block; margin-bottom: 20px; font-size: 17px; font-weight: 600; line-height: 1.41; letter-spacing: -0.9px; color: #212121; text-align: center;}
+.pledge_form .form_body > div {display: inline-block; width: 100%; font-size: 14px; line-height: 1.29; letter-spacing: -0.7px; color: #666;}
+.pledge_form .form_body > div b {color: #212121;}
+.pledge_form .form_agree {display: inline-block; width: 100%; height: 60px; background-color: #4ec5ca; line-height: 60px; font-size: 24px; letter-spacing: -1px; text-align: center; color: #fff; position: fixed; bottom: 0; left: 0; z-index: 4010;}
+
+/* aside_menu */
+.aside_menu {position: fixed; left: 0; right: 0; bottom: 0; z-index: 2001;}
+.aside_menu .btn_top {position:absolute;right:0;top:-50px; display: none;}
+.aside_menu .btn_top span {display:block;float:right;width:39px;height:33px;border:1px solid #e1e1e1;margin-right:15px;cursor:pointer}
+.aside_menu .btn_top span:after {content:"";display:block;width:39px;height:33px;background:url('https://images.otwojob.com/image/mobile/common/ico_top.png') no-repeat center;background-size:19.5px 19px;position:absolute;right:15px;top:0;z-index:20}
+.aside_menu .btn_top span:before {content:"";display:block;width:37px;height:31px;background-color:#fff;opacity:.8;position:absolute;right:16px;top:1px;z-index:10}
+.aside_menu .btn_top:after {clear:both;content:'';display:block}
+
+.aside_menu .item_wrap {overflow:hidden;height:55px;background:#fff;/* margin-top:50px; */border-top:1px solid #e1e1e1;}
+.aside_menu .item_wrap .item {float:left;width:20%;text-align:center;margin:3.9px 0 2.1px;}
+.aside_menu .item_wrap .item a {display:inline-block;font-size:12px;color:#212121; width: 100%; height: 100%;}
+.aside_menu .item_wrap .item a span {display:block}
+.aside_menu .item_wrap .item .image {height:26px; width: 26px; display: inline-block; margin-bottom: 3px; text-align: center;}
+.aside_menu .item_wrap .item .image.new {position: relative;}
+.aside_menu .item_wrap .item .image.new:after {content: ' '; position: absolute; width: 4px; height: 4px; border-radius: 50%; background-color: #ff6a05; top: 3px; right: -5px;}
+.aside_menu .item_wrap .item .image img {height: 100%; width: 100%; border-radius: 13px;border: 1px solid #868686;}
+.aside_menu .item_wrap .item01 a span.image { background: url('../../image/mobile/ico/ic-quick-home-def.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item01.on a span.image{ background: url('../../image/mobile/ico/ic-quick-home-sel.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item02 a span.image { background: url('../../image/mobile/ico/ic-quick-talk-def.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item02.on a span.image {  background: url('../../image/mobile/ico/ic-quick-talk-sel.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item03 a span.image { background: url('../../image/mobile/ico/ic-quick-catagory-def.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item03.on a span.image {  background: url('../../image/mobile/ico/ic-quick-catagory-sel.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item03_1 a span.image { background: url('../../image/mobile/ico/ic-quick-catagory-def.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item03_1.on a span.image {  background: url('../../image/mobile/ico/ic-quick-catagory-sel.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item04 a span.image { background: url('../../image/mobile/ico/ic-quick-my-def.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item04.on a span.image {  background: url('../../image/mobile/ico/ic-quick-my-sel.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item05 a span.image { background: url('../../image/mobile/ico/ic-quick-view-def.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+.aside_menu .item_wrap .item05_1 a span.image { background: url('../../image/mobile/ico/ic-quick-view-def.png') no-repeat; background-size: 26px 26px; display: inline-block;}
+
+.category_sitemap {position: fixed; top: calc(100vh); left: 0; right: 0; background-color: #fff; height: calc(100vh); z-index: 5000;}
+.category_sitemap .sitemap_div {position: relative; width: 100%; height: 100%; padding: 1rem 0 1rem 1rem; overflow-y: auto;}
+.category_sitemap .sitemap_div label {font-size: 1.4rem; font-weight: bold; line-height: 1.8rem; margin: 1.3rem 0 1rem ; display: block;}
+.category_sitemap .sitemap_div h3 {font-size: 0.9rem; margin-bottom: 0.5rem; margin-top: -0.4rem; letter-spacing: -0.06rem;}
+.category_sitemap .sitemap_div .sitemap_close {height: 3rem; margin-bottom: -1.3rem; }
+.category_sitemap .sitemap_div .sitemap_close button { width: 3rem;  float: right;}
+.category_sitemap .sitemap_div .sitemap_close button img { width: 100%; height: 100%;}
+.category_sitemap .sitemap_div .category_grids {border-bottom: 1px solid #f4f5f6; width: calc(100vw - 2rem);}
+.category_sitemap .sitemap_div div.category_grid {width: calc(100vw - 2rem);  border-top: 1px solid #f4f5f6; /*border-bottom: 1px solid #f4f5f6;*/ display: inline-block; position: relative; min-height: 5rem;}
+.category_sitemap .sitemap_div div.category_grid button.c_button {position: absolute; top:0; width: calc((100vw - 1.5rem) / 4); border-left: 1px solid #f4f5f6; padding: 0.1rem 0.2rem 0.7rem; letter-spacing: -0.04rem; font-size: 0.7rem; margin-right: -0.3rem; height: 5rem; background-size: 1.3rem 1.3rem;}
+.category_sitemap .sitemap_div div.category_grid button.c_button:first-child {left: 0;}
+.category_sitemap .sitemap_div div.category_grid button.c_button:nth-child(3) {left: 25%;}
+.category_sitemap .sitemap_div div.category_grid button.c_button:nth-child(5) {left: 50%;}
+.category_sitemap .sitemap_div div.category_grid button.c_button:nth-child(7) {border-right: 1px solid #f4f5f6; margin-right: 0;left: 75%;}
+.category_sitemap .sitemap_div div.category_grid button.c_button:last-child {}
+.category_sitemap .sitemap_div div.category_grid button.c_button img {width: 40%; display: block; margin-left: 30%; margin-bottom: 0.3rem;}
+.category_sitemap .sitemap_div div.category_grid button.c_button.selected {background-color: #222e4f; color: #fff; font-weight: bold; border: 1px solid #fff; border-bottom: #222e4f;}
+.category_sitemap .sitemap_div div.category_grid .sub_category {display: none; margin-top: 5rem; border: solid 2px #222e4f; background-color: #f7f9fd; color: #222e4f; font-size: 0.7rem; padding: 1rem 1rem 0; height: 0; width: 100%; margin-left: 1px;}
+.category_sitemap .sitemap_div div.category_grid .sub_category a {display: inline-block; width: 32%; margin-bottom: 1rem;}
+.category_sitemap .sitemap_div div.category_grid i {display: inline-block; background: url('../../image/mobile/ico/ico-sprite1.png') no-repeat; width: 64px; height: 64px; transform: scale(0.6); margin-bottom: -9px;}
+.category_sitemap .sitemap_div .sub_categories { margin-top: 2px;}
+.category_sitemap .sitemap_div .sub_categories .sub_category {display: none; background-color: #f7f9fd; color: #222e4f; border: 1px solid #222e4f; font-size: 0.7rem; padding: 1rem;}
+.category_sitemap .sitemap_div .sub_categories .sub_category a {width: 32%; display: inline-block; margin-bottom: 1rem;}
+.category_sitemap .sitemap_div .sitemap_big_banner {width: calc(100vw - 2rem); display: inline-block;}
+.category_sitemap .sitemap_div .sitemap_big_banner img {width: 100%;}
+.category_sitemap .sitemap_div ul li { display: inline-block; margin-right: -0.4rem;}
+.category_sitemap .sitemap_div ul li a {width: calc(40vw - 1rem); height: calc((40vw - 1rem) * 51 / 70); display: inline-block;}
+.category_sitemap .sitemap_div ul li a img { width: 100%; }
+
+/* 오더잡 카테고리 아이콘 */
+.orderjob_category { background: url('../../image/mobile/orderjob/orderjob_categories.png') no-repeat; display: block; transform: scale(0.5);}
+.orderjob_category.category_10 { width: 64px; height: 64px; background-position: 0 -704px; }
+.orderjob_category.category_11 { width: 64px; height: 64px; background-position: 0 -128px; }
+.orderjob_category.category_12 { width: 64px; height: 64px; background-position: 0 -448px; }
+.orderjob_category.category_13 { width: 64px; height: 64px; background-position: 0 -512px; }
+.orderjob_category.category_14 { width: 64px; height: 64px; background-position: 0 -576px; }
+.orderjob_category.category_15 { width: 64px; height: 64px; background-position: 0 0; }
+.orderjob_category.category_16 { width: 64px; height: 64px; background-position: 0 -640px; }
+.orderjob_category.category_17 { width: 64px; height: 64px; background-position: 0 -64px; }
+.orderjob_category.category_18 { width: 64px; height: 64px; background-position: 0 -256px; }
+.orderjob_category.category_19 { width: 64px; height: 64px; background-position: 0 -192px; }
+.orderjob_category.category_21 { width: 64px; height: 64px; background-position: 0 -768px; }
+.orderjob_category.category_23 { width: 64px; height: 64px; background-position: 0 -898px; }
+.orderjob_category.category_25 { width: 64px; height: 66px; background-position: 0 -832px; }
+.orderjob_category.category_26 { width: 64px; height: 64px; background-position: 0 -320px; }
+.orderjob_category.category_27 { width: 64px; height: 64px; background-position: 0 -384px; }
+
+
+/* datepicker */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {text-align: center;}
+
+/*
+.ui-datepicker {position:absolute;top:45px;right:0;padding:10px 7px;background-color:#fff;z-index:1}
+.ui-datepicker td {border: 1px solid #eaeaea; padding: 0;  line-height: calc((100vw - 44px) / 7);}
+.ui-datepicker .ui-datepicker-title {font-size:19px; color: #212121;}
+.ui-widget-header {background:none;border:none; background: none; font-weight: normal;}
+.ui-datepicker .ui-datepicker-header .ui-icon-circle-triangle-w {background:url('../../image/mobile/orderjob/btn-m-left-defualt.png') no-repeat 0 0; background-size: 100% 100%; width: 1.8em; height: 1.8em}
+.ui-datepicker .ui-datepicker-header .ui-icon-circle-triangle-e {background:url('../../image/mobile/orderjob/btn-m-right-defualt.png') no-repeat 0 0; background-size: 100% 100%; width: 1.8em; height: 1.8em}
+.ui-datepicker-calendar thead {padding-bottom:2px;margin-top:22px;height:22px;border-bottom:1px solid #f4f4f4}
+.ui-datepicker-calendar thead {padding-bottom:2px;margin-top:22px;height:22px;border-bottom:1px solid #f4f4f4}
+.ui-datepicker-calendar thead th {width:30px !important;text-align:center;font-size:11px; font-weight: normal; letter-spacing: -0.7px; color: #999;}
+.ui-datepicker-calendar thead th:last-child {margin-right:0}
+.ui-datepicker-calendar tbody td a {width: 100% !important;height:100% !important;padding:8px 0;text-align:center;font-size:13px}
+.ui-datepicker-calendar tbody td.mark_today {background:#f23325;color:#fff}
+.ui-datepicker-calendar tbody td.mark_offday {background:#b5b5b5;color:#e8e8e8}
+.ui-datepicker-calendar tbody td:nth-child(7n) a {margin-right:0;color:#666; font-family: Roboto, Malgun Gothic;}
+.ui-datepicker-calendar tbody td:first-child a,
+.ui-datepicker-calendar tbody td:nth-child(7n+1) a {color:#666; font-family: Roboto, Malgun Gothic;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {top: 0px;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-prev-hover {left: -2px;}
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-next-hover {right: 12px;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button {border:none !important;!*background:none !important*!}
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus,.ui-button:hover,.ui-button:focus{border: none ;background:#fff;!*font-weight:normal;color:#2b2b2b*!}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {color: #666; font-family: Roboto, Malgun Gothic; background-color: #fff; padding: 0;}
+.ui-state-default.ui-state-highlight {background-color: #eaeaea;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {color: #fff; font-family: Roboto, Malgun Gothic; background-color: #4ec5ca;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {text-align: center;}
+.ui-widget.ui-widget-content {border: none;}*/

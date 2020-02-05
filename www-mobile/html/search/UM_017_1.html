@@ -1,0 +1,155 @@
+<div class="search_wrap search_bar" style="display: block;">
+	<p class="sch_box">
+		<input type="text" title="검색입력창" placeholder="" id="keyword_0" name="keyword" value="디자인" autocomplete="off">
+		<button type="button" class="btn_search" id="btnSearchTotal" onclick="TopSearch.now(0);">검색</button>
+	</p>
+</div>
+
+<ul class="search_type_div">
+	<li><button class="selected" type="button">최근 검색어</button></li>
+	<li><button type="button">인기 검색어</button></li>
+</ul>
+
+<!-- autosearch_wrap 자동완성 활성화시 현재 autosearch_wrap 클래스에 on만 추가해주시면 됩니다. -->
+<div class="autosearch_wrap on">
+	<!-- 아무것도 없을때 -->
+	<div class="inner_wrap">
+		<ul class="auto_list no_list"> <!-- otwojob-1553 -->
+			<li>최근 검색어 내역이 없습니다.</li>
+		</ul>
+	</div>
+	<div class="btn_area">
+		<button type="button" class="auto_close">자동완성끄기</button>
+		<button type="button" class="btn_cancel">닫기</button>
+	</div>
+</div>
+
+<div class="autosearch_wrap on">
+	<!-- 검색어가 없을때 -->
+	<div class="inner_wrap">
+		<ul class="auto_list recent"> <!-- otwojob-1553 -->
+			<li><a href="#none">블로그1블로그1블로그1블로그1블로그1블로그1블로그1블로그1</a> <em><span class="date">2017.12.03</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그2</a> <em><span class="date">2017.12.11</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그3</a> <em><span class="date">2017.12.15</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그4</a> <em><span class="date">2017.12.22</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그5</a> <em><span class="date">2017.12.22</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그6</a> <em><span class="date">2017.12.30</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그7</a> <em><span class="date">2017.12.30</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그8</a> <em><span class="date">2017.12.30</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그9</a> <em><span class="date">2017.12.31</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+			<li><a href="#none">블로그10</a> <em><span class="date">2018.01.02</span><button type="button"><img src="/image/mobile/svg/btn-closed.svg" class="btn_closed"></button></em></li>
+		</ul>
+	</div>
+	<div class="btn_area">
+		<button type="button" class="auto_close">자동완성끄기</button>
+		<button type="button" class="btn_cancel">닫기</button>
+	</div>
+</div>
+
+<div class="autosearch_wrap on">
+	<!-- 검색어가 있을때 -->
+	<div class="inner_wrap">
+		<!-- auto_list -->
+		<ul class="auto_list">
+			<li><a href="#none"><span class="find_result">블로그</span>1</a></li>
+			<li><a href="#none"><span class="find_result">블로그</span>2 <span class="find_result">블로그</span>2 <span class="find_result">블로그</span>2</a></li>
+			<li><a href="#none">블로그3 블로그3블로그3블로그3블로그3블로그3블로그3블로그3 블로그3블로그3블로그3블로그3블로그 3블로그3블로그3블로그3블로그3블로그3블로그3블로그3블로그3블로그3블로그3</a></li>
+			<li class="on"><a href="#none">블로그4</a></li>
+			<li><a href="#none">블로그5</a></li>
+			<li><a href="#none">블로그6</a></li>
+			<li><a href="#none">블로그7</a></li>
+			<li><a href="#none">블로그8</a></li>
+			<li><a href="#none">블로그9</a></li>
+			<li><a href="#none">블로그10</a></li>
+		</ul>
+		<!-- //auto_list -->
+	</div>
+	<!-- //검색결과가있을때 -->
+	<div class="btn_area">
+		<button type="button" class="auto_close">자동완성끄기</button>
+		<button type="button" class="btn_cancel">닫기</button>
+	</div>
+</div>
+<!-- //autosearch_wrap 자동완성 기능이 켜져있을때 -->
+
+
+
+<div class="autosearch_wrap on">
+	<!-- 검색어가 있을때 -->
+	<div class="inner_wrap">
+		<!-- auto_list -->
+		<ul class="auto_list best_rank">
+			<li><a href="#none">인스타그램</a></li>
+			<li><a href="#none">물총축제</a></li>
+			<li><a href="#none">블로그마케팅</a></li>
+			<li><a href="#none">로고디자인</a></li>
+			<li><a href="#none">엑셀</a></li>
+			<li><a href="#none">영어번역</a></li>
+			<li><a href="#none">영상편집</a></li>
+			<li><a href="#none">레포트</a></li>
+			<li><a href="#none">다이어트</a></li>
+			<li><a href="#none">일본여행</a></li>
+		</ul>
+		<!-- //auto_list -->
+	</div>
+	<!-- //검색결과가있을때 -->
+	<div class="btn_area">
+		<button type="button" class="btn_cancel">닫기</button>
+	</div>
+</div>
+
+
+<!-- autosearch_wrap 자동완성 기능이 꺼져있을때 -->
+<div class="autosearch_wrap on">
+	<div class="inner_wrap">
+		<p class="auto_end_txt">자동완성 기능이 꺼져 있습니다.</p>
+	</div>
+
+	<div class="btn_area">
+		<button type="button" class="auto_close">자동완성켜기</button>
+		<button type="button" class="btn_cancel">닫기</button>
+	</div>
+</div>
+<!-- //autosearch_wrap 자동완성 기능이 꺼져있을때 -->
+
+<!-- autosearch_wrap 검색결과가없을때 -->
+<div class="autosearch_wrap on">
+
+	<!-- 검색결과가없을때 -->
+	<div class="noresult_wrap">
+		<!-- talent_regist_completed -->
+		<div class="talent_regist_noresult type01">
+			<p class="result"><span class="point">'행복디자인’</span>에 대한 검색결과가 없습니다.</p>
+			<p class="ps_txt">
+				입력하신 검색어가 정확한지 다시한번<br> 확인하시고 재검색해주세요.
+			</p>
+		</div>
+		<!-- //talent_regist_completed -->
+
+		<!-- order_servicebox -->
+		<div class="order_servicebox">
+			<p class="alert_txt">
+				찾으시는 재능이 없으신가요?
+				<span>그럼 <em class="point">오더잡</em>에서 <em class="point">오더</em>하세요!</span>
+			</p>
+			<p class="text_type03">필요한 재능을 원하는대로 맞춤 오더할 수 있는 서비스 </p>
+			<div class="btn_wrap">
+				<button type="button" class="btn_type btn_type02 flex">오더하기</button>
+			</div>
+		</div>
+		<!-- //order_servicebox -->
+	</div>
+	<!-- //검색결과가없을때 -->
+
+	<div class="btn_area">
+		<button type="button" class="auto_close">자동완성끄기</button>
+		<button type="button" class="btn_cancel">닫기</button>
+	</div>
+</div>
+<!-- //autosearch_wrap 검색결과가없을때 -->
+
+<!-- 컨텐츠 시작 -->
+<div class="inner_container">
+
+</div>
+<!-- 컨텐츠 끝 -->

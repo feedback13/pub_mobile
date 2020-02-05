@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/style.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header" id="header">
+	<h1 class="blind">OTWOJOB</h1>
+	<h2>검색</h2>
+	<button type="button" class="btn_back">뒤로가기</button>
+	<button type="button" class="search_opener">검색</button>
+</header>
+<!-- //header -->
+
+<!-- search_wrap -->
+<div class="search_wrap search_bar" style="display:block;">
+	<select name="" id="" class="sch_select">
+		<option>통합검색</option>
+		<option>판매자ID</option>
+		<option>재능검색</option>
+	</select>
+	<p class="sch_box">
+		<input type="text" title="검색입력창">
+		<button type="button" class="search_delete">검색삭제</button>
+		<button type="button" class="btn_search">검색</button>
+	</p>
+</div>
+<!-- //search_wrap -->
+
+<!-- content -->
+<section class="content" id="content">
+	<!-- autosearch_wrap 자동완성 활성화시 현재 autosearch_wrap 클래스에 on만 추가해주시면 됩니다. -->
+	<div class="autosearch_wrap on">
+		<!-- 검색결과가있을때 -->
+		<div class="inner_wrap">
+			<!-- auto_list -->
+			<ul class="auto_list">
+				<li><a href="#none"><span class="find_result">블로그</span>1</a></li>
+				<li><a href="#none"><span class="find_result">블로그</span>2 <span class="find_result">블로그</span>2 <span class="find_result">블로그</span>2</a></li>
+				<li><a href="#none">블로그3 블로그3블로그3블로그3블로그3블로그3블로그3블로그3 블로그3블로그3블로그3블로그3블로그 3블로그3블로그3블로그3블로그3블로그3블로그3블로그3블로그3블로그3블로그3</a></li>
+				<li class="on"><a href="#none">블로그4</a></li>
+				<li><a href="#none">블로그5</a></li>
+				<li><a href="#none">블로그6</a></li>
+				<li><a href="#none">블로그7</a></li>
+				<li><a href="#none">블로그8</a></li>
+				<li><a href="#none">블로그9</a></li>
+				<li><a href="#none">블로그10</a></li>
+			</ul>
+			<!-- //auto_list -->
+		</div>
+		<!-- //검색결과가있을때 -->
+
+		<div class="btn_area">
+			<button type="button" class="auto_close">자동완성끄기</button>
+			<button type="button" class="btn_cancel">취소</button>
+		</div>
+	</div>
+	<!-- //autosearch_wrap 자동완성 기능이 켜져있을때 -->
+
+	<!-- autosearch_wrap 자동완성 기능이 꺼져있을때 -->
+	<div class="autosearch_wrap on">
+		<div class="inner_wrap">
+			<p class="auto_end_txt">자동완성 기능이 꺼져 있습니다.</p>
+		</div>
+
+		<div class="btn_area">
+			<button type="button" class="auto_close">자동완성켜기</button>
+			<button type="button" class="btn_cancel">취소</button>
+		</div>
+	</div>
+	<!-- //autosearch_wrap 자동완성 기능이 꺼져있을때 -->
+
+	<!-- autosearch_wrap 검색결과가없을때 -->
+	<div class="autosearch_wrap on">
+
+		<!-- 검색결과가없을때 -->
+		<div class="noresult_wrap">
+			<!-- talent_regist_completed -->
+			<div class="talent_regist_noresult type01">
+				<p class="result"><span class="point">'행복디자인’</span>에 대한 검색결과가 없습니다.</p>
+				<p class="ps_txt">
+					입력하신 검색어가 정확한지 다시한번<br> 확인하시고 재검색해주세요.
+				</p>
+			</div>
+			<!-- //talent_regist_completed -->
+
+			<!-- order_servicebox -->
+			<div class="order_servicebox">
+				<p class="alert_txt">
+					찾으시는 재능이 없으신가요?
+					<span>그럼 <em class="point">오더잡</em>에서 <em class="point">오더</em>하세요!</span>
+				</p>
+				<p class="text_type03">필요한 재능을 원하는대로 맞춤 오더할 수 있는 서비스 </p>
+				<div class="btn_wrap">
+					<button type="button" class="btn_type btn_type02 flex">오더하기</button>
+				</div>
+			</div>
+			<!-- //order_servicebox -->
+		</div>
+		<!-- //검색결과가없을때 -->
+
+		<div class="btn_area">
+			<button type="button" class="auto_close">자동완성끄기</button>
+			<button type="button" class="btn_cancel">취소</button>
+		</div>
+	</div>
+	<!-- //autosearch_wrap 검색결과가없을때 -->
+
+	<!-- 컨텐츠 시작 -->
+	<div class="inner_container">
+
+	</div>
+	<!-- 컨텐츠 끝 -->
+
+</section>
+<!-- //content -->
+
+<!-- aside_menu -->
+<aside class="aside_menu">
+	<div class="btn_top"><span><em class="blind">TOP</em></span></div>
+	<div class="item_wrap">
+		<div class="item item01">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside1.png" alt=""></span>
+				<span class="txt">홈</span>
+			</a>
+		</div>
+		<div class="item item02">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside2.png" alt=""></span>
+				<span class="txt">마이페이지</span>
+			</a>
+		</div>
+		<div class="item item03">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside3.png" alt=""></span>
+				<span class="txt">메시지</span>
+			</a>
+		</div>
+		<div class="item item04">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside4.png" alt=""></span>
+				<span class="txt">오더잡</span>
+			</a>
+		</div>
+	</div>
+</aside>
+<!-- //aside_menu -->
+
+<!-- footer -->
+<footer class="footer" id="footer">
+	<div class="inner_container">
+		<ul class="utils">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">사업자정보확인</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">개인정보처리방침</a></li>
+		</ul>
+		<button type="button" class="more_infos"><span class="bul">(주)사람인HR 사업자정보</span></button>
+		<div class="infos_txt">
+			<p class="line">㈜ 사람인 | 대표 : 김용환 | 대표전화 : 09-2025-2707</p>
+			<p class="line">주소 : 서울 구로구 디지털로34길 43  코오롱싸이언스밸리 1차 201호 (구로동)</p>
+			<p class="line">개인정보보호 책임자 : 강봉관 | 사업자등록번호 : 113-86—0917</p>
+			<p class="line"> 통신판매업 : 제 2339호 | 직업정보제공사업 : 서울 관악 제 2005-6호</p>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

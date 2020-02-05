@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>사람인 OTWOJOB</title>
+    <meta http-equiv="refresh" content="5;https://m.otwojob.com/main">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        /* normalize */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, summary, time, video { margin:0; padding:0; border:0; font:inherit; color:inherit; vertical-align:baseline; background:transparent;}
+        body {line-height:1;}
+        img {border:0 none; vertical-align:middle;}
+        #p_loading {position:relative;}
+        #p_loading .p_loading_top {position:relative;}
+        #p_loading .p_loading_top .inner {text-align:center;}
+        #p_loading .p_loading_top .inner img {width:100%;}
+        #p_loading .p_loading_cont {position:relative;}
+        #p_loading .p_loading_cont .inner {padding:25px 16px 80px;text-align:center;}
+        #p_loading .p_loading_cont .inner .loading_txt img {width:100%;}
+        #p_loading .p_loading_cont .inner .loading_img {margin-top:68px;padding-top:74px;background:url('https://images.otwojob.com/image/mobile/etc/p_loading_img2.gif') no-repeat 50% top;background-size:12%;}
+        #p_loading .p_loading_footer {position:fixed;width:100%;bottom:0;background:#f9f9f9}
+        #p_loading .p_loading_footer .inner {padding:8px 16px;font-size:11px;text-align:left;color:#818181;line-height:16px;}
+        #p_loading .p_loading_footer .inner p {padding:8px 0;}
+        #p_loading .p_loading_footer .inner p b {font-weight:bold;}
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="p_loading">
+        <div class="p_loading_top">
+            <div class="inner">
+                <img src="https://images.otwojob.com/image/mobile/etc/p_loading_img1.png" alt="OTWOJOB-취업포털 No.1 사람인과 함께하는 오투잡 / 이런재능을 가진 전문가를 찾고 계시나요? 디자인, 마케팅, 프로그래밍, 번역">
+            </div>
+        </div>
+        <div class="p_loading_cont">
+            <div class="inner">
+                <p class="loading_txt"><img src="https://images.otwojob.com/image/mobile/etc/p_loading_img3.png" alt="안전하고 믿을 수 있는 오투잡에서 전문가를 만나보세요!"></p>
+                <p class="loading_img">잠시만 기다려주세요</p>
+            </div>
+        </div>
+        <div class="p_loading_footer">
+            <div class="inner">
+                <p>※ 지속적으로 서비스에 접속이 되지 않는 경우 <b>고객센터 02-2025-2707</b> 또는 <b>help@otwojob.com</b>으로 문의 주시길 바랍니다.</p>
+                <p>※ 오투잡은 재능판매 중개자로서 등록된 판매상품과 상품의 내용은 판매자가 등록한 것으로 ㈜사람인에이치알에서는 그 등록내역에 대하여 일체의 책임을 지지 않습니다.</p>
+            </div>
+        </div>
+    </div>
+    <style>
+
+    </style>
+    <script>
+        $(document).ready(function() {
+            var winHeight = $(window).height();
+
+            if (winHeight < 630) {
+                console.log(winHeight);
+                $('.p_loading_footer').css('position', 'relative')
+            } else {
+                $('.p_loading_footer').css('position', 'fixed')
+            }
+        });
+        $(window).resize(function() {
+            var winHeight = $(window).height();
+
+            if (winHeight < 630) {
+                console.log(winHeight);
+                $('.p_loading_footer').css('position', 'relative')
+            } else {
+                $('.p_loading_footer').css('position', 'fixed')
+            }
+        });
+    </script>
+</body>
+</html>

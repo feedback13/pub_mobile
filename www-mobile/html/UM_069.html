@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>오투잡</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/mobile/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/util.css">
+<link rel="stylesheet" type="text/css" href="../css/mobile/style.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/mobile/otwojob.vendor.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header title_bar" id="header">
+	<h1 class="blind">OTWOJOB</h1>
+	<h2>광고관리</h2>
+	<button type="button" class="btn_back">뒤로가기</button>
+</header>
+<!-- //header -->
+
+<!-- content -->
+<section class="content" id="content">
+
+	<!-- 컨텐츠 시작 -->
+	<div class="inner_container type07">
+		<h3 class="title_type01">오투잡의 재능광고란?</h3>
+		<p class="text_type04">
+			오투잡의 재능광고는 재능 판매자 분들의 효율적인 재능 판매를 위한 마케팅 서비스입니다. <br>
+			본인이 판매중인 재능 중에 원하는 재능을 골라 특정 광고상품을 적용하여 광고를 진행 할 수 있습니다.
+		</p>
+
+		<div class="advertise_box">
+			<p class="talent01">첫 페이지 구매율 70%</p>
+			<p class="talent02">카테로리별로 다른 합리적인 광고비용</p>
+			<p class="talent03"  id="talent_ad_text">광고 결과 리포트로 효과 관리</p>
+		</div>
+	</div>
+
+	<div class="inner_container type08">
+		<div class="tab_type01">
+			<ul class="tab_btn">
+				<li><a href="#talent_ad_text" data-href="#special" class="on">스페셜재능</a></li>
+				<li><a href="#talent_ad_text" data-href="#plus">플러스재능</a></li>
+				<li><a href="#talent_ad_text" data-href="#self">셀프픽업재능</a></li>
+				<li><a href="#talent_ad_text" data-href="#recommend">추천재능</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="inner_container type07">
+		<div class="talent_ad_text">
+			<!-- 스페셜재능 text -->
+			<p class="text_type04 tab_content" id="special" style="display:block;">
+				오투잡의 메인 가장 상단에 노출되어 주목도가 높은 상품으로 구매자들이 가장 먼저 보게 되어 높은 광고 효과를 누릴 수 있습니다.
+			</p>
+			<!-- 플러스재능 text -->
+			<p class="text_type04 tab_content" id="plus">
+				오투잡 메인과 카테고리 페이지 최상단에 노출되어 구매자의 주목도와 연관도가 높은 상품입니다.
+			</p>
+			<!-- 셀프픽업재능 text -->
+			<p class="text_type04 tab_content" id="self">
+				카테고리의 리스트 최상단에 노출되는 상품으로 리스트에서 가장 상단에 위치하여 구매자의 주목도가 높은 상품입니다.
+			</p>
+			<!-- 추천재능 text -->
+			<p class="text_type04 tab_content" id="recommend">
+				판매글 상세페이지 우측에 배너 형태의 광고 상품입니다. <br>
+				동일한 카테고리와 상품을 보고 있는 사용자에게 추천해 주는 광고 상품입니다.
+			</p>
+		</div>
+
+		<!-- 재능선택 -->
+		<fieldset class="form_join">
+			<legend class="blind"></legend>
+			<div class="write">
+				<div class="input_wrap divide100 last">
+					<select class="last full_width">
+						<option>재능선택</option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
+		<!-- //재능선택 -->
+
+		<!-- 광고기간 -->
+		<fieldset class="form_join">
+			<legend class="blind"></legend>
+			<div class="write">
+				<div class="input_wrap divide100 last">
+					<select class="last full_width">
+						<option>광고기간</option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
+		<!-- //광고기간 -->
+
+		<!-- pay_result -->
+		<div class="pay_result">
+			<p class="tit">결제금액</p>
+			<p class="price"><strong>150,000</strong>원</p>
+		</div>
+		<!-- //pay_result -->
+
+		<!-- payment_button -->
+		<!-- <div class="payment_button">
+			<span class="first"><button type="button" class="on">신용카드</button></span>
+			<span><button type="button">계좌이체</button></span>
+			<span><button type="button">무통장입금</button></span>
+			<span class="last"><button type="button" >휴대폰</button></span>
+		</div> -->
+		<!-- //payment_button -->
+
+		<!-- btn_wrap -->
+		<div class="btn_wrap">
+			<div class="btn_cover05 btn_first">
+				<div class="b_in_wrap">
+					<button type="button" class="btn_type btn_type01">취소</button>
+				</div>
+			</div>
+			<div class="btn_cover05 btn_last">
+				<div class="b_in_wrap">
+					<button type="button" class="btn_type btn_type02">광고신청</button>
+				</div>
+			</div>
+		</div>
+		<!-- //btn_wrap -->
+
+		<div class="alarm_txt01">
+			<h3 class="a_tit">알림</h3>
+			<div class="list_type04">
+				<ul>
+					<li><p>광고신청은 현재 판매중인 재능이 있는 경우에만 가능합니다. </p></li>
+					<li><p>광고상품은 카테고리별로 가격이 다를 수 있습니다. </p></li>
+					<li><p>광고상품을 이용 중이신 경우, 재능이 광고기간 전에 종료되더라도 남은 기간에 대한 차액은 환불되지 않습니다. </p></li>
+				</ul>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- 컨텐츠 끝 -->
+
+</section>
+<!-- //content -->
+
+<!-- aside_menu -->
+<aside class="aside_menu">
+	<div class="btn_top"><span><em class="blind">TOP</em></span></div>
+	<div class="item_wrap">
+		<div class="item item01">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside1.png" alt=""></span>
+				<span class="txt">홈</span>
+			</a>
+		</div>
+		<div class="item item02">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside2.png" alt=""></span>
+				<span class="txt">마이페이지</span>
+			</a>
+		</div>
+		<div class="item item03">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside3.png" alt=""></span>
+				<span class="txt">메시지</span>
+			</a>
+		</div>
+		<div class="item item04">
+			<a href="#">
+				<span class="image"><img src="../image/mobile/common/ico_aside4.png" alt=""></span>
+				<span class="txt">오더잡</span>
+			</a>
+		</div>
+	</div>
+</aside>
+<!-- //aside_menu -->
+
+<!-- footer -->
+<footer class="footer" id="footer">
+	<div class="inner_container">
+		<ul class="utils">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">사업자정보확인</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">개인정보처리방침</a></li>
+		</ul>
+		<button type="button" class="more_infos"><span class="bul">(주)사람인HR 사업자정보</span></button>
+		<div class="infos_txt">
+			<p class="line">㈜ 사람인 | 대표 : 김용환 | 대표전화 : 09-2025-2707</p>
+			<p class="line">주소 : 서울 구로구 디지털로34길 43  코오롱싸이언스밸리 1차 201호 (구로동)</p>
+			<p class="line">개인정보보호 책임자 : 강봉관 | 사업자등록번호 : 113-86—0917</p>
+			<p class="line"> 통신판매업 : 제 2339호 | 직업정보제공사업 : 서울 관악 제 2005-6호</p>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<script type="text/javascript" src="../js/mobile/otwojob.util.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.app.js"></script>
+<script type="text/javascript" src="../js/mobile/otwojob.exec.js"></script>
+</body>
+</html>

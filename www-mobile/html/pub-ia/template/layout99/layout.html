@@ -1,0 +1,2307 @@
+<!doctype html>
+<!--
+  ~ Copyright (c) 2017. (주)사람인HR.
+  ~ All rights reserved.
+  -->
+
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>오투잡</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/short_event.css"><!-- 이벤트 페이지에만 노출 -->
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/mobile/otwojob.vendor.js"></script>
+    <script type="text/javascript" src="/js/jquery/detectmobilebrowser.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<header class="header title_bar" id="header"></header>
+<!-- //header -->
+
+<!-- all_menu -->
+<section class="all_menu"></section>
+<!-- //all_menu -->
+
+<!-- content -->
+<section class="content" id="content"></section>
+<!-- //content -->
+
+<!-- aside_menu -->
+<aside class="aside_menu"></aside>
+<!-- //aside_menu -->
+
+<!-- footer -->
+<footer class="footer" id="footer"></footer>
+<!-- //footer -->
+
+<!-- pop_layer -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">승인거절 사유</h2>
+        <div class="layer_cont">
+            <p class="text01">죄송합니다.<br>테스트 등록으로 인한 승인이 거절되었습니다.</p>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //pop_layer -->
+
+<!-- 주문 상세내역 레이어 -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer2 width01">
+        <h2 class="tit">주문 상세내역</h2>
+        <div class="layer_cont">
+            <button type="button" class="closer" onclick="OTWOJOB.layerClose();">닫기</button>
+
+            <div class="tit_wrap">
+                <h3 class="sec_title">주문정보 </h3>
+            </div>
+
+            <!-- product_summary -->
+            <div class="product_summary top10">
+                <div class="p_info">
+                    <div class="img"><img src="../image/mobile/temp/@logo.png" alt=""></div>
+                    <div class="desc_wrap">
+                        <h3 class="tit ellipsis">디자인>로고/CI&BI</h3>
+                        <p class="title_txt">심플, 모던한 로고(CI,BI)디자인 해드립니다</p>
+                        <p class="price">
+                            <span class="num">50,000원</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="pay_list">
+                    <p class="plus"><span class="tit">빠른작업</span><span class="pay_txt">빠른 작업 요청 (1개/1일)</span><span class="price">+8,500,000원</span></p>
+                    <p class="plus"><span class="tit">추가옵션</span><span class="pay_txt">색상선택/3컬러 사용 (1개/2일)</span><span class="price">+15,000원</span></p>
+                </div>
+            </div>
+            <!-- //product_summary -->
+
+            <!-- order_pay_box -->
+            <div class="order_pay_box">
+                <p class="tit">합계</p>
+                <p class="data">
+                    <span class="num">수량 <strong>200</strong>개</span>
+                    <span class="term">기간 <strong>30</strong>일</span>
+                </p>
+                <p class="price"><strong>8,500,000</strong>원</p>
+            </div>
+            <!-- //order_pay_box -->
+
+            <div class="tit_wrap type01">
+                <h3 class="sec_title">결제금액</h3>
+            </div>
+
+            <!-- bill_wrap -->
+            <div class="bill_wrap">
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">신용카드</h4>
+                    </div>
+                    <p class="date">2015.11.05 07:46:29</p>
+                    <button type="button" class="btn_print">매출전표 출력</button>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문일</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data">2016.05.20</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>22,400</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- data_box -->
+                <div class="data_box">
+                    <!-- desc_wrap -->
+                    <div class="desc_wrap">
+                        <div class="left_side">
+                            <h4 class="tit">판매가</h4>
+                        </div>
+                        <div class="right_side">
+                            <p class="data">19,000원</p>
+                        </div>
+                    </div>
+                    <!-- //desc_wrap -->
+                    <!-- desc_wrap -->
+                    <div class="desc_wrap">
+                        <div class="left_side">
+                            <h4 class="tit">배송비</h4>
+                        </div>
+                        <div class="right_side">
+                            <p class="data">2,500원</p>
+                        </div>
+                    </div>
+                    <!-- //desc_wrap -->
+                </div>
+                <!-- //data_box -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">할인금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data">-1,500원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">상태</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data point"><strong>입금대기</strong></p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+            </div>
+            <!-- //bill_wrap -->
+
+            <div class="tit_wrap type01">
+                <h3 class="sec_title">주문합계</h3>
+            </div>
+
+            <!-- bill_wrap -->
+            <div class="bill_wrap">
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>22,400</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">할인금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>-1,500</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">포인트</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>-0</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap all_price">
+                    <div class="left_side">
+                        <h4 class="tit">주문합계</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data point"><strong>20,900</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+            </div>
+            <!-- //bill_wrap -->
+        </div>
+    </div>
+</div>
+<!-- //주문 상세내역 레이어 -->
+
+<div class="pop_layer" id="photo_upload">
+    <div class="dimm"></div>
+    <div class="in_layer">
+        <div class="layer_cont">
+            <div class="upload_area">
+                <div class="photo"><span><img src="../image/mobile/temp/@profile1.png" alt=""></span></div>
+                <div class="btn_photo">
+                    <button type="button"><input type="file" />사진올리기</button>
+                    <button type="button">삭제</button>
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="btn_close">취소</button>
+                <button type="button">확인</button>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">문의하기</h2>
+        <div class="layer_cont">
+            <p class="text01">https://www.otwojob.com<br>고객님의 문의사항이 접수되었습니다.</p>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- pop_layer -->
+<div class="pop_layer type01" id="order_no_search">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">주문번호검색</h2>
+        <div class="layer_cont sizetype">
+
+            <div class="tab_type01">
+                <ul class="">
+                    <li><a href="#none" class="on">구매내역</a></li>
+                    <li><a href="#none">판매내역</a></li>
+                </ul>
+            </div>
+
+            <div class="input_date">
+                <input type="date" id="" title="날짜선택" class="calendar_input">
+                <span class="bar">~</span>
+                <input type="date" id="" title="날짜선택" class="calendar_input last">
+            </div>
+
+            <!-- tab_type05 -->
+            <div class="tab_type05">
+                <ul>
+                    <li><a href="#none" class="on">오늘</a></li>
+                    <li><a href="#none">어제</a></li>
+                    <li><a href="#none">이번주</a></li>
+                    <li><a href="#none">이번달</a></li>
+                    <li><a href="#none">전체</a></li>
+                </ul>
+            </div>
+            <!-- //tab_type05 -->
+
+            <!-- search_form -->
+            <fieldset class="search_form02 type01">
+                <legend class="blind">전체 검색</legend>
+                <div class="select_wrap">
+                    <select name="" id="">
+                        <option value="">제목</option>
+                    </select>
+                </div>
+                <div class="desc_wrap">
+                    <div class="input_wrap type01">
+                        <input type="text">
+                    </div>
+                </div>
+            </fieldset>
+            <!-- //search_form -->
+
+            <div class="btn_wrap top10">
+                <div class="btn_cover_full">
+                    <button type="button" class="btn_type btn_type05">검색하기</button>
+                </div>
+            </div>
+
+            <!-- tab_type06 -->
+            <div class="tab_type06">
+                <ul>
+                    <li class="on"><a href="#none" >구매 0</a></li>
+                    <li><a href="#none">완료 5</a></li>
+                    <li><a href="#none">취소 0</a></li>
+                </ul>
+            </div>
+            <!-- //tab_type06 -->
+
+            <p class="text_type04 type01">문의하실 주문번호를 선택하여 주세요.</p>
+
+            <!-- table_type02 -->
+            <div class="table_type02">
+                <ul>
+                    <li>
+                        <span>주문번호 : 152141FE</span>
+                        <span>주문날짜 : 2016.03.22</span>
+                        <span>판매자 : 오투잡</span>
+                        <p class="title"><a href="#none">모닝콜-날씨안내 해드립니다. 모닝콜-날씨안내 해드립니다. 모닝콜-날씨안내 해드립니다</a></p>
+                        <button class="btn_sel">선택</button>
+                    </li>
+                    <li>
+                        <span>주문번호 : 152141FE</span>
+                        <span>주문날짜 : 2016.03.22</span>
+                        <span>판매자 : 오투잡</span>
+                        <p class="title"><a href="#none">모닝콜-날씨안내 해드립니다. 모닝콜-날씨안내 해드립니다. 모닝콜-날씨안내 해드립니다</a></p>
+                        <button class="btn_sel">선택</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- //table_type02 -->
+
+            <div class="see_more"><a href="#"><span>더보기</span></a></div>
+
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //pop_layer -->
+
+<!-- pop_layer -->
+<div class="pop_layer type01" id="order_no_search">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">주문번호검색</h2>
+        <div class="layer_cont sizetype">
+
+            <div class="tab_type01">
+                <ul class="">
+                    <li><a href="#none" class="on">구매내역</a></li>
+                    <li><a href="#none">판매내역</a></li>
+                </ul>
+            </div>
+
+            <div class="input_date">
+                <input type="date" id="" title="날짜선택" class="calendar_input">
+                <span class="bar">~</span>
+                <input type="date" id="" title="날짜선택" class="calendar_input last">
+            </div>
+
+            <!-- tab_type05 -->
+            <div class="tab_type05">
+                <ul>
+                    <li><a href="#none" class="on">오늘</a></li>
+                    <li><a href="#none">어제</a></li>
+                    <li><a href="#none">이번주</a></li>
+                    <li><a href="#none">이번달</a></li>
+                    <li><a href="#none">전체</a></li>
+                </ul>
+            </div>
+            <!-- //tab_type05 -->
+
+            <!-- search_form -->
+            <fieldset class="search_form02 type01">
+                <legend class="blind">전체 검색</legend>
+                <div class="select_wrap">
+                    <select name="" id="">
+                        <option value="">제목</option>
+                    </select>
+                </div>
+                <div class="desc_wrap">
+                    <div class="input_wrap type01">
+                        <input type="text">
+                    </div>
+                </div>
+            </fieldset>
+            <!-- //search_form -->
+
+            <div class="btn_wrap top10">
+                <div class="btn_cover_full">
+                    <button type="button" class="btn_type btn_type05">검색하기</button>
+                </div>
+            </div>
+
+            <!-- tab_type06 -->
+            <div class="tab_type06">
+                <ul>
+                    <li class="on"><a href="#none" >구매 0</a></li>
+                    <li><a href="#none">완료 5</a></li>
+                    <li><a href="#none">취소 0</a></li>
+                </ul>
+            </div>
+            <!-- //tab_type06 -->
+
+            <p class="text_type04 type01">문의하실 주문번호를 선택하여 주세요.</p>
+
+            <!-- table_type02 -->
+            <div class="table_type02">
+                <table>
+                    <caption class="blind"></caption>
+                    <colgroup>
+                        <col >
+                        <col width="55%">
+                        <col >
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>주문번호</th>
+                        <th>주문날짜/판매자/제목</th>
+                        <th>가격/수량</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <button class="btn_sel btn_close">선택</button>
+                            <p class="color01">152141FE</p>
+                        </td>
+                        <td class="desc">
+                            <p class="color01">
+                                2016.03.22<br>오투잡
+                            </p>
+                            <p class="title"><a href="#none">모닝콜-날씨안내 해드립니다. 모닝콜-날씨안내 해드립니다. 모닝콜-날씨안내 해드립니다</a></p>
+                        </td>
+                        <td>15,000원/1개</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn_sel">선택</button>
+                            <p class="color01">152141FE</p>
+                        </td>
+                        <td class="desc">
+                            <p class="color01">
+                                2016.03.22<br>오투잡
+                            </p>
+                            <p class=" title"><a href="#none">모닝콜-날씨안내 해드립니다. 모닝콜-날씨안내 해드립니다. 모닝콜-날씨안내 해드립니다</a></p>
+                        </td>
+                        <td>15,000원/1개</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table_type02 -->
+
+            <!-- paging -->
+            <div class="paging">
+                <a href="#none" class="prev"></a>
+                <span class="pg_num">
+					<a href="#none" class="on">1</a><!-- 선택된 페이지에 class="on" 추가-->
+					<a href="#none">2</a>
+					<a href="#none">3</a>
+					<a href="#none">4</a>
+					<a href="#none">5</a>
+					<a href="#none">6</a>
+					<a href="#none">9</a>
+					<a href="#none">8</a>
+					<a href="#none">9</a>
+					<a href="#none">10</a>
+				</span>
+                <a href="#none" class="next"></a>
+            </div>
+            <!-- //paging -->
+
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //pop_layer -->
+
+<div class="pop_layer" id="coupon_layer">
+    <div class="coupon_pop in_layer">
+        <div class="coupon_cont">
+            <p><strong>1,000원</strong> 할인 쿠폰이<br>등록되었습니다.</p>
+            <a href="#none;">쿠폰 확인 ></a>
+        </div>
+        <div class="coupon_date">
+            사용기간 : 2017.08.01~2017.08.31
+        </div>
+        <button type="button" class="closer" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">닫기</button>
+    </div>
+</div>
+
+<!-- 영수증/계산서 발행 안내 레이어 -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01" >
+        <h2 class="tit">영수증/계산서 발행 안내</h2>
+        <div class="layer_cont sizetype">
+            <button type="button" class="closer" >닫기</button>
+            <div class="tit_wrap">
+                <h3 class="sec_title">영수증 발행 안내</h3>
+            </div>
+
+            <p class="text_type07 type01">현금영수증</p>
+            <!-- list_type04 -->
+            <div class="list_type04">
+                <ul>
+                    <li><p>현금 결제 및 실시간 계좌이체  시의 최종 구매금액으로 현금영수증이 자동 발급됩니다.</p></li>
+                    <li><p>세금계산서 신청을 원하시면 현금영수증( 지출증빙용 )으로 신청하여 주시기 바랍니다.</p></li>
+                    <li><p>입금완료 전까지 현금영수증 신청정보를 변경하실 수 있습니다.</p></li>
+                </ul>
+            </div>
+            <!-- //list_type04 -->
+
+            <p class="text_type07 type01">세금계산서</p>
+            <!-- list_type04 -->
+            <div class="list_type04">
+                <ul>
+                    <li><p>세금계산서를 발급하지 않습니다.</p></li>
+                    <li><p>세금계산서 신청을 원하시면 현금영수증(지출증빙용)으로 신청하여 주시기 바랍니다.</p></li>
+                    <li><p>현금영수증(지출증빙용)은 세금계산서 대용으로 매입세액공제를 받을 수 있습니다.</p></li>
+                </ul>
+            </div>
+            <!-- //list_type04 -->
+
+            <p class="text_type07 type01">신용카드 매출전표</p>
+            <!-- list_type04 -->
+            <div class="list_type04">
+                <ul>
+                    <li><p>신용카드 구매 시에는 카드매출전표가 자동 발급됩니다.</p></li>
+                    <li><p>부가세법 시행령 제 57조 2항에 의거하여, 신용카드 전표는 세금계산서 대용으로 매입세액공제를 받을 수 있습니다.</p></li>
+                </ul>
+            </div>
+            <!-- //list_type04 -->
+
+            <div class="tit_wrap type01">
+                <h3 class="sec_title">현금영수증 및 신용카드매출전표 발행 시점</h3>
+            </div>
+
+            <!-- table_type02 -->
+            <div class="table_type02">
+                <table>
+                    <caption class="blind"></caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th >구분</th>
+                        <th>현금영수증</th>
+                        <th>신용카드매출전표</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="desc">신청가능조건</td>
+                        <td class="desc">계좌이체,<br>실시간 계좌이체 등 <br>현금결제 시</td>
+                        <td class="desc">신용카드 결제 시</td>
+                    </tr>
+                    <tr>
+                        <td class="desc">신청기한</td>
+                        <td class="desc">자동신청, 신청정보 변경은 입금완료전까지 가능</td>
+                        <td class="desc">자동신청, 주문완료 후 정보변경 불가</td>
+                    </tr>
+                    <tr>
+                        <td class="desc">발급대상금액</td>
+                        <td class="desc">결제금액에서 할인금액을  차감한 금액</td>
+                        <td class="desc">결제금액에서 할인금액을  차감한 금액</td>
+                    </tr>
+                    <tr>
+                        <td class="desc">계산서/영수증상 발급일</td>
+                        <td class="desc">입금완료일, 환불일</td>
+                        <td class="desc">카드승인일, 카드승인취소일</td>
+                    </tr>
+                    <tr>
+                        <td class="desc">발급가능시점</td>
+                        <td class="desc">입금완료 후 2일 이내 (영업일 기준)</td>
+                        <td class="desc">카드승인 후 2일 이내</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table_type02 -->
+        </div>
+    </div>
+</div>
+
+<!-- 공유하기 레이어 -->
+<div class="pop_layer" id ="share_pop">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">공유하기</h2>
+        <div class="layer_cont">
+            <div class="share_btns">
+                <a href="#"><img src="../image/mobile/common/ico_share01.png" alt=""><span>페이스북</span></a>
+                <a href="#"><img src="../image/mobile/common/ico_share02.png" alt=""><span>카카오톡</span></a>
+                <a href="#"><img src="../image/mobile/common/ico_share03.png" alt=""><span>트위터</span></a>
+                <a href="#"><img src="../image/mobile/common/ico_share04.png" alt=""><span>URL복사</span></a>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+
+<!-- pop_layer -->
+<div class="pop_layer" id="avi">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">동영상 업로드</h2>
+        <div class="layer_cont">
+            <button type="button" class="closer" >닫기</button>
+            <div class="form_wrap full">
+                <input type="text" title="유투브 동영상 주소" placeholder="유투브 동영상 주소를 입력해 주세요">
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //pop_layer -->
+
+<!-- 주문 상세내역 레이어 -->
+<div class="pop_layer3">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">주문 상세내역</h2>
+        <div class="layer_cont">
+            <button type="button" class="closer" >닫기</button>
+
+            <div class="tit_wrap">
+                <h3 class="sec_title">주문정보 </h3>
+            </div>
+
+            <!-- product_summary -->
+            <div class="product_summary top10">
+                <div class="p_info">
+                    <div class="img"><img src="../image/mobile/temp/@logo.png" alt=""></div>
+                    <div class="desc_wrap">
+                        <h3 class="tit ellipsis">디자인&gt;로고/CI&amp;BI</h3>
+                        <p class="title_txt">심플, 모던한 로고(CI,BI)디자인 해드립니다</p>
+                        <p class="price">
+                            <span class="num">50,000원</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="pay_list">
+                    <p class="plus"><span class="tit">빠른작업</span><span class="pay_txt">빠른 작업 요청 (1개/1일)</span><span class="price">+8,500,000원</span></p>
+                    <p class="plus"><span class="tit">추가옵션</span><span class="pay_txt">색상선택/3컬러 사용 (1개/2일)</span><span class="price">+15,000원</span></p>
+                </div>
+            </div>
+            <!-- //product_summary -->
+
+            <!-- order_pay_box -->
+            <div class="order_pay_box">
+                <p class="tit">합계</p>
+                <p class="data">
+                    <span class="num">수량 <strong>200</strong>개</span>
+                    <span class="term">기간 <strong>30</strong>일</span>
+                </p>
+                <p class="price"><strong>8,500,000</strong>원</p>
+            </div>
+            <!-- //order_pay_box -->
+
+            <div class="tit_wrap type01">
+                <h3 class="sec_title">결제금액</h3>
+            </div>
+
+            <!-- bill_wrap -->
+            <div class="bill_wrap">
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">신용카드</h4>
+                    </div>
+                    <p class="date">2015.11.05 07:46:29</p>
+                    <button type="button" class="btn_print">매출전표 출력</button>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문일</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data">2016.05.20</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>22,400</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- data_box -->
+                <div class="data_box">
+                    <!-- desc_wrap -->
+                    <div class="desc_wrap">
+                        <div class="left_side">
+                            <h4 class="tit">판매가</h4>
+                        </div>
+                        <div class="right_side">
+                            <p class="data">19,000원</p>
+                        </div>
+                    </div>
+                    <!-- //desc_wrap -->
+                    <!-- desc_wrap -->
+                    <div class="desc_wrap">
+                        <div class="left_side">
+                            <h4 class="tit">배송비</h4>
+                        </div>
+                        <div class="right_side">
+                            <p class="data">2,500원</p>
+                        </div>
+                    </div>
+                    <!-- //desc_wrap -->
+                </div>
+                <!-- //data_box -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">할인금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data">-1,500원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">상태</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data point"><strong>입금대기</strong></p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+            </div>
+            <!-- //bill_wrap -->
+
+            <div class="tit_wrap type01">
+                <h3 class="sec_title">주문합계</h3>
+            </div>
+
+            <!-- bill_wrap -->
+            <div class="bill_wrap">
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>22,400</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">할인금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>-1,500</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">포인트</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>-0</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap all_price">
+                    <div class="left_side">
+                        <h4 class="tit">주문합계</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data point"><strong>20,900</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+            </div>
+            <!-- //bill_wrap -->
+        </div>
+    </div>
+</div>
+
+<!-- 쿠폰안내 1 -->
+<div class="pop_layer type01" id="tooltip_event_180209">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">쿠폰 이용 안내</h2>
+        <div class="layer_cont sizetype">
+            <div class="list_type04">
+                <ul>
+                    <li>다운기간 : 2018.02.13 ~ 2018.02.18</li>
+                    <li>사용기간 : 2018.02.13 00:00 ~ 2018.02.18 23:59</li>
+                    <li>다운대상 : 오투잡 전체회원</li>
+                    <li>다운기회 : id 당 이벤트 기간내 1회 다운가능</li>
+                    <li>할인쿠폰 적용대상 : 오투잡 재능상품 전체</li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="closer" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">닫기</button>
+    </div>
+</div>
+
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">이미지 업로드</h2>
+        <div class="layer_cont">
+            <div class="input_file_wrap type01">
+                <div class="t_wrap">
+                    <input type="text" disabled="disabled">
+                </div>
+                <label for="input_file22" class="btn"><input type="file" id="input_file22"><span>찾아보기</span></label>
+            </div>
+            <div class="list_type04">
+                <ul>
+                    <li>최대 20MB까지 업로드가 가능합니다.</li>
+                    <li>등록 가능한 파일 확장자는 jpg, gif, png, bmp입니다.</li>
+                </ul>
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- pop_layer -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">등록 미완료</h2>
+        <div class="layer_cont">
+            <p class="text01">재능등록이 완료되지 않았습니다.<br>임시저장 하시겠습니까? 취소 시 입력된 내용은 저장되지 않습니다.</p>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">임시저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //pop_layer -->
+
+<!-- 견적요청 레이어 -->
+<div class="pop_layer ">
+    <div class="dimm"></div>
+    <div class="in_layer width01" >
+        <h2 class="tit"></h2>
+        <div class="layer_cont sizetype">
+
+        </div>
+    </div>
+</div>
+
+<!-- 결제내역 조회 레이어 -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01" >
+        <h2 class="tit">결제내역 조회</h2>
+        <div class="layer_cont">
+            <div class="tab_type05">
+                <ul>
+                    <li><a href="#" class="on">당일</a></li>
+                    <li><a href="#" >1주일</a></li>
+                    <li><a href="#" >1개월</a></li>
+                    <li><a href="#" >3개월</a></li>
+                </ul>
+            </div>
+
+            <div class="input_date">
+                <input type="date" id="" title="날짜선택" class="calendar_input">
+                <span class="bar">~</span>
+                <input type="date" id="" title="날짜선택" class="calendar_input last">
+            </div>
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02 sm">조회하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 스페셜 가격제안 레이어 -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01" >
+        <h2 class="tit">스페셜 가격제안</h2>
+        <div class="layer_cont sizetype">
+
+            <!-- product_summary -->
+            <div class="product_summary">
+                <div class="p_info">
+                    <div class="img"><span><img src="../image/mobile/temp/@logo.png" alt=""></span></div>
+                    <div class="desc_wrap">
+                        <h3 class="tit ellipsis">디자인>로고/CI&BI</h3>
+                        <p class="title_txt">심플, 모던한 로고(CI,BI)디자인 해드립니다</p>
+                        <p class="price">
+                            <span class="num">50,000원</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- field_wrap -->
+                <div class="field_wrap">
+                    <div class="line">
+                        <label for="add_cash" class="l_tit">스페셜 가격</label>
+                        <div class="input_wrap">
+                            <div class="t_wrap">
+                                <input type="text" id="add_cash" class="full_width">
+                            </div>
+                            <p class="unit"><i>,000</i> 원</p>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="l_side">
+                            <label for="work_day" class="l_tit">작업기간</label>
+                            <select name="" id="work_day" class="full_width align_right">
+                                <option value="">1일</option>
+                            </select>
+                        </div>
+                        <div class="r_side">
+                            <label for="work_ammount" class="l_tit">수량</label>
+                            <select name="" id="work_ammount" class="full_width align_right">
+                                <option value="">1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- //field_wrap -->
+
+                <div class="t_info">
+                    <dl>
+                        <dt>작업 기간</dt>
+                        <dd><span class="color01">2</span>일</dd>
+                    </dl>
+                    <dl>
+                        <dt>총 금액</dt>
+                        <dd>1,000원 X 수량 4개 = 총 <span class="color01">40,000</span>원</dd>
+                    </dl>
+                </div>
+
+            </div>
+            <!-- //product_summary -->
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 생년월일 등록 레이어 -->
+<div class="pop_layer" >
+    <div class="dimm"></div>
+    <div class="in_layer width01" >
+        <h2 class="tit">생년월일 등록</h2>
+        <div class="layer_cont sizetype">
+
+            <!-- product_summary -->
+            <div class="product_summary">
+                <p class="txt">
+                    정보통신망 이용촉진 및 정보보호 등에 관한 법률 제31조 1항에 의거하여
+                    만 14세 이상의 회원만 전자상거래가 가능합니다.<br /><br />
+
+                    회원님의 생년월일을 입력해주세요.<br />
+                    생년월일을 입력하지 않으면 <i>서비스 이용에 제한</i>이 있을 수 있습니다.
+                </p>
+
+                <!-- field_wrap -->
+                <div class="field_wrap2">
+                    <ul class="line">
+                        <li class="select_wrap">
+                            <div class="inner">
+                                <select name="" id="" class="">
+                                    <option value="">년월</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="select_wrap">
+                            <div class="inner">
+                                <select name="" id="" class="">
+                                    <option value="">월</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="select_wrap">
+                            <div class="inner">
+                                <select name="" id="" class="">
+                                    <option value="">일</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //field_wrap -->
+
+                <p class="txt2">입력하신 정보는 회원님의 개인정보에 자동 저장됩니다.</p>
+
+            </div>
+            <!-- //product_summary -->
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+
+<!-- 주문 상세내역 레이어 -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">주문 상세내역</h2>
+        <div class="layer_cont" style="max-height: 400px;overflow-y: scroll;">
+            <button type="button" class="closer" >닫기</button>
+
+            <div class="tit_wrap">
+                <h3 class="sec_title">주문정보 </h3>
+            </div>
+
+            <!-- product_summary -->
+            <div class="product_summary top10">
+                <div class="p_info">
+                    <div class="img"><img src="../image/mobile/temp/@logo.png" alt=""></div>
+                    <div class="desc_wrap">
+                        <h3 class="tit ellipsis">디자인>로고/CI&BI</h3>
+                        <p class="title_txt">심플, 모던한 로고(CI,BI)디자인 해드립니다</p>
+                        <p class="price">
+                            <span class="num">50,000원</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="pay_list">
+                    <p class="plus"><span class="tit">빠른작업</span><span class="pay_txt">빠른 작업 요청 (1개/1일)</span><span class="price">+8,500,000원</span></p>
+                    <p class="plus"><span class="tit">추가옵션</span><span class="pay_txt">색상선택/3컬러 사용 (1개/2일)</span><span class="price">+15,000원</span></p>
+                </div>
+            </div>
+            <!-- //product_summary -->
+
+            <!-- order_pay_box -->
+            <div class="order_pay_box">
+                <p class="tit">합계</p>
+                <p class="data">
+                    <span class="num">수량 <strong>200</strong>개</span>
+                    <span class="term">기간 <strong>30</strong>일</span>
+                </p>
+                <p class="price"><strong>8,500,000</strong>원</p>
+            </div>
+            <!-- //order_pay_box -->
+
+            <div class="tit_wrap type01">
+                <h3 class="sec_title">결제금액</h3>
+            </div>
+
+            <!-- bill_wrap -->
+            <div class="bill_wrap">
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">신용카드</h4>
+                    </div>
+                    <p class="date">2015.11.05 07:46:29</p>
+                    <button type="button" class="btn_print">매출전표 출력</button>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문일</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data">2016.05.20</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>22,400</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- data_box -->
+                <div class="data_box">
+                    <!-- desc_wrap -->
+                    <div class="desc_wrap">
+                        <div class="left_side">
+                            <h4 class="tit">판매가</h4>
+                        </div>
+                        <div class="right_side">
+                            <p class="data">19,000원</p>
+                        </div>
+                    </div>
+                    <!-- //desc_wrap -->
+                    <!-- desc_wrap -->
+                    <div class="desc_wrap">
+                        <div class="left_side">
+                            <h4 class="tit">배송비</h4>
+                        </div>
+                        <div class="right_side">
+                            <p class="data">2,500원</p>
+                        </div>
+                    </div>
+                    <!-- //desc_wrap -->
+                </div>
+                <!-- //data_box -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">할인금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data">-1,500원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">상태</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data point"><strong>입금대기</strong></p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+            </div>
+            <!-- //bill_wrap -->
+
+            <div class="tit_wrap type01">
+                <h3 class="sec_title">주문합계</h3>
+            </div>
+
+            <!-- bill_wrap -->
+            <div class="bill_wrap">
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">주문금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>22,400</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">할인금액</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>-1,500</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap">
+                    <div class="left_side">
+                        <h4 class="tit">포인트</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data"><strong>-0</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+
+                <!-- desc_wrap -->
+                <div class="desc_wrap all_price">
+                    <div class="left_side">
+                        <h4 class="tit">주문합계</h4>
+                    </div>
+                    <div class="right_side">
+                        <p class="data point"><strong>20,900</strong>원</p>
+                    </div>
+                </div>
+                <!-- //desc_wrap -->
+            </div>
+            <!-- //bill_wrap -->
+        </div>
+    </div>
+</div>
+
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">추가결제 요청</h2>
+        <div class="layer_cont sizetype">
+
+            <!-- product_summary -->
+            <div class="product_summary">
+                <div class="p_info">
+                    <div class="img"><img src="../image/mobile/temp/@logo.png" alt=""></div>
+                    <div class="desc_wrap">
+                        <h3 class="tit ellipsis"><span class="status">진행중</span> [디자인] 다이어트 상담 + 2주 퍼스널트레이닝</h3>
+                        <p class="p_num">
+                            <strong>주문번호</strong>
+                            <span>1603222123123E83</span>
+                        </p>
+                        <p class="price">
+                            <span class="num">50,000</span><span>원(수량 1개)</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="o_info">
+                    <div class="l_area">
+                        <span class="type">주문</span>
+                        <span class="date">2016.08.20</span>
+                    </div>
+                    <div class="r_area">
+                        <strong>결제</strong>
+                        <span>신용카드</span>
+                    </div>
+                </div>
+                <h3 class="add_tit">추가 결제 상품 설정</h3>
+
+                <!-- field_wrap -->
+                <div class="field_wrap">
+                    <div class="line">
+                        <input type="text" class="full_width" placeholder="추가 상품을 입력해주세요">
+                    </div>
+                    <div class="line">
+                        <label for="add_cash" class="l_tit">추가금액</label>
+                        <div class="input_wrap">
+                            <div class="t_wrap">
+                                <input type="text" id="add_cash" class="full_width">
+                            </div>
+                            <p class="unit"><i>,000</i> 원</p>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="l_side">
+                            <label for="work_day" class="l_tit">작업기간</label>
+                            <select name="" id="work_day" class="full_width align_right">
+                                <option value="">1일</option>
+                            </select>
+                        </div>
+                        <div class="r_side">
+                            <label for="work_ammount" class="l_tit">수량</label>
+                            <select name="" id="work_ammount" class="full_width align_right">
+                                <option value="">1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- //field_wrap -->
+
+                <div class="t_info">
+                    <dl>
+                        <dt>작업 기간</dt>
+                        <dd><span class="color01">2</span>일</dd>
+                    </dl>
+                    <dl>
+                        <dt>총 금액</dt>
+                        <dd>1,000원 X 수량 4개 = 총 <span class="color01">40,000</span>원</dd>
+                    </dl>
+                </div>
+
+                <div class="list_type04">
+                    <ul>
+                        <li>추가 결제는 기본상품 주문이 완료 된 상태에서만(진행중인 상품) 가능합니다.</li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- //product_summary -->
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pop_layer type01" id="option_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">옵션검색</h2>
+        <div class="layer_cont sizetype">
+
+            <h3 class="in_tit">기본제공 파일 형태</h3>
+            <p class="form_line type01">
+                <label for="l_opt1"><input type="checkbox" id="l_opt1"><span class="txt">PNG</span></label>
+                <label for="l_opt2" class="second_form" id="l_opt2"><input type="checkbox"><span class="txt">PDF</span></label>
+                <label for="l_opt3" class="second_form" id="l_opt3"><input type="checkbox"><span class="txt">JPG</span></label>
+                <label for="l_opt4"><input type="checkbox" id="l_opt4"><span class="txt">PSD</span></label>
+                <label for="l_opt5" class="second_form" id="l_opt5"><input type="checkbox"><span class="txt">XLS</span></label>
+                <label for="l_opt6" class="second_form" id="l_opt6"><input type="checkbox"><span class="txt">MPEG</span></label>
+                <label for="l_opt7"><input type="checkbox" id="l_opt7"><span class="txt">AI</span></label>
+                <label for="l_opt8" class="second_form" id="l_opt8"><input type="checkbox"><span class="txt">PPTX</span></label>
+                <label for="l_opt9" class="second_form" id="l_opt9"><input type="checkbox"><span class="txt">HWP</span></label>
+            </p>
+
+            <h3 class="in_tit type01">원본파일 제공여부</h3>
+            <p class="form_line type01">
+                <label for="l_opt10" class="half"><input type="radio" name="origin_file" id="l_opt10"><span class="txt">제공</span></label>
+                <label for="l_opt11" class="half second_form"><input type="radio" name="origin_file" id="l_opt11"><span class="txt">미제공</span></label>
+            </p>
+
+            <h3 class="in_tit type01">문의 응답 시간</h3>
+            <p class="form_line type01">
+                <label for="l_opt12" class="half"><input type="radio" name="response_time" id="l_opt12"><span class="txt">1시간 이내</span></label>
+                <label for="l_opt13" class="half second_form"><input type="radio" name="response_time" id="l_opt13"><span class="txt">1일 이내</span></label>
+                <label for="l_opt14" class="half"><input type="radio" name="response_time" id="l_opt14"><span class="txt">3일 이내</span></label>
+                <label for="l_opt15" class="half second_form"><input type="radio" name="response_time" id="l_opt15"><span class="txt">7일 이내</span></label>
+            </p>
+
+            <div class="del_itembox">
+                <h3 class="i_tit">검색조건</h3>
+                <div class="in_box">
+                    <span>PNG<button type="button" class="del">삭제</button></span>
+                    <span>PSD<button type="button" class="del">삭제</button></span>
+                    <span>제공<button type="button" class="del">삭제</button></span>
+                    <span>기업용<button type="button" class="del">삭제</button></span>
+                    <span>2회<button type="button" class="del">삭제</button></span>
+                    <span>1시간이내<button type="button" class="del">삭제</button></span>
+                </div>
+            </div>
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">초기화</button>
+                <button type="button" class="btn_type btn_type02 sm">검색</button>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+
+<!-- pop_layer -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">우편번호 찾기</h2>
+        <div class="layer_cont sizetype">
+            <div class="tab_type01">
+                <ul>
+                    <li><a href="#" class="on">도로명 주소</a></li>
+                    <li><a href="#">지번 주소</a></li>
+                </ul>
+            </div>
+
+            <p class="text01 top15">
+                찾고자 하는 주소의 도로명을 입력해 주세요.<br>
+                (예: 테헤란로, 동숭1길, 세종대로)
+            </p>
+
+            <!-- search_form -->
+            <fieldset class="search_form02">
+                <legend class="blind">도로명 주소 검색</legend>
+                <div class="desc_wrap">
+                    <div class="input_wrap">
+                        <input type="text" placeholder="도로명+건물번호를 입력해 주세요">
+                    </div>
+                    <input type="submit" class="submit type01" value="검색">
+                </div>
+            </fieldset>
+            <!-- //search_form -->
+
+            <p class="text03 top20">검색 결과 중 해당 주소를 클릭하시면 자동 입력됩니다.</p>
+
+            <!-- table_type02 -->
+            <div class="table_type02">
+                <table>
+                    <caption class="blind">도로명 주소 검색 결과</caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>우편번호</th>
+                        <th>주소</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>135-933</td>
+                        <td>서울시 강남구 역삼동 테헤란로 624</td>
+                    </tr>
+                    <tr>
+                        <td>135-933</td>
+                        <td>서울시 강남구 역삼동 테헤란로 624</td>
+                    </tr>
+                    <tr>
+                        <td>135-933</td>
+                        <td>서울시 강남구 역삼동 테헤란로 624</td>
+                    </tr>
+                    <tr>
+                        <td>135-933</td>
+                        <td>서울시 강남구 역삼동 테헤란로 624</td>
+                    </tr>
+                    <tr>
+                        <td>135-933</td>
+                        <td>서울시 강남구 역삼동 테헤란로 624</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table_type02 -->
+
+            <p class="text03 top10"><span class="point">사업자 등록증의 주소</span>와 동일한 사업장 주소를 입력해 주세요.</p>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+
+    <!-- 주소 선택시 결과 화면 > style="display:none" 삭제하시면됩니다. -->
+    <div class="in_layer width02">
+        <h2 class="tit">주소 변경</h2>
+        <div class="layer_cont">
+
+            <h3 class="in_tit">판매자 정보</h3>
+
+            <!-- table_type01 -->
+            <div class="table_type03">
+                <table>
+                    <colgroup>
+                        <col width="85px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>주소</th>
+                        <td>
+                            <p class="txt_color02 type01">
+                                123-456 <br>
+                                서울특별시 구로구 디지털로 34길 43 코오롱 싸이언스밸리 1차 201호
+                            </p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table_type01 -->
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">변경</button>
+            </div>
+            <button type="button" class="closer">닫기</button>
+        </div>
+    </div>
+    <!-- //주소 선택시 결과 화면 -->
+
+</div>
+<!-- //pop_layer -->
+
+<!-- pop_layer -->
+<div class="pop_layer" id="admin_message_pop">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">받은 메시지</h2>
+        <div class="layer_cont sizetype">
+            <div class="table_type03">
+                <table>
+                    <caption class="blind">결제정보 내용</caption>
+                    <colgroup>
+                        <col width="90px">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>보낸사람</th>
+                        <td><span class="txt_color02">우투잡 운영자</span></td>
+                    </tr>
+                    <tr>
+                        <th>보낸날짜</th>
+                        <td><span class="txt_color02">2017.01.10 10:10</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="comment">
+                            [경고] 구매자로부터 직거래 신고가 접수되어 경고1회 조치되었습니다. 경고 3회부터 판매에 제한이 있으니 참고 부탁드립니다.구매자로부터 직거래 신고가 접수되어 경고1회 조치되었습니다. 경고 3회부터 판매에 제한이 있으니 참고 부탁드립니다.구매자로부터 직거래 신고가 접수되어 경고1회 조치되었습니다. 경고 3회부터 판매에 제한이 있으니 참고 부탁드립니다.
+                            <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">01_오더등록.hwp</a></p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+
+</div>
+<!-- //pop_layer -->
+
+<!-- pop_layer -->
+<div class="pop_layer" id="my_pop">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">나의 제안내용 보기</h2>
+        <div class="layer_cont sizetype">
+            <button type="button" class="closer" >닫기</button>
+            <!-- list_type02 -->
+            <div class="list_type02 no_top">
+                <div class="item_wrap popup_con">
+                    <!-- item -->
+                    <div class="item first">
+                        <div class="in_wrap">
+                            <div class="head">
+                                <p class="status ing">요청중</p>
+                                <p class="regist_day">2016.01.19 <em class="ico">종료</em></p>
+                            </div>
+                            <h4 class="tit">단순 이미지 수정 및 제작해 드려요</h4>
+                            <div class="info_wrap">
+                                <p class="price"><span class="span_wrap"><img src="../image/mobile/index/ico_info1.png" alt=""><span class="num">190,000</span>원</span></p>
+                                <p class="remain_day"><span class="span_wrap"><img src="../image/mobile/index/ico_info2.png" alt="">20일</span></p>
+                            </div>
+                            <div class="details">
+                                <p class="comment">
+                                    2016년 신설회사a로 건물을 전문관리하여 양호한 상태로 안전, 청결하게 유지해 드리는 서비스를 제공하고 있습니다.<br>
+                                    <br>
+                                    상징적 의미: 청결, 안전<br>
+                                    로고컨셉: 그린, 블루, 청녹색계열 선호
+                                </p>
+                                <div class="meta_info">
+                                    <span>파일형식 : docx</span>
+                                    <span>언어 : 영어</span>
+                                    <span>번역 : 외 -> 한</span>
+                                </div>
+                                <div class="attached" >
+                                    <p class="line1">첨부파일 <span class="n">3개</span> (35.2KB)</p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">01_참고디자인.jpg</a></p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">02_참고디자인2.jpg</a></p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">03_참고디자인3.jpg</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //item -->
+                </div>
+            </div>
+            <!-- //list_type02 -->
+        </div>
+    </div>
+</div>
+<!-- //pop_layer -->
+
+<!-- layer popup : 스케줄확인 -->
+<div class="pop_layer type01" id="schedule_calendar">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit2"><em class="blind">스케줄확인 팝업</em></h2>
+        <div class="layer_cont sizetype pt0">
+
+            <!-- schedule_calendar -->
+            <div class="schedule_calendar layer_cal">
+                <div class="year_month">
+                    <button class="prev">이전달</button>
+                    <p>
+                        <span class="year"><strong>2016</strong>년</span>
+                        <span class="monthh"><strong>7</strong>월</span>
+                    </p>
+                    <button class="next">다음달</button>
+                </div>
+
+                <!-- carlendar -->
+                <div class="carlendar">
+                    <!-- week -->
+                    <div class="week">
+                        <ul>
+                            <li><span>일</span></li>
+                            <li><span>월</span></li>
+                            <li><span>화</span></li>
+                            <li><span>수</span></li>
+                            <li><span>목</span></li>
+                            <li><span>금</span></li>
+                            <li><span>토</span></li>
+                        </ul>
+                    </div>
+                    <!--// week -->
+
+                    <!-- day -->
+                    <div class="day">
+                        <ul>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>1</span></li>
+                            <li><span>2</span></li>
+                            <li><span>3</span></li>
+                            <li><span>4</span></li>
+                            <li><span>5</span></li>
+                            <li><span>6</span></li>
+                            <li><span>7</span></li>
+                            <li class="mark_today"><span>8</span></li>
+                            <li><span>9</span></li>
+                            <li><span>10</span></li>
+                            <li><span>11</span></li>
+                            <li><span>12</span></li>
+                            <li><span>13</span></li>
+                            <li><span>14</span></li>
+                            <li><span>15</span></li>
+                            <li><span>16</span></li>
+                            <li><span>17</span></li>
+                            <li><span>18</span></li>
+                            <li><span>19</span></li>
+                            <li><span>20</span></li>
+                            <li><span>21</span></li>
+                            <li><span>22</span></li>
+                            <li class="mark_offday"><span>23</span></li>
+                            <li><span>24</span></li>
+                            <li><span>25</span></li>
+                            <li><span>26</span></li>
+                            <li><span>27</span></li>
+                            <li><span>28</span></li>
+                            <li><span>29</span></li>
+                            <li><span>30</span></li>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>&nbsp;</span></li>
+                        </ul>
+                    </div>
+                    <!--// day -->
+                </div>
+                <!--// carlendar -->
+            </div>
+            <!-- //schedule_calendar -->
+
+            <div class="schedule_dot">
+                <span>오늘날짜</span>
+                <span>응대 불가능 날짜</span>
+            </div>
+            <ul class="schedule_txt">
+                <li>판매자는 문의에 대한 응답이 불가능한 날짜를 설정할 수 있습니다.</li>
+                <li>판매자가 설정한 문의응대 불가능 날짜를 참고하여 주문해주세요.</li>
+            </ul>
+        </div>
+        <button type="button" class="closer closer2">닫기</button>
+    </div>
+</div>
+<!-- layer popup -->
+
+<!-- layer popup : 승인거절 -->
+<div class="pop_layer" id="talent_refuse">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">승인거절 사유</h2>
+        <div class="layer_cont">
+            <p class="text01">죄송합니다.<br>테스트 등록으로 인한 승인이 거절되었습니다.</p>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //layer popup -->
+
+<!-- layer popup : 출금신청 -->
+<div class="pop_layer" id="payback">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">출금신청</h2>
+        <div class="layer_cont sizetype">
+            <p class="text02">출금 가능한 수익금<strong class="price_txt">1,350,000</strong>원</p>
+
+            <!-- payment_box -->
+            <div class="payment_box">
+                <p class="tit">출금신청금액</p>
+                <div class="price_area">
+					<span class="write">
+						<input type="text" id="출금신청금액" title="출금신청금액">
+						<em>원</em>
+					</span>
+                    <label for="opt1"><input type="checkbox" id="opt1" checked="checked"><span class="txt">모두출금</span></label>
+                </div>
+                <p class="tit">O캐시 충전</p>
+                <div class="price_area">
+					<span class="write">
+						<input type="text" id="O캐시 충전" title="O캐시 충전">
+						<em>원</em>
+					</span>
+                </div>
+            </div>
+            <!-- //payment_box -->
+
+            <!-- result_cash -->
+            <div class="result_cash type02">
+                <p>
+                    <span class="tit">총 출금액 </span>
+                    <span class="price type01"><strong>770,000</strong>원</span>
+                </p>
+            </div>
+            <!-- //result_cash -->
+
+            <!-- list_type04 -->
+            <div class="list_type04">
+                <ul>
+                    <li><p>수익금은 현금 출금 혹은 O캐시로 충전하실 수 있습니다.</p></li>
+                    <li><p>출금신청은 취소할 수 없습니다. </p></li>
+                </ul>
+            </div>
+            <!-- //list_type04 -->
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01 sm">취소</button>
+                <button type="button" class="btn_type btn_type02 sm">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //layer popup -->
+
+<!-- Layer popup : 이메일 입력 -->
+<div class="pop_layer" id="fn_order_email" style="display: none;">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <h2 class="tit">주문 전 입력해 주세요! <span class="member_point">최초 1회</span></h2>
+        <div class="layer_cont">
+
+            <!-- otwojob-1627 -->
+            <p class="small_txt_banner"><span>EVENT</span><a href="#">지금 개인정보 입력하면 할인쿠폰 즉시 발급!</a></p>
+            <article class="cont_wrap">
+                <!-- form_join -->
+                <fieldset class="form_join">
+                    <legend class="blind">이메일입력</legend>
+                    <div class="write first">
+                        <div class="input_wrap required">
+                            <input type="text" title="이메일주소" placeholder="이메일 주소">
+                        </div>
+                        <button type="button" class="btn_confirm_new">인증하기</button>
+                        <p class="warning" id="">[$test@test2.co.kr$]으로 발송된 인증메일의 인증링크를 유효시간 30분 안에 클릭해주세요.</p> <!-- step01 -->
+                        <p class="confirm" id="">인증이 완료 되었습니다.</p> <!-- step02 -->
+                        <p class="warning" id="">[$test@test2.co.kr$](은)는 이미 가입되어 있는 이메일주소 입니다.</p> <!-- 이미가입시 -->
+                    </div>
+                    <div class="write">
+                        <div class="confirm_box">
+                            <label for="agree2" class="form_type01"><input type="checkbox" id="agree2"><span class="txt">(선택) 이메일을 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree_layer01');">마케팅정보 수신</a>에 동의합니다.</span></label>
+                            <p class="confirm_box_info">
+                                <span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="write hide" id="event_info_agree_layer01">
+                        <div class="write_agree_form">
+                            <p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree_layer01');">X</a></p>
+                            <div class="txt_box">
+                                • 수집ㆍ이용목적<br>
+                                &nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+                                • 수집항목: 이메일 수신동의<br>
+                                • 보유 및 이용기간: 서비스 이용시까지<br><br>
+                                ※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //form_join -->
+                </fieldset>
+            </article>
+            <div class="list_type04">
+                <ul>
+                    <li><p>회원서비스 제공,  구매자 확인 및 상담 처리를 위해 입력해주세요.</p></li>
+                    <li><p>입력하신 정보는 기본회원 정보에 함께 저장합니다.</p></li>
+                </ul>
+            </div>
+
+            <button type="button" class="closer" onclick="$('#fn_order_email').hide();">닫기</button>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02">인증완료하기</button>
+                <button type="button" class="btn_type btn_type11">인증완료하기</button> <!-- 미인증시 노출 -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Layer popup -->
+
+<!-- Layer popup : 휴대폰번호 입력 -->
+<div class="pop_layer" id="fn_order_phone">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <h2 class="tit">주문 전 입력해 주세요! <span class="member_point">최초 1회</span></h2>
+        <div class="layer_cont">
+
+            <article class="cont_wrap">
+                <!-- form_join -->
+                <fieldset class="form_join">
+                    <legend class="blind">휴대폰번호입력</legend>
+                    <div class="write first">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm')">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="confirm" id="">입력하신 번호로 인증번호가 발송되었습니다.</p>
+                    </div>
+                    <div class="write hide" id="phone_confirm">
+                        <div class="input_wrap required">
+                            <input type="text" title="인증번호 입력" placeholder="인증번호 입력">
+                        </div>
+                        <button type="button" class="btn_confirm_new">인증하기</button>
+                    </div>
+                    <div class="write">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)" value="01033333333">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm');">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="warning" id="">이미 사용중인 휴대폰번호입니다.</p>
+                    </div>
+                    <div class="write">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)" value="01033333333">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm')">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="confirm" id="">인증이 완료 되었습니다.</p>
+                    </div>
+                    <div class="write">
+                        <div class="confirm_box">
+                            <label for="agree2" class="form_type01"><input type="checkbox" id="agree2"><span class="txt">(선택) SMS/MMS를 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree_layer02');">마케팅정보 수신</a>에 동의합니다.</span></label>
+                            <p class="confirm_box_info">
+                                <span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="write hide" id="event_info_agree_layer02">
+                        <div class="write_agree_form">
+                            <p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree_layer02');">X</a></p>
+                            <div class="txt_box">
+                                • 수집ㆍ이용목적<br>
+                                &nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+                                • 수집항목: SMS/MMS 수신동의<br>
+                                • 보유 및 이용기간: 서비스 이용시까지<br><br>
+                                ※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //form_join -->
+                </fieldset>
+            </article>
+            <div class="list_type04">
+                <ul>
+                    <li><p>회원서비스 제공,  구매자 확인 및 상담 처리를 위해 입력해주세요.</p></li>
+                    <li><p>입력하신 정보는 기본회원 정보에 함께 저장합니다.</p></li>
+                </ul>
+            </div>
+
+            <button type="button" class="closer" onclick="$('#fn_order_phone').hide();">닫기</button>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02">인증완료하기</button>
+                <button type="button" class="btn_type btn_type11">인증완료하기</button> <!-- 미인증시 노출 -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Layer popup -->
+
+<!-- Layer popup : 휴대폰번호, 이메일 동시 입력 -->
+<div class="pop_layer" id="fn_order_phone_mail">
+    <div class="dimm"></div>
+
+    <div class="in_layer width02">
+        <h2 class="tit">주문 전 입력해 주세요! <span class="member_point">최초 1회</span></h2>
+        <div class="layer_cont">
+
+            <article class="cont_wrap">
+                <!-- form_join -->
+                <fieldset class="form_join">
+                    <legend class="blind">휴대폰번호, 이메일 동시 입력</legend>
+                    <div class="write first">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm')">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="confirm" id="">입력하신 번호로 인증번호가 발송되었습니다.</p>
+                    </div>
+                    <div class="write hide" id="phone_confirm">
+                        <div class="input_wrap required">
+                            <input type="text" title="인증번호 입력" placeholder="인증번호 입력">
+                        </div>
+                        <button type="button" class="btn_confirm_new">인증하기</button>
+                    </div>
+                    <div class="write">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)" value="01033333333">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm');">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="warning" id="">이미 사용중인 휴대폰번호입니다.</p>
+                    </div>
+                    <div class="write">
+                        <div class="input_wrap required">
+                            <input type="text" title="휴대폰번호" placeholder="휴대폰번호(&quot;_&quot;제외, 숫자만 입력)" value="01033333333">
+                        </div>
+                        <button type="button" class="btn_confirm_new" onclick="memberDivOpen('phone_confirm')">인증하기</button>
+                        <!--<button type="button" class="btn_confirm_new">재발송</button>--> <!-- 인증하기 클릭시 버튼 변경 -->
+                        <p class="confirm" id="">인증이 완료 되었습니다.</p>
+                    </div>
+                    <div class="write">
+                        <div class="confirm_box">
+                            <label for="agree2" class="form_type01"><input type="checkbox" id="agree2"><span class="txt">(선택) SMS/MMS를 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree_layer0201');">마케팅정보 수신</a>에 동의합니다.</span></label>
+                            <p class="confirm_box_info">
+                                <span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="write hide" id="event_info_agree_layer0201">
+                        <div class="write_agree_form">
+                            <p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree_layer0201');">X</a></p>
+                            <div class="txt_box">
+                                • 수집ㆍ이용목적<br>
+                                &nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+                                • 수집항목: SMS/MMS 수신동의<br>
+                                • 보유 및 이용기간: 서비스 이용시까지<br><br>
+                                ※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="write first">
+                        <div class="input_wrap required">
+                            <input type="text" title="이메일주소" placeholder="이메일 주소">
+                        </div>
+                        <button type="button" class="btn_confirm_new">인증하기</button>
+                        <p class="warning" id="">[$test@test2.co.kr$]으로 발송된 인증메일의 인증링크를 유효시간 30분 안에 클릭해주세요.</p> <!-- step01 -->
+                        <p class="confirm" id="">인증이 완료 되었습니다.</p> <!-- step02 -->
+                        <p class="warning" id="">[$test@test2.co.kr$](은)는 이미 가입되어 있는 이메일주소 입니다.</p> <!-- 이미가입시 -->
+                    </div>
+                    <div class="write">
+                        <div class="confirm_box">
+                            <label for="agree2" class="form_type01"><input type="checkbox" id="agree2"><span class="txt">(선택) 이메일을 통한 이벤트, 서비스 관련광고, 재능정보 등 <a href="javascript:void(0);" class="underline" onclick="memberDivOpen('event_info_agree_layer0102');">마케팅정보 수신</a>에 동의합니다.</span></label>
+                            <p class="confirm_box_info">
+                                <span class="confirm_box_txt">선택 동의를 하지 않은 경우, 일부 서비스 이용에 제한이 있을 수 있습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="write hide" id="event_info_agree_layer0102">
+                        <div class="write_agree_form">
+                            <p class="txt_tit">마케팅 정보수신 동의 (선택)<a href="javascript:void(0);" class="hide_form_close" onclick="memberDivClose('event_info_agree_layer0102');">X</a></p>
+                            <div class="txt_box">
+                                • 수집ㆍ이용목적<br>
+                                &nbsp;&nbsp;&nbsp;- 신규 서비스, 이벤트, 서비스 관련 맞춤형 광고 및 재능정보 전송<br>
+                                • 수집항목: 이메일 수신동의<br>
+                                • 보유 및 이용기간: 서비스 이용시까지<br><br>
+                                ※ 선택사항에 동의하지 않으셔도 회원가입은 가능합니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 오투잡 서비스 이용에 제한이 있을 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //form_join -->
+                </fieldset>
+            </article>
+            <div class="list_type04">
+                <ul>
+                    <li><p>회원서비스 제공,  구매자 확인 및 상담 처리를 위해 입력해주세요.</p></li>
+                    <li><p>입력하신 정보는 기본회원 정보에 함께 저장합니다.</p></li>
+                </ul>
+            </div>
+
+            <button type="button" class="closer" onclick="$('#fn_order_phone_mail').hide();">닫기</button>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type02">인증완료하기</button>
+                <button type="button" class="btn_type btn_type11">인증완료하기</button> <!-- 미인증시 노출 -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Layer popup -->
+
+<!-- layer popup : 맛보기재능 주문 -->
+<div class="pop_layer" id="free_order">
+    <div class="dimm"></div>
+    <div class="in_layer width02">
+        <h2 class="tit">맛보기재능 주문</h2>
+        <div class="layer_cont">
+            <!-- list_type -->
+            <div class="list_type08 free_list_type">
+                <!-- item -->
+                <article class="item first">
+                    <div class="item_cont">
+                        <div class="image_item">
+                            <div class="img"><a href="#"><img src="/image/mobile/temp/@item001.png" alt=""></a></div>
+                            <div class="desc_wrap">
+                                <p class="category">
+                                    <span class="main">디자인</span>
+                                    <span class="sub">전단지/홍보물</span>
+                                </p>
+                                <h4 class="cate_tit"><a href="#">고객맞춤 디자인/센스 풀 가동/감동 있는 디자인! 몽키디자인! <i>+맛보기</i></a></h4>
+                            </div>
+                        </div>
+                        <div class="last_order_cont">
+                            <h4 class="tit">총 금액</h4>
+                            <p class="price"><span>0</span>원</p>
+                        </div>
+                    </div>
+                    <div class="free_list_type_info">
+                        <dl>
+                            <dt>상세설명</dt>
+                            <dd>맛보기재능은 A/S 및 수정이 불가능하며, 구매 후 취소 시 재구매가 불가능합니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>판매규정</dt>
+                            <dd>맛보기재능은 판매자가 재능의 일부를 맛보기로 제공하는 기능으로, 무료(0원)로 결제가 진행됩니다.</dd>
+                        </dl>
+                    </div>
+                </article>
+                <!-- //item -->
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="btn_type btn_type01">취소</button>
+                <button type="button" class="btn_type btn_type03 free_type"><span>0원</span>주문 계속하기</button>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //layer popup -->
+
+<!-- layer popup : 상품정렬 안내 -->
+<div class="pop_layer" id="sort_pop" style="display: none;">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">추천순</h2>
+        <div class="layer_cont text01">
+            <p>구매자가 원하는 상품을 더 쉽게 찾을 수 있도록 판매경험, 판매적극성, 구매만족도를 합산하여 정렬</p>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+
+<div class="pop_layer type01" id="coupon_info_layer">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">사용조건</h2>
+        <div class="layer_cont sizetype">
+            <div class="list_type04">
+                <ul>
+                    <li>5만원이상 구매 시 할인 가능</li>
+                    <li>사용가능 재능 상품
+                        <ul class="type_no link_type">
+                            <li>[$재능카테고리 1차$] > 전체</li>
+                            <li><a href="javascript:void();">[$재능카테고리 1차$] > [$카테고리2차$]</a></li>
+                            <li>[$ 재능명(상품코드)$]</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+
+<!-- Layer popup : 페이백 : otwojob-1400 -->
+<div class="pop_layer type01" id="payback_event1">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">구매적립 기준</h2>
+        <div class="layer_cont">
+            <p class="oneline">구매 확정 시 결제금액의 1%를 포인트로 적립</p>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<div class="pop_layer type01" id="payback_event2">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">구매평 적립기준</h2>
+        <div class="layer_cont">
+            <p>구매평 150자 미만 200p, 150자 이상 500p</p>
+            <p class="mt5">등록 완료 시 즉시 지급!</p>
+            <p class="mt13"><a href="#" class="link_style">자세히보기></a></p>
+        </div>
+        <button type="button" class="closer">닫기</button>
+    </div>
+</div>
+<!-- //Layer popup : 페이백 : otwojob-1400 -->
+
+<!-- layer popup : otwojob-1455 -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer lucky7">
+        <div class="lucky7_cont">
+            <p class="lucky7_img01"><img src="/image/mobile/popup/lucky7_img01.png"></p>
+            <p class="lucky7_text01">오투잡 가족 7일째를 기념하여<br><em>럭키세븐 할인쿠폰</em>이 발급되었습니다.</p>
+            <p class="lucky7_img02"><img src="/image/mobile/popup/lucky7_img02.png"></p>
+            <p class="lucky7_text02">앞으로도 회원님의 무한한 사랑을 기대하며,<br>오투잡이 행운의 쿠폰을 쏩니다.</p>
+            <p class="lucky7_btn"><a href="#">쿠폰 확인 ＞</a></p>
+        </div>
+        <button type="button" class="lucky7_closer">닫기</button>
+    </div>
+</div>
+<!-- layer popup : otwojob-1455 -->
+
+<!-- layer popup : otwojob-1455 -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer secret">
+        <div class="secret_cont">
+            <p class="secret_text01">쉿! <span>정영환정영환정영환환환</span>님께<br><em>시크릿 할인쿠폰</em>이 발급되었습니다.</p>
+            <p class="secret_img01"><img src="/image/mobile/popup/secret_img02.png"></p>
+            <p class="secret_text02">아직도 구매를 망설인다면<br>이번이 할인받아 구매할 기회!</p>
+            <p class="secret_btn"><a href="#">쿠폰 확인 ＞</a></p>
+        </div>
+        <button type="button" class="secret_closer">닫기</button>
+    </div>
+</div>
+<!-- layer popup : otwojob-1455 -->
+
+<!-- layer popup : otwojob-1455 -->
+<div class="pop_layer">
+    <div class="dimm"></div>
+    <div class="in_layer secret">
+        <div class="secret_cont">
+            <p class="secret_text01">쉿! <span>정영환정영환정영환환환</span>님께<br><em>할인쿠폰</em>이 발급되었습니다.</p>
+            <p class="secret_img01"><img src="/image/mobile/popup/coupon_1000.png"></p>
+            <p class="secret_text02">아직도 구매를 망설인다면<br>이번이 할인받아 구매할 기회!</p>
+            <p class="secret_btn"><a href="#">쿠폰 확인 ＞</a></p>
+        </div>
+        <button type="button" class="secret_closer">닫기</button>
+    </div>
+</div>
+<!-- layer popup : otwojob-1455 -->
+
+<!-- pop_layer : 나의 제안내용 보기-->
+<div class="pop_layer" id="my_pop">
+    <div class="dimm"></div>
+    <div class="in_layer width01">
+        <h2 class="tit">나의 제안내용 보기</h2>
+        <div class="layer_cont sizetype">
+            <button type="button" class="closer" >닫기</button>
+            <!-- list_type02 -->
+            <div class="list_type02 no_top">
+                <div class="item_wrap popup_con">
+                    <!-- item -->
+                    <div class="item first">
+                        <div class="in_wrap">
+                            <div class="head">
+                                <p class="status ing">요청중</p>
+                                <p class="regist_day">2016.01.19 <em class="ico">종료</em></p>
+                            </div>
+                            <h4 class="tit">단순 이미지 수정 및 제작해 드려요</h4>
+                            <div class="info_wrap">
+                                <p class="price"><span class="span_wrap"><img src="../image/mobile/index/ico_info1.png" alt=""><span class="num">190,000</span>원</span></p>
+                                <p class="remain_day"><span class="span_wrap"><img src="../image/mobile/index/ico_info2.png" alt="">20일</span></p>
+                            </div>
+                            <div class="details">
+                                <p class="comment">
+                                    2016년 신설회사a로 건물을 전문관리하여 양호한 상태로 안전, 청결하게 유지해 드리는 서비스를 제공하고 있습니다.<br>
+                                    <br>
+                                    상징적 의미: 청결, 안전<br>
+                                    로고컨셉: 그린, 블루, 청녹색계열 선호
+                                </p>
+                                <div class="meta_info">
+                                    <span>파일형식 : docx</span>
+                                    <span>언어 : 영어</span>
+                                    <span>번역 : 외 -> 한</span>
+                                </div>
+                                <div class="attached" >
+                                    <p class="line1">첨부파일 <span class="n">3개</span> (35.2KB)</p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">01_참고디자인.jpg</a></p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">02_참고디자인2.jpg</a></p>
+                                    <p class="files"><a href="#"><img src="../image/mobile/index/ico_download.png" alt="">03_참고디자인3.jpg</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //item -->
+                </div>
+            </div>
+            <!-- //list_type02 -->
+        </div>
+    </div>
+</div>
+<!-- //pop_layer -->
+
+<script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    //header
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout12/header.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#header').html(data);
+               }
+           });
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout12/all_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.all_menu').html(data);
+               }
+           });
+    //content
+    $.ajax({
+               type: 'GET',
+               url: '/m/'+getParameterByName('page'),
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#content').html(data);
+               }
+           });
+    //aside_menu
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout12/aside_menu.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('.aside_menu').html(data);
+               }
+           });
+    //footer
+    $.ajax({
+               type: 'GET',
+               url: '/m/pub-ia/template/layout12/footer.html',
+               dataType: 'html',
+               cache: false,
+               async: false,
+               success: function (data) {
+                   $('#footer').html(data);
+               }
+           });
+</script>
+    <script type="text/javascript" src="/js/mobile/otwojob.util.js"></script>
+    <script type="text/javascript" src="/js/mobile/otwojob.app.js"></script>
+    <script type="text/javascript" src="/js/mobile/otwojob.exec.js"></script>
+</body>
+</html>
